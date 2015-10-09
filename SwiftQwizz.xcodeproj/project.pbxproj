@@ -14,6 +14,7 @@
 		BF357B9C1BC75BA000D0C072 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF357B9A1BC75BA000D0C072 /* LaunchScreen.storyboard */; };
 		BF357BA71BC75BA000D0C072 /* SwiftQwizzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BA61BC75BA000D0C072 /* SwiftQwizzTests.swift */; };
 		BF357BB21BC75BA000D0C072 /* SwiftQwizzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BB11BC75BA000D0C072 /* SwiftQwizzUITests.swift */; };
+		BF357BC01BC75BF100D0C072 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BBF1BC75BF100D0C072 /* Quiz.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BF357BAD1BC75BA000D0C072 /* SwiftQwizzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftQwizzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF357BB11BC75BA000D0C072 /* SwiftQwizzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftQwizzUITests.swift; sourceTree = "<group>"; };
 		BF357BB31BC75BA000D0C072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF357BBF1BC75BF100D0C072 /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				BF357B911BC75BA000D0C072 /* AppDelegate.swift */,
+				BF357BBF1BC75BF100D0C072 /* Quiz.swift */,
 				BF357B931BC75BA000D0C072 /* ViewController.swift */,
 				BF357B951BC75BA000D0C072 /* Main.storyboard */,
 				BF357B981BC75BA000D0C072 /* Assets.xcassets */,
@@ -257,6 +260,7 @@
 			files = (
 				BF357B941BC75BA000D0C072 /* ViewController.swift in Sources */,
 				BF357B921BC75BA000D0C072 /* AppDelegate.swift in Sources */,
+				BF357BC01BC75BF100D0C072 /* Quiz.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

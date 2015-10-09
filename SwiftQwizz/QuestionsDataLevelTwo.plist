@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+  <dict>
+    <key>question</key>
+    <string>The appropriate floating-point type to use depends on the nature and range of values you need to work with in your code. In situations where either type would be appropriate, Double is preferred.</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>1</integer>
+    <key>rightAnswerMessage</key>
+    <string>The appropriate floating-point type to use depends on the nature and range of values you need to work with in your code. In situations where either type would be appropriate, Double is preferred.</string>
+  </dict>
+   <dict>
+    <key>question</key>
+    <string>The value of a constant doesn&apos;t need to be known at compile time, but you must assign it a value exactly once.</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>1</integer>
+    <key>rightAnswerMessage</key>
+    <string>The value of a constant doesn&apos;t need to be known at compile time, but you must assign it a value exactly once.</string>
+  </dict>
+   <dict>
+    <key>question</key>
+    <string>Strings have a powerful string interpolation feature where it’s easy to use variables to create a strings.</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>1</integer>
+    <key>rightAnswerMessage</key>
+    <string>Strings have a powerful string interpolation feature where it’s easy to use variables to create a strings.</string>
+   </dict>
+   <dict>
+    <key>question</key>
+    <string>An Int literal can be written as decimal, binary, octal and Hexadecimal </string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>1</integer>
+    <key>rightAnswerMessage</key>
+    <string>An Int literal can be written as decimal, binary, octal and Hexadecimal </string>
+  </dict>
+   <dict>
+    <key>question</key>
+    <string>Array is a collection of data items which can be accessed via an index beginning with 0.</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>1</integer>
+    <key>rightAnswerMessage</key>
+    <string>Array is a collection of data items which can be accessed via an index beginning with 0.</string>
+  </dict>
+   <dict>
+    <key>question</key>
+    <string>Array is a collection type that stores values of the same type in an ordered list. The same value can appear in it multiple times at different positions.</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>1</integer>
+    <key>rightAnswerMessage</key>
+    <string>Array is a collection type that stores values of the same type in an ordered list. The same value can appear in it multiple times at different positions.</string>
+  </dict>
+  <dict>
+    <key>question</key>
+    <string>This code is replacing the value on position 0 of the array named todo: todo[0] = &apos;Buy Milk&apos;</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>1</integer>
+    <key>rightAnswerMessage</key>
+    <string>This code is replacing the value on position 0 of the array named todo: todo[0] = &apos;Buy Milk&apos;</string>
+  </dict>
+  <dict>
+    <key>question</key>
+    <string>Dictionary type allows you to store key-value pairs and access the value by providing the key.</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>1</integer>
+    <key>rightAnswerMessage</key>
+    <string>Dictionary type allows you to store key-value pairs and access the value by providing the key.</string>
+  </dict>
+  <dict>
+    <key>question</key>
+    <string>Do-While loop ensures that your block of code is executed at least once.</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>1</integer>
+    <key>rightAnswerMessage</key>
+    <string>Do-While loop ensures that your block of code is executed at least once.</string>
+  </dict>
+  <dict>
+    <key>question</key>
+    <string>While loop states that if something is true execute a block of code. It stops execution when that condition turns to false.</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>1</integer>
+    <key>rightAnswerMessage</key>
+    <string>While loop states that if something is true execute a block of code. It stops execution when that condition turns to false.</string>
+  </dict>
+  <dict>
+    <key>question</key>
+    <string>For-In loop creates a temporary variable and assigns it a value while iterating over the array.</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>1</integer>
+    <key>rightAnswerMessage</key>
+    <string>For-In loop creates a temporary variable and assigns it a value while iterating over the array.</string>
+  </dict>
+  <dict>
+    <key>question</key>
+    <string>1…10 – is a range of numbers from 1 to 10. The three dots are known as a Closed range because the upper limit is inclusive.</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>1</integer>
+    <key>rightAnswerMessage</key>
+    <string>1…10 – is a range of numbers from 1 to 10. The three dots are known as a Closed range because the upper limit is inclusive.</string>
+  </dict>
+  <dict>
+    <key>question</key>
+    <string>1..&lt;10 – is a range of numbers from 1 to 9. The two dots with a lesser-than sign is known as a Half-Closed range because the upper limit is non-inclusive.</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>1</integer>
+    <key>rightAnswerMessage</key>
+    <string>1..&lt;10 – is a range of numbers from 1 to 9. The two dots with a lesser-than sign is known as a Half-Closed range because the upper limit is non-inclusive.</string>
+  </dict>
+  <dict>
+    <key>question</key>
+    <string>var dogBreed = 'Husky' is an example of type inference</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>1</integer>
+    <key>rightAnswerMessage</key>
+    <string>If you provide an initial value for a constant or variable at the point that it is defined. Swift can infer the type to be used for that constant or variable.</string>
+  </dict>
+  <dict>
+    <key>question</key>
+    <string>The use of type inference makes for a more concise and readable code.</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>1</integer>
+    <key>rightAnswerMessage</key>
+    <string>The use of type inference makes for a more concise and readable code.</string>
+  </dict>
+  <dict>
+    <key>question</key>
+    <string>Swift strings are not mutable that is, you can not change their values.</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>2</integer>
+    <key>rightAnswerMessage</key>
+    <string>You indicate whether a particular String can be modified by assigning it to a variable, or to a constant (in which case it cannot be modified).</string>
+  </dict>
+  <dict>
+    <key>question</key>
+    <string>You should define values as variables wherever possible. This improves execution times.</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>2</integer>
+    <key>rightAnswerMessage</key>
+    <string>If a stored value in your code is not going to change, always declare it as a constant with the let keyword. Use variables only for storing values that need to be able to change.</string>
+  </dict>
+  <dict>
+    <key>question</key>
+    <string>String is a value type. When you assign a string to a variable, a constant, or pass it as an argument to a function, its value is copied.</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>1</integer>
+    <key>rightAnswerMessage</key>
+    <string>String is a value type. When you assign a string to a variable, a constant, or pass it as an argument to a function, its value is copied.</string>
+  </dict>
+  <dict>
+    <key>question</key>
+    <string>Swift requires semicolons at the end of each statement.</string>
+    <key>answer1</key>
+    <string>True</string>
+    <key>answer2</key>
+    <string>False</string>
+    <key>answer3</key>
+    <string></string>
+    <key>rightAnswer</key>
+    <integer>2</integer>
+    <key>rightAnswerMessage</key>
+    <string>Swift only requires semicolons if you write multiple statements on a single line.</string>
+  </dict>
+   <dict>
+    <key>question</key>
+    <string>Unlike many other languages, Swift does requires you to write a semicolon after each statement in your code, although you can skip that if you wish.</string>
+      <key>answer1</key>
+      <string>True</string>
+      <key>answer2</key>
+      <string>False</string>
+      <key>answer3</key>
+      <string></string>
+      <key>rightAnswer</key>
+      <integer>2</integer>
+      <key>rightAnswerMessage</key>
+      <string>Unlike many other languages, Swift does not requires you to write a semicolon after each statement in your code, although you can use them if you wish.</string>
+    </dict>
+   <dict>
+     <key>question</key>
+     <string>Swift has a Boolean type, Bool, that holds a value of either true or nil.</string>
+     <key>answer1</key>
+     <string>True</string>
+     <key>answer2</key>
+     <string>False</string>
+     <key>answer3</key>
+     <string></string>
+     <key>rightAnswer</key>
+     <integer>2</integer>
+     <key>rightAnswerMessage</key>
+     <string>Swift has a basic Boolean type, called Bool. Boolean values are referred to as logical, because they can only ever be true or false.</string>
+   </dict>
+</array>
+</plist>
