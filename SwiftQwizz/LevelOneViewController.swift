@@ -14,7 +14,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
   @IBOutlet weak var currentChapterTextLabel: UILabel!
   @IBOutlet weak var questionNumberLabel: UILabel!
   @IBOutlet weak var scoreNumberLabel: UILabel!
-  @IBOutlet var labelQuestion: UILabel!
+  @IBOutlet var QuestionTextLabel: UILabel!
   @IBOutlet var buttonAnswer1: UIButton! {
     didSet {
       stylingButtons(buttonAnswer1)
@@ -30,9 +30,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
       stylingButtons(buttonAnswer3)
     }
   }
-  @IBOutlet weak var answerFeedbackView: UIView!
   @IBOutlet weak var rightOrWrongTextLabel: UILabel!
-  @IBOutlet weak var rightAnswerRepetitionTextLabel: UILabel!
   @IBOutlet weak var continueButton: UIButton!
   
   var currentQuiz = Quiz()
@@ -123,15 +121,13 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
       rightOrWrongTextLabel.text = "Yes!"
       if practiceMode == true {
       displayAnswerFeedback()
-      answerFeedbackView.hidden = false
       stylingButtons(continueButton)
       continueButton.hidden = false
       }
     } else {
       rightOrWrongTextLabel.text = "Wrong"
-      rightAnswerRepetitionTextLabel.text = "Please try again."
+      QuestionTextLabel.text = "Please try again."
       if practiceMode == true {
-      answerFeedbackView.hidden = false
       stylingButtons(continueButton)
       continueButton.hidden = false
       }
@@ -140,7 +136,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
   
   func displayCurrentQuestion() {
     if currentQuestionCounter < currentQuizQuestions.count {
-      labelQuestion.text = currentQuizQuestions[currentQuestionCounter].question
+      QuestionTextLabel.text = currentQuizQuestions[currentQuestionCounter].question
       buttonAnswer1.setTitle(currentQuizQuestions[currentQuestionCounter].answer1, forState: .Normal)
       buttonAnswer2.setTitle(currentQuizQuestions[currentQuestionCounter].answer2,
         forState: .Normal)
@@ -152,7 +148,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
   }
   
   func displayAnswerFeedback () {
-      rightAnswerRepetitionTextLabel.text = "\(currentQuizQuestions[currentQuestionCounter].rightAnswerMessage)"
+      QuestionTextLabel.text = "\(currentQuizQuestions[currentQuestionCounter].rightAnswerMessage)"
     }
   
 //  func resetQuiz() {
@@ -220,7 +216,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     buttonAnswer1.hidden = true
     buttonAnswer2.hidden = true
     buttonAnswer3.hidden = true
-    labelQuestion.hidden = true
+    QuestionTextLabel.hidden = true
     self.view.backgroundColor = UIColor.orangeColor()
     } else {
       currentQuestionCounter++
@@ -246,12 +242,11 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     }
     }
     self.view.backgroundColor = UIColor.whiteColor()
-    answerFeedbackView.hidden = true
     continueButton.hidden = true
     buttonAnswer1.hidden = false
     buttonAnswer2.hidden = false
     buttonAnswer3.hidden = false
-    labelQuestion.hidden = false
+    QuestionTextLabel.hidden = false
   }
 
   @IBAction func goBack(segue: UIStoryboardSegue) {
