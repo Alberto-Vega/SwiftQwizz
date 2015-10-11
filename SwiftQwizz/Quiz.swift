@@ -10,7 +10,6 @@ import Foundation
 
 struct Quiz {
   var currentChapter: String?
-  var Chapters = ["The Basics", "Basic Operators", "Strings and Characters", "Collection Types", "Control Flow", "Functions", "Closures", "Enumerations", "Classes and Structures", "Properties", "Methods", "Subscripts", "Inheritance", "Initialization", "Deinitialization", "Automatic Reference Counting", "Optional Chaining", "Error Handling", "Type Casting", "Nested Types", "Extensions", "Protocols", "Generics", "Access Control", "Advanced Operators"]
   var questionPoolFromPlist = [Question]()
   var currentQuizQuestions = [Question]()
   

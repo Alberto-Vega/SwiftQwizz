@@ -33,7 +33,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
   @IBOutlet weak var rightOrWrongTextLabel: UILabel!
   @IBOutlet weak var continueButton: UIButton!
   
-  var currentQuiz = Quiz()
+//  var currentQuiz = Quiz()
   var rightAnswersCounter = 0
   var currentQuestionCounter = 0
   var questionPoolFromPlist = [Question] ()
@@ -50,6 +50,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
 //    }
 //    if let buttonTwo = buttonAnswer2 { stylingButtons(buttonTwo)}
 //    stylingButtons(buttonAnswer3)
+    print("The current chapter is \(currentChapter)")
     currentChapterTextLabel.text = currentChapter
     loadQuestionsFromPlist()
     createQuizFromRandomQuestions()

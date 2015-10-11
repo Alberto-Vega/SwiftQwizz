@@ -9,7 +9,8 @@
 import UIKit
 
 class ChaptersListTableViewController: UITableViewController {
-  var currentQuiz = Quiz()
+  
+  var Chapters = ["The Basics", "Basic Operators", "Strings and Characters", "Collection Types", "Control Flow", "Functions", "Closures", "Enumerations", "Classes and Structures", "Properties", "Methods", "Subscripts", "Inheritance", "Initialization", "Deinitialization", "Automatic Reference Counting", "Optional Chaining", "Error Handling", "Type Casting", "Nested Types", "Extensions", "Protocols", "Generics", "Access Control", "Advanced Operators"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,22 +36,16 @@ class ChaptersListTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return currentQuiz.Chapters.count
+        return Chapters.count
       
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCellWithIdentifier("ChaptersListItem", forIndexPath: indexPath)
       
-      let chapterToDisplay = self.currentQuiz.Chapters[indexPath.row]
+      let chapterToDisplay = self.Chapters[indexPath.row]
       let chapterNameTextLabel = cell.viewWithTag(1) as! UILabel
       chapterNameTextLabel.text = chapterToDisplay
-//      if indexPath.row == 0 {
-//        
-//        chapterLabel?.text = "The Basics"
-//      } else if indexPath.row == 1 {
-//        chapterLabel?.text = "Basic Operators"
-//      }
         return cell
     }
     
@@ -97,15 +92,12 @@ class ChaptersListTableViewController: UITableViewController {
       if segue.identifier == "ShowLevelOneViewController" {
       if let LevelOneViewController = segue.destinationViewController as? LevelOneViewController {    
         if let indexPath = self.tableView.indexPathForSelectedRow {
-          let selectedRow = indexPath.row
-          currentQuiz.currentChapter = self.currentQuiz.Chapters[selectedRow]
-          print(currentQuiz.currentChapter)
-          LevelOneViewController.currentChapter = currentQuiz.currentChapter
+//          let selectedRow = indexPath.row
+          let currentChapter = Chapters[indexPath.row]
+          print(currentChapter)
+          LevelOneViewController.currentChapter = currentChapter
         }
-        
       }
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
 }
 }
