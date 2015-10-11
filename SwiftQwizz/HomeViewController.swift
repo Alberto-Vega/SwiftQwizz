@@ -9,6 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+  @IBInspectable
   
   private let defaults = NSUserDefaults.standardUserDefaults()
   

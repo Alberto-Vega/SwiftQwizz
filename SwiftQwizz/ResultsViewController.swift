@@ -10,12 +10,10 @@ import UIKit
 
 class ResultsViewController: UIViewController {
   
-  @IBOutlet weak var currentLevelLabel: UILabel!
+
+  @IBOutlet weak var currentChapterLabel: UILabel!
   @IBOutlet weak var finalScoreLabel: UILabel!
-  @IBOutlet weak var finalAccuracyLabel: UILabel!
-  @IBOutlet weak var startLevelOneButton: UIButton!
-  @IBOutlet weak var startLevelTwoButton: UIButton!
-  
+  @IBOutlet weak var finalAccuracyLabel: UILabel!  
   @IBOutlet weak var startAgainButton: UIButton!
   var rightAnswersCounter: Int?
   var currentChapter: String?
@@ -23,20 +21,10 @@ class ResultsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setResultLabels()
-    
-    stylingButtons(startLevelOneButton)
-    stylingButtons(startLevelTwoButton)
-
+    stylingButtons(startAgainButton)
     
     if let currentLevel = currentChapter {
-      currentLevelLabel.text = "Results for " + "\(currentLevel)"
-      if currentLevel == "Level II" {
-      startLevelOneButton.hidden = true
-      startLevelTwoButton.hidden = true
-      startAgainButton.hidden = false
-      } else {
-        startAgainButton.hidden = true
-      }
+      currentChapterLabel.text = "Chapter: \(currentLevel)"
   }
   }
   
