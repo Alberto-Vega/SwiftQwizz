@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ResultsViewController: UIViewController {
+ class ResultsViewController:UIViewController {
   
-
+  @IBOutlet weak var endOfQuizMessage: UILabel!
   @IBOutlet weak var currentChapterLabel: UILabel!
   @IBOutlet weak var finalScoreLabel: UILabel!
   @IBOutlet weak var finalAccuracyLabel: UILabel!  
@@ -40,13 +40,19 @@ class ResultsViewController: UIViewController {
     button.layer.shadowOpacity = 0.5
   }
   
-  
   func setResultLabels() {
     if let rightAnswers = rightAnswersCounter {
-      print(" This is the unwrapped opcional value \(rightAnswers)")
+      print(" This is the unwrapped opcional value for right answers counter \(rightAnswers)")
+      let accuracyPercentage = (Double(rightAnswers)/10)*100
+      if accuracyPercentage < 60 {
+        endOfQuizMessage!.text = "Good try!"
+      } else if accuracyPercentage < 90 {
+        endOfQuizMessage!.text = "Good Job!"
+      } else {
+        endOfQuizMessage!.text = "Impressive!"
+      }
       finalScoreLabel!.text = "\(rightAnswers)"
-      finalAccuracyLabel!.text = "\((Double(rightAnswers)/10)*100)" + " %"
-      print("\(finalAccuracyLabel!.text!)")
+      finalAccuracyLabel!.text = "\(accuracyPercentage)" + " %"
     }
   }
   

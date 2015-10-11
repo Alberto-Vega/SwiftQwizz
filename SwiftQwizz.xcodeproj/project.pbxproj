@@ -13,7 +13,6 @@
 		BF357BA71BC75BA000D0C072 /* SwiftQwizzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BA61BC75BA000D0C072 /* SwiftQwizzTests.swift */; };
 		BF357BB21BC75BA000D0C072 /* SwiftQwizzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BB11BC75BA000D0C072 /* SwiftQwizzUITests.swift */; };
 		BF357BC01BC75BF100D0C072 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BBF1BC75BF100D0C072 /* Quiz.swift */; settings = {ASSET_TAGS = (); }; };
-		BF357BC31BC76E9400D0C072 /* LevelTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BC21BC76E9400D0C072 /* LevelTwoViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BF357BC61BC76EC700D0C072 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BC51BC76EC700D0C072 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BF357BC81BC76EEC00D0C072 /* LevelOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BC71BC76EEC00D0C072 /* LevelOneViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BF357BCA1BC76F0500D0C072 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF357BC91BC76F0500D0C072 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -55,7 +54,6 @@
 		BF357BB11BC75BA000D0C072 /* SwiftQwizzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftQwizzUITests.swift; sourceTree = "<group>"; };
 		BF357BB31BC75BA000D0C072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF357BBF1BC75BF100D0C072 /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
-		BF357BC21BC76E9400D0C072 /* LevelTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelTwoViewController.swift; path = SwiftQwizz/LevelTwoViewController.swift; sourceTree = "<group>"; };
 		BF357BC51BC76EC700D0C072 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = SwiftQwizz/HomeViewController.swift; sourceTree = "<group>"; };
 		BF357BC71BC76EEC00D0C072 /* LevelOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelOneViewController.swift; path = SwiftQwizz/LevelOneViewController.swift; sourceTree = "<group>"; };
 		BF357BC91BC76F0500D0C072 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 				BF357BD11BC76F6C00D0C072 /* SettingsTableViewController.swift */,
 				BF357BC71BC76EEC00D0C072 /* LevelOneViewController.swift */,
 				BF357BCF1BC76F6300D0C072 /* ResultsViewController.swift */,
-				BF357BC21BC76E9400D0C072 /* LevelTwoViewController.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -303,7 +300,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF357BC61BC76EC700D0C072 /* HomeViewController.swift in Sources */,
-				BF357BC31BC76E9400D0C072 /* LevelTwoViewController.swift in Sources */,
 				BF357BC81BC76EEC00D0C072 /* LevelOneViewController.swift in Sources */,
 				BF357BD01BC76F6300D0C072 /* ResultsViewController.swift in Sources */,
 				BF357BD21BC76F6C00D0C072 /* SettingsTableViewController.swift in Sources */,
