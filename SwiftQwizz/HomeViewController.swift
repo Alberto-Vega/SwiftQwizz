@@ -22,9 +22,12 @@ class HomeViewController: UIViewController, UIPopoverPresentationControllerDeleg
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     self.view.backgroundColor = UIColor.orangeColor()
     stylingButtons(startButton)
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    print("The initial state of practice Mode: \(practiceMode)")
   }
   
   override func didReceiveMemoryWarning() {
@@ -36,10 +39,12 @@ class HomeViewController: UIViewController, UIPopoverPresentationControllerDeleg
     
     if let identifier = segue.identifier {
       switch identifier {
-      case "Show Level One":
+      case "ShowChapterListTableView":
         
-        if let _: LevelOneViewController =  segue.destinationViewController as? LevelOneViewController {
- 
+        if let tvc: ChaptersListTableViewController =  segue.destinationViewController as? ChaptersListTableViewController {
+          if let mode = practiceMode {
+          tvc.practiceMode = mode
+          }
         }
       
       case "HomeShowSettings":

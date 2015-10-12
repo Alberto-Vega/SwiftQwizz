@@ -51,6 +51,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
 //    if let buttonTwo = buttonAnswer2 { stylingButtons(buttonTwo)}
 //    stylingButtons(buttonAnswer3)
     print("The current chapter is \(currentChapter)")
+    print("The LevelOneViewControler practice mode: \(practiceMode)")
     currentChapterTextLabel.text = currentChapter
     loadQuestionsFromPlist()
     createQuizFromRandomQuestions()

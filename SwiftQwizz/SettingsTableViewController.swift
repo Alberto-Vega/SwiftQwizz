@@ -10,6 +10,7 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
 
+  @IBOutlet weak var practiceModeSwitch: UISwitch!
   @IBOutlet weak var settingsView: UIView!
   var practiceMode:Bool?
     override func viewDidLoad() {
@@ -34,33 +35,40 @@ class SettingsTableViewController: UITableViewController {
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    if segue.identifier == "backToHomeViewController" {
+//    if segue.identifier == "backToHomeViewController" {
       let hvc: HomeViewController = segue.destinationViewController as! HomeViewController
       hvc.practiceMode = practiceMode
-    }
+//    }
   }
     
   @IBAction func begginnerOrAdvancedSwitch(sender: UISwitch) {
-    practiceMode = false
-}
+    if practiceModeSwitch.on {
+      practiceMode = true
+    } else {
+      practiceMode = false
+    }
+    print("Practice Mode was set by the switch to: \(practiceMode)")
+  }
+//    practiceMode = false
 
-  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 1
-  }
-  
-  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
-    return 1
-    
-  }
-  
-  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("SettingsItem")
-    as UITableViewCell!
-    
-    return cell
-  
-  }
+
+//  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//    return 1
+//  }
+//  
+//  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//    
+//    return 1
+//    
+//  }
+//  
+//  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//    let cell = tableView.dequeueReusableCellWithIdentifier("SettingsItem")
+//    as UITableViewCell!
+//    
+//    return cell
+//  
+//  }
     /*
     // MARK: - Navigation
 

@@ -11,6 +11,7 @@ import UIKit
 class ChaptersListTableViewController: UITableViewController {
   
   var Chapters = ["The Basics", "Basic Operators", "Strings and Characters", "Collection Types", "Control Flow", "Functions", "Closures", "Enumerations", "Classes and Structures", "Properties", "Methods", "Subscripts", "Inheritance", "Initialization", "Deinitialization", "Automatic Reference Counting", "Optional Chaining", "Error Handling", "Type Casting", "Nested Types", "Extensions", "Protocols", "Generics", "Access Control", "Advanced Operators"]
+    var practiceMode:Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,12 +91,18 @@ class ChaptersListTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
       if segue.identifier == "ShowLevelOneViewController" {
-      if let QuizNavigationController = segue.destinationViewController as? QuizNavigationViewController {
+        if let LevelOneViewController = segue.destinationViewController as? LevelOneViewController {
         if let indexPath = self.tableView.indexPathForSelectedRow {
 //          let selectedRow = indexPath.row
           let currentChapter = Chapters[indexPath.row]
           print(currentChapter)
-          QuizNavigationController.currentChapter = currentChapter
+          LevelOneViewController.currentChapter = currentChapter
+          
+        if let mode = practiceMode {
+            LevelOneViewController.practiceMode = mode
+
+          
+          }
         }
       }
     }
