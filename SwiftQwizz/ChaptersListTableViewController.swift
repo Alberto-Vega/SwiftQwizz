@@ -90,12 +90,12 @@ class ChaptersListTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
       if segue.identifier == "ShowLevelOneViewController" {
-      if let LevelOneViewController = segue.destinationViewController as? LevelOneViewController {    
+      if let QuizNavigationController = segue.destinationViewController as? QuizNavigationViewController {
         if let indexPath = self.tableView.indexPathForSelectedRow {
 //          let selectedRow = indexPath.row
           let currentChapter = Chapters[indexPath.row]
           print(currentChapter)
-          LevelOneViewController.currentChapter = currentChapter
+          QuizNavigationController.currentChapter = currentChapter
         }
       }
     }
