@@ -11,13 +11,15 @@ import UIKit
 class HomeViewController: UIViewController, UIPopoverPresentationControllerDelegate {
   @IBInspectable
   
-  private let defaults = NSUserDefaults.standardUserDefaults()
+//  private let defaults = NSUserDefaults.standardUserDefaults()
   
-  var practiceMode:Bool? {
-    get { return defaults.objectForKey("Mode") as? Bool ?? false }
-    set { defaults.setObject(newValue, forKey: "Mode") }
-    }
-    
+//  var practiceMode:Bool? {
+//    get { return defaults.objectForKey("Mode") as? Bool ?? false }
+//    set { defaults.setObject(newValue, forKey: "Mode") }
+//    }
+   var currentQuiz = Quiz()
+  
+  
   @IBOutlet weak var startButton: UIButton!
   
   override func viewDidLoad() {
@@ -27,7 +29,7 @@ class HomeViewController: UIViewController, UIPopoverPresentationControllerDeleg
   }
   
   override func viewWillAppear(animated: Bool) {
-    print("The initial state of practice Mode: \(practiceMode)")
+    print("The initial state of practice Mode: \(currentQuiz.practiceMode)")
   }
   
   override func didReceiveMemoryWarning() {
@@ -42,7 +44,7 @@ class HomeViewController: UIViewController, UIPopoverPresentationControllerDeleg
       case "ShowChapterListTableView":
         
         if let tvc: ChaptersListTableViewController =  segue.destinationViewController as? ChaptersListTableViewController {
-          if let mode = practiceMode {
+          if let mode = currentQuiz.practiceMode {
           tvc.practiceMode = mode
           }
         }
@@ -51,7 +53,7 @@ class HomeViewController: UIViewController, UIPopoverPresentationControllerDeleg
         if let svc = segue.destinationViewController as? SettingsTableViewController {
           if let ppc = svc.popoverPresentationController {
             ppc.delegate = self
-            if let mode = practiceMode {
+            if let mode = currentQuiz.practiceMode {
               svc.practiceMode = mode
             }
           }

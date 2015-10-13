@@ -118,7 +118,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
 //  }
 
   func updateScore() {
-    if currentQuizQuestions[currentQuestionCounter].userAnswer == currentQuizQuestions[currentQuestionCounter].rightAnswer {
+    if currentQuizQuestions[currentQuestionCounter].correctAnswer {
       rightAnswersCounter += 1
       rightOrWrongTextLabel.text = "Yes!"
       if practiceMode == true {

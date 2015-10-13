@@ -12,6 +12,12 @@ struct Quiz {
   var currentChapter: String?
   var questionPoolFromPlist = [Question]()
   var currentQuizQuestions = [Question]()
+  var bestScore:Int?
+  var defaults = NSUserDefaults.standardUserDefaults()
+  var practiceMode:Bool? {
+    get { return defaults.objectForKey("Mode") as? Bool ?? false }
+    set { defaults.setObject(newValue, forKey: "Mode") }
+  }
   
  mutating func loadQuestionsFromPlist(plistName: String) {
     print("Loading Questions from Plist")
@@ -55,7 +61,18 @@ struct Question {
   var answer2: String
   var answer3: String
   var rightAnswer: Int?
-  var userAnswer: Int?
+  var userAnswer: Int? {
+    willSet {
+      print("The new value of userAnswer is:\(newValue)")
+    }
+    didSet {
+      if let answer = userAnswer {
+        correctAnswer = answer == rightAnswer ? true : false
+        print("User answer is correct: \(correctAnswer)")
+      }
+    }
+  }
+  var correctAnswer = false
   var rightAnswerMessage: String
   
   init(question: String, answer1: String, answer2: String, answer3: String, rightAnswer: Int, rightAnswerMessage: String) {
@@ -68,5 +85,8 @@ struct Question {
     self.rightAnswerMessage = rightAnswerMessage
   }
 }
+
+
+
 
 

@@ -37,7 +37,7 @@ class SettingsTableViewController: UITableViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 //    if segue.identifier == "backToHomeViewController" {
       let hvc: HomeViewController = segue.destinationViewController as! HomeViewController
-      hvc.practiceMode = practiceMode
+      hvc.currentQuiz.practiceMode = practiceMode
 //    }
   }
     
