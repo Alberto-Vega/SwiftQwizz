@@ -9,13 +9,21 @@
 import UIKit
 
 class ChaptersListTableViewController: UITableViewController {
+  var currentQuiz:Quiz?
+  
   
   var Chapters = ["The Basics", "Basic Operators", "Strings and Characters", "Collection Types", "Control Flow", "Functions", "Closures", "Enumerations", "Classes and Structures", "Properties", "Methods", "Subscripts", "Inheritance", "Initialization", "Deinitialization", "Automatic Reference Counting", "Optional Chaining", "Error Handling", "Type Casting", "Nested Types", "Extensions", "Protocols", "Generics", "Access Control", "Advanced Operators"]
-    var practiceMode:Bool?
+  
+//    var practiceMode:Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//      let message = "The Class instance was not received in table view"
+      if let quizMode = currentQuiz?.practiceMode {
+//      let messageToPrint = ("\(quizInstance.practiceMode) ?? \(message)")
+//        print("\(message) \(messageToPrint)")
+        print("Practice mode is \(quizMode)")
+      }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -98,10 +106,8 @@ class ChaptersListTableViewController: UITableViewController {
           print(currentChapter)
           LevelOneViewController.currentChapter = currentChapter
           
-        if let mode = practiceMode {
+        if let mode = currentQuiz!.practiceMode {
             LevelOneViewController.practiceMode = mode
-
-          
           }
         }
       }
