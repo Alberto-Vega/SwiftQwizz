@@ -9,9 +9,9 @@
 import Foundation
 
 struct Quiz {
-  var currentChapter: String?
+  var Chapter: String?
   var questionPoolFromPlist = [Question]()
-  var currentQuizQuestions = [Question]()
+  var Questions = [Question]()
   var bestScore:Int?
   var defaults = NSUserDefaults.standardUserDefaults()
   var practiceMode:Bool? {
@@ -19,7 +19,7 @@ struct Quiz {
     set { defaults.setObject(newValue, forKey: "Mode") }
   }
   
- mutating func loadQuestionsFromPlist(plistName: String) {
+ mutating func loadQuestionsFromPlistNamed(plistName: String) {
     print("Loading Questions from Plist")
     let questionsPath = NSBundle.mainBundle().pathForResource(plistName, ofType: "plist")
     if let questionObjects = NSArray(contentsOfFile: questionsPath!) as? [[String: AnyObject]] {
@@ -34,21 +34,22 @@ struct Quiz {
   }
   
   mutating func createQuizFromRandomQuestions() {
-    print("Creating current quiz from random Plist questions")
-    var newIndex: Int?
+    print("Creating current quiz from random questions on Plist")
     var previousIndexes = [Int]()
     
-    while currentQuizQuestions.count < 10 {
+    while Questions.count < 10 {
       print("picking a random question index number...")
       
-      let randomIndex = Int(arc4random_uniform(UInt32(questionPoolFromPlist.count)))
+      var randomIndex:Int?
+      randomIndex = Int(arc4random_uniform(UInt32(questionPoolFromPlist.count)))
+//      newIndex =randomIndex
       print("the random index number picked is \(randomIndex)")
       
-      if previousIndexes.indexOf(randomIndex) != nil {
-        newIndex = nil
+      if previousIndexes.indexOf(randomIndex!) != nil {
+        randomIndex = nil
       } else {
-        currentQuizQuestions.append(questionPoolFromPlist[newIndex!])
-        previousIndexes.append(newIndex!)
+        Questions.append(questionPoolFromPlist[randomIndex!])
+        previousIndexes.append(randomIndex!)
       }
       print("The list of previous indexes is \(previousIndexes)")
     }

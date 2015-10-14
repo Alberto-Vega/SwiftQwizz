@@ -22,7 +22,6 @@
 		BF357BD21BC76F6C00D0C072 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BD11BC76F6C00D0C072 /* SettingsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BF357BD41BC8A7D400D0C072 /* ChaptersListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BD31BC8A7D400D0C072 /* ChaptersListTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BF357BD61BC8C67000D0C072 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF357BD51BC8C67000D0C072 /* logo.png */; settings = {ASSET_TAGS = (); }; };
-		BF7D40251BCB486700513703 /* QuizNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D40241BCB486700513703 /* QuizNavigationViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 		BF357BD11BC76F6C00D0C072 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = SwiftQwizz/SettingsTableViewController.swift; sourceTree = "<group>"; };
 		BF357BD31BC8A7D400D0C072 /* ChaptersListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChaptersListTableViewController.swift; path = SwiftQwizz/ChaptersListTableViewController.swift; sourceTree = "<group>"; };
 		BF357BD51BC8C67000D0C072 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		BF7D40241BCB486700513703 /* QuizNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizNavigationViewController.swift; path = SwiftQwizz/QuizNavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +159,6 @@
 				BF357BC51BC76EC700D0C072 /* HomeViewController.swift */,
 				BF357BD11BC76F6C00D0C072 /* SettingsTableViewController.swift */,
 				BF357BD31BC8A7D400D0C072 /* ChaptersListTableViewController.swift */,
-				BF7D40241BCB486700513703 /* QuizNavigationViewController.swift */,
 				BF357BC71BC76EEC00D0C072 /* LevelOneViewController.swift */,
 				BF357BCF1BC76F6300D0C072 /* ResultsViewController.swift */,
 			);
@@ -303,7 +300,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF357BC61BC76EC700D0C072 /* HomeViewController.swift in Sources */,
-				BF7D40251BCB486700513703 /* QuizNavigationViewController.swift in Sources */,
 				BF357BC81BC76EEC00D0C072 /* LevelOneViewController.swift in Sources */,
 				BF357BD01BC76F6300D0C072 /* ResultsViewController.swift in Sources */,
 				BF357BD21BC76F6C00D0C072 /* SettingsTableViewController.swift in Sources */,

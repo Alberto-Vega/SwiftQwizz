@@ -16,16 +16,15 @@ import UIKit
   @IBOutlet weak var finalAccuracyLabel: UILabel!  
   @IBOutlet weak var startAgainButton: UIButton!
   var rightAnswersCounter: Int?
-  var currentChapter: String?
+//  var currentChapter: String?
+  var currentQuiz: Quiz?
   
   override func viewDidLoad() {
     super.viewDidLoad()
     setResultLabels()
     stylingButtons(startAgainButton)
-    
-    if let currentLevel = currentChapter {
-      currentChapterLabel.text = "Chapter: \(currentLevel)"
-  }
+    print("The current chapter in resultsvc: \(currentQuiz?.Chapter)")
+      currentChapterLabel.text = "Chapter: \(currentQuiz?.Chapter)"
   }
   
   override func didReceiveMemoryWarning() {

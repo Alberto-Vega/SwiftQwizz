@@ -52,9 +52,9 @@ class ChaptersListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCellWithIdentifier("ChaptersListItem", forIndexPath: indexPath)
       
-      let chapterToDisplay = self.Chapters[indexPath.row]
+       currentQuiz?.Chapter = self.Chapters[indexPath.row]
       let chapterNameTextLabel = cell.viewWithTag(1) as! UILabel
-      chapterNameTextLabel.text = chapterToDisplay
+      chapterNameTextLabel.text = currentQuiz?.Chapter
         return cell
     }
     
@@ -101,13 +101,13 @@ class ChaptersListTableViewController: UITableViewController {
       if segue.identifier == "ShowLevelOneViewController" {
         if let LevelOneViewController = segue.destinationViewController as? LevelOneViewController {
         if let indexPath = self.tableView.indexPathForSelectedRow {
-//          let selectedRow = indexPath.row
-          let currentChapter = Chapters[indexPath.row]
+          let selectedRow = indexPath.row
+          let currentChapter = Chapters[selectedRow]
           print(currentChapter)
-          LevelOneViewController.currentChapter = currentChapter
+          LevelOneViewController.currentQuiz.Chapter = currentChapter
           
-        if let mode = currentQuiz!.practiceMode {
-            LevelOneViewController.practiceMode = mode
+        if let quiz = currentQuiz {
+            LevelOneViewController.currentQuiz = quiz
           }
         }
       }

@@ -33,48 +33,23 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
   @IBOutlet weak var rightOrWrongTextLabel: UILabel!
   @IBOutlet weak var continueButton: UIButton!
   
-//  var currentQuiz = Quiz()
+  var currentQuiz = Quiz()
   var rightAnswersCounter = 0
   var currentQuestionCounter = 0
-  var questionPoolFromPlist = [Question] ()
-  var currentQuizQuestions = [Question] ()
-  var practiceMode:Bool?
-  var currentChapter:String?
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-//    if let buttonOne = buttonAnswer1 {
-//      stylingButtons(buttonOne)
-//    }
-//    if let buttonTwo = buttonAnswer2 { stylingButtons(buttonTwo)}
-//    stylingButtons(buttonAnswer3)
-    print("The current chapter is \(currentChapter)")
-    print("The LevelOneViewControler practice mode: \(practiceMode)")
-    currentChapterTextLabel.text = currentChapter
-    loadQuestionsFromPlist()
-    createQuizFromRandomQuestions()
+    print("The current chapter is \(currentQuiz.Chapter)")
+    print("The LevelOneViewControler practice mode: \(currentQuiz.practiceMode)")
+    currentChapterTextLabel.text = currentQuiz.Chapter
+currentQuiz.loadQuestionsFromPlistNamed("QuestionsData")
+    currentQuiz.createQuizFromRandomQuestions()
     displayCurrentQuestion()
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
-  }
-  
-  private func loadQuestionsFromPlist() {
-    print("Loading Questions from Plist")
-    let questionsPath = NSBundle.mainBundle().pathForResource("QuestionsData", ofType: "plist")
-    if let questionObjects = NSArray(contentsOfFile: questionsPath!) as? [[String: AnyObject]] {
-      for question in questionObjects {
-        if let questionOne = question["question"] as? String, answer1 = question["answer1"] as? String, answer2 = question["answer2"] as? String, answer3 = question["answer3"] as? String, rightAnswer = question["rightAnswer"] as? Int, rightAnswerMessage = question["rightAnswerMessage"] as? String {
-          let question = Question(question: questionOne, answer1: answer1, answer2: answer2, answer3: answer3, rightAnswer: rightAnswer, rightAnswerMessage: rightAnswerMessage)
-          questionPoolFromPlist.append(question)
-          print("Question pool has appended  " + "\(questionPoolFromPlist.count)" + " questions from Plist")
-        }
-      }
-    }
   }
   
   func stylingButtons(button: UIButton) {
@@ -84,44 +59,12 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     button.layer.shadowOpacity = 0.5
   }
   
-  func createQuizFromRandomQuestions() {
-    print("Creating current quiz from random Plist questions")
-    var newIndex: Int?
-    var previousIndexes = [Int]()
-    
-    while currentQuizQuestions.count < 10 {
-      print("picking a random question index number...")
-      
-      let randomIndex = Int(arc4random_uniform(UInt32(questionPoolFromPlist.count)))
-      newIndex = randomIndex
-      print("the random index number picked is \(newIndex)")
-      
-//      findDuplicateIndex(indexToFind: newIndex!, fromIndexes: previousIndexes)
-      
-      if previousIndexes.indexOf(newIndex!) != nil {
-        newIndex = nil
-      } else {
-        currentQuizQuestions.append(questionPoolFromPlist[newIndex!])
-        previousIndexes.append(newIndex!)
-      }
-      print("The list of previous indexes is \(previousIndexes)")
-      }
-    }
-  
-//  func findDuplicateIndex(#indexToFind: Int, fromIndexes: [Int]) -> Bool {
-//    for index in fromIndexes {
-//      if index == indexToFind {
-//        return true
-//      }
-//      }
-//    return false
-//  }
 
   func updateScore() {
-    if currentQuizQuestions[currentQuestionCounter].correctAnswer {
+    if currentQuiz.Questions[currentQuestionCounter].correctAnswer {
       rightAnswersCounter += 1
       rightOrWrongTextLabel.text = "Yes!"
-      if practiceMode == true {
+      if currentQuiz.practiceMode == true {
       displayAnswerFeedback()
       stylingButtons(continueButton)
       continueButton.hidden = false
@@ -129,7 +72,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     } else {
       rightOrWrongTextLabel.text = "Wrong"
       QuestionTextLabel.text = "Please try again."
-      if practiceMode == true {
+      if currentQuiz.practiceMode == true {
       stylingButtons(continueButton)
       continueButton.hidden = false
       }
@@ -137,12 +80,12 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
   }
   
   func displayCurrentQuestion() {
-    if currentQuestionCounter < currentQuizQuestions.count {
-      QuestionTextLabel.text = currentQuizQuestions[currentQuestionCounter].question
-      buttonAnswer1.setTitle(currentQuizQuestions[currentQuestionCounter].answer1, forState: .Normal)
-      buttonAnswer2.setTitle(currentQuizQuestions[currentQuestionCounter].answer2,
+    if currentQuestionCounter < currentQuiz.Questions.count {
+      QuestionTextLabel.text = currentQuiz.Questions[currentQuestionCounter].question
+      buttonAnswer1.setTitle(currentQuiz.Questions[currentQuestionCounter].answer1, forState: .Normal)
+      buttonAnswer2.setTitle(currentQuiz.Questions[currentQuestionCounter].answer2,
         forState: .Normal)
-      buttonAnswer3.setTitle(currentQuizQuestions[currentQuestionCounter].answer3, forState: .Normal)
+      buttonAnswer3.setTitle(currentQuiz.Questions[currentQuestionCounter].answer3, forState: .Normal)
       
       questionNumberLabel.text = "\(currentQuestionCounter + 1)"
       scoreNumberLabel.text = "\(rightAnswersCounter)"
@@ -150,7 +93,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
   }
   
   func displayAnswerFeedback () {
-      QuestionTextLabel.text = "\(currentQuizQuestions[currentQuestionCounter].rightAnswerMessage)"
+      QuestionTextLabel.text = "\(currentQuiz.Questions[currentQuestionCounter].rightAnswerMessage)"
     }
   
 //  func resetQuiz() {
@@ -169,13 +112,14 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
       case "showResults":
         if let rvc: ResultsViewController =  segue.destinationViewController as? ResultsViewController {
               rvc.rightAnswersCounter = rightAnswersCounter
-              rvc.currentChapter = currentChapter
+              rvc.currentQuiz = currentQuiz
         }
+        
       case "Show Settings":
         if let svc = segue.destinationViewController as? SettingsTableViewController {
           if let ppc = svc.popoverPresentationController {
             ppc.delegate = self
-            if let mode = practiceMode {
+            if let mode = currentQuiz.practiceMode {
               svc.practiceMode = mode
             }
           }
@@ -203,18 +147,18 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     
     switch sender {
     case buttonAnswer1:
-      currentQuizQuestions[currentQuestionCounter].userAnswer = 1
+      currentQuiz.Questions[currentQuestionCounter].userAnswer = 1
     case buttonAnswer2:
-      currentQuizQuestions[currentQuestionCounter].userAnswer = 2
+      currentQuiz.Questions[currentQuestionCounter].userAnswer = 2
     case buttonAnswer3:
-      currentQuizQuestions[currentQuestionCounter].userAnswer = 3
+      currentQuiz.Questions[currentQuestionCounter].userAnswer = 3
     default:
-      currentQuizQuestions[currentQuestionCounter].userAnswer = 0
+      currentQuiz.Questions[currentQuestionCounter].userAnswer = 0
     }
     updateScore()
     scoreNumberLabel.text = "\(rightAnswersCounter)"
     
-    if practiceMode == true {
+    if currentQuiz.practiceMode == true {
     buttonAnswer1.hidden = true
     buttonAnswer2.hidden = true
     buttonAnswer3.hidden = true
@@ -234,7 +178,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
   
   @IBAction func continueButtonPressed(sender: AnyObject) {
     
-    if currentQuizQuestions[currentQuestionCounter].userAnswer == currentQuizQuestions[currentQuestionCounter].rightAnswer {
+    if currentQuiz.Questions[currentQuestionCounter].userAnswer == currentQuiz.Questions[currentQuestionCounter].rightAnswer {
     currentQuestionCounter++
 
     if (currentQuestionCounter) < 10 {

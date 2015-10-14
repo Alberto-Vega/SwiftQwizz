@@ -45,6 +45,7 @@ class HomeViewController: UIViewController, UIPopoverPresentationControllerDeleg
     
     if let identifier = segue.identifier {
       switch identifier {
+        
       case "ShowChapterListTableView":
         
         if let tvc: ChaptersListTableViewController =  segue.destinationViewController as? ChaptersListTableViewController {
@@ -55,6 +56,7 @@ class HomeViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }
       
       case "HomeShowSettings":
+        
         if let svc = segue.destinationViewController as? SettingsTableViewController {
           if let ppc = svc.popoverPresentationController {
             ppc.delegate = self
