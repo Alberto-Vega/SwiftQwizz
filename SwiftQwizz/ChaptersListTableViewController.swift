@@ -22,7 +22,7 @@ class ChaptersListTableViewController: UITableViewController {
       if let quizMode = currentQuiz?.practiceMode {
 //      let messageToPrint = ("\(quizInstance.practiceMode) ?? \(message)")
 //        print("\(message) \(messageToPrint)")
-        print("Practice mode is \(quizMode)")
+        print("Practice mode in tvc is \(quizMode)")
       }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -51,8 +51,8 @@ class ChaptersListTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCellWithIdentifier("ChaptersListItem", forIndexPath: indexPath)
-      
-       currentQuiz?.Chapter = self.Chapters[indexPath.row]
+      let index = indexPath.row
+        currentQuiz?.Chapter = self.Chapters[index]
       let chapterNameTextLabel = cell.viewWithTag(1) as! UILabel
       chapterNameTextLabel.text = currentQuiz?.Chapter
         return cell
@@ -102,9 +102,13 @@ class ChaptersListTableViewController: UITableViewController {
         if let LevelOneViewController = segue.destinationViewController as? LevelOneViewController {
         if let indexPath = self.tableView.indexPathForSelectedRow {
           let selectedRow = indexPath.row
-          let currentChapter = Chapters[selectedRow]
-          print(currentChapter)
-          LevelOneViewController.currentQuiz.Chapter = currentChapter
+          print("the table view tapped index is: \(selectedRow)")
+
+          let chapter = Chapters[selectedRow]
+          
+          currentQuiz?.Chapter = chapter
+//          print(currentChapter)
+//          LevelOneViewController.currentQuiz = currentQuiz!
           
         if let quiz = currentQuiz {
             LevelOneViewController.currentQuiz = quiz

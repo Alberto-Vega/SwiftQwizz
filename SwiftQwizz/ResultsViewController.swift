@@ -23,8 +23,10 @@ import UIKit
     super.viewDidLoad()
     setResultLabels()
     stylingButtons(startAgainButton)
-    print("The current chapter in resultsvc: \(currentQuiz?.Chapter)")
-      currentChapterLabel.text = "Chapter: \(currentQuiz?.Chapter)"
+    if let chapter = currentQuiz?.Chapter {
+    print("The current chapter in resultsvc: \(chapter)")
+      currentChapterLabel.text = "Chapter: \(chapter)"
+    }
   }
   
   override func didReceiveMemoryWarning() {
@@ -55,14 +57,12 @@ import UIKit
     }
   }
   
-  /*
   // MARK: - Navigation
   
-  // In a storyboard-based application, you will often want to do a little preparation before navigation
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-  // Get the new view controller using segue.destinationViewController.
-  // Pass the selected object to the new view controller.
+        if let tvc: ChaptersListTableViewController =  segue.destinationViewController as? ChaptersListTableViewController {
+          tvc.currentQuiz = currentQuiz
+    }
   }
-  */
   
 }

@@ -545,7 +545,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="5Ru-eA-dRO" kind="show" id="3UA-SD-nzk"/>
+                                    <segue destination="R6M-J8-CLz" kind="show" id="zAQ-kc-LGl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results Level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pn-l7-Es8">
@@ -956,7 +956,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChaptersListItem" id="j0m-Wx-qvg">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j0m-Wx-qvg" id="qB0-ho-kUg">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -1034,7 +1034,6 @@
         <image name="logo.png" width="2880" height="2880"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qzQ-X6-jqm"/>
         <segue reference="X1K-lK-jdB"/>
     </inferredMetricsTieBreakers>
 </document>
