@@ -9,7 +9,7 @@
 import Foundation
 
 struct Quiz {
-  var Chapter: String?
+  var chapter: Chapter?
   var questionPoolFromPlist = [Question]()
   var Questions = [Question]()
   var bestScore:Int?
@@ -17,6 +17,14 @@ struct Quiz {
   var practiceMode:Bool? {
     get { return defaults.objectForKey("Mode") as? Bool ?? false }
     set { defaults.setObject(newValue, forKey: "Mode") }
+  }
+  
+  func createChapters {
+    
+  }
+  
+  func selectChapter() {
+    
   }
   
  mutating func loadQuestionsFromPlistNamed(plistName: String) {
@@ -86,6 +94,18 @@ struct Question {
     self.rightAnswerMessage = rightAnswerMessage
   }
 }
+
+struct Chapter {
+  let name: String
+  let plistFileName: String
+  
+  init(name: String, plistFileName: String) {
+    self.name = name
+    self.plistFileName = name
+  }
+}
+
+
 
 
 
