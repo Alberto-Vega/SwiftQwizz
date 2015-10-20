@@ -25,17 +25,10 @@ struct Quiz {
     let theBasics = Chapter(name: "The Basics", plistFileName: "QuestionsData.plist")
     let basicOperators = Chapter(name: "Basic Operators", plistFileName: "QuestionsData.plist")
     chapters = [theBasics, basicOperators]
-//    chapters = ["The Basics", "Basic Operators", "Strings and Characters", "Collection Types", "Control Flow", "Functions", "Closures", "Enumerations", "Classes and Structures", "Properties", "Methods", "Subscripts", "Inheritance", "Initialization", "Deinitialization", "Automatic Reference Counting", "Optional Chaining", "Error Handling", "Type Casting", "Nested Types", "Extensions", "Protocols", "Generics", "Access Control", "Advanced Operators"]
-    
-  
-    
+    //    chapters = ["The Basics", "Basic Operators", "Strings and Characters", "Collection Types", "Control Flow", "Functions", "Closures", "Enumerations", "Classes and Structures", "Properties", "Methods", "Subscripts", "Inheritance", "Initialization", "Deinitialization", "Automatic Reference Counting", "Optional Chaining", "Error Handling", "Type Casting", "Nested Types", "Extensions", "Protocols", "Generics", "Access Control", "Advanced Operators"]
   }
   
-  func selectChapter() {
-    
-  }
-  
- mutating func loadQuestionsFromPlistNamed(plistName: String) {
+  mutating func loadQuestionsFromPlistNamed(plistName: String) {
     print("Loading Questions from Plist")
     let questionsPath = NSBundle.mainBundle().pathForResource(plistName, ofType: "plist")
     if let questionObjects = NSArray(contentsOfFile: questionsPath!) as? [[String: AnyObject]] {
@@ -50,15 +43,13 @@ struct Quiz {
   }
   
   mutating func createQuizFromRandomQuestions() {
+    
     print("Creating current quiz from random questions on Plist")
     var previousIndexes = [Int]()
-    
     while Questions.count < 10 {
       print("picking a random question index number...")
-      
       var randomIndex:Int?
       randomIndex = Int(arc4random_uniform(UInt32(questionPoolFromPlist.count)))
-//      newIndex =randomIndex
       print("the random index number picked is \(randomIndex)")
       
       if previousIndexes.indexOf(randomIndex!) != nil {

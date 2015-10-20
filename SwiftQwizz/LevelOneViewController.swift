@@ -39,10 +39,9 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    print("The current chapter is \(currentQuiz.currentChapter?.name)")
     print("The LevelOneViewControler practice mode: \(currentQuiz.practiceMode)")
     currentChapterTextLabel.text = currentQuiz.currentChapter?.name
-currentQuiz.loadQuestionsFromPlistNamed("QuestionsData")
+    currentQuiz.loadQuestionsFromPlistNamed("QuestionsData")
     currentQuiz.createQuizFromRandomQuestions()
     displayCurrentQuestion()
   }
@@ -59,22 +58,21 @@ currentQuiz.loadQuestionsFromPlistNamed("QuestionsData")
     button.layer.shadowOpacity = 0.5
   }
   
-
   func updateScore() {
     if currentQuiz.Questions[currentQuestionCounter].correctAnswer {
       rightAnswersCounter += 1
       rightOrWrongTextLabel.text = "Yes!"
       if currentQuiz.practiceMode == true {
-      displayAnswerFeedback()
-      stylingButtons(continueButton)
-      continueButton.hidden = false
+        displayAnswerFeedback()
+        stylingButtons(continueButton)
+        continueButton.hidden = false
       }
     } else {
       rightOrWrongTextLabel.text = "Wrong"
       QuestionTextLabel.text = "Please try again."
       if currentQuiz.practiceMode == true {
-      stylingButtons(continueButton)
-      continueButton.hidden = false
+        stylingButtons(continueButton)
+        continueButton.hidden = false
       }
     }
   }
@@ -93,26 +91,24 @@ currentQuiz.loadQuestionsFromPlistNamed("QuestionsData")
   }
   
   func displayAnswerFeedback () {
-      QuestionTextLabel.text = "\(currentQuiz.Questions[currentQuestionCounter].rightAnswerMessage)"
-    }
-  
-//  func resetQuiz() {
-//    rightAnswersCounter = 0
-//    currentQuestionCounter = 0
-//    currentQuizQuestions = []
-//    println("Reseting questions to start again")
-//    createQuizFromRandomQuestions()
-//    displayCurrentQuestion()
-//  }
+    QuestionTextLabel.text = "\(currentQuiz.Questions[currentQuestionCounter].rightAnswerMessage)"
+  }
+  //  func resetQuiz() {
+  //    rightAnswersCounter = 0
+  //    currentQuestionCounter = 0
+  //    currentQuizQuestions = []
+  //    println("Reseting questions to start again")
+  //    createQuizFromRandomQuestions()
+  //    displayCurrentQuestion()
+  //  }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    
     if let identifier = segue.identifier {
       switch identifier {
       case "showResults":
         if let rvc: ResultsViewController =  segue.destinationViewController as? ResultsViewController {
-              rvc.rightAnswersCounter = rightAnswersCounter
-              rvc.currentQuiz = currentQuiz
+          rvc.rightAnswersCounter = rightAnswersCounter
+          rvc.currentQuiz = currentQuiz
         }
         
       case "Show Settings":
@@ -127,16 +123,16 @@ currentQuiz.loadQuestionsFromPlistNamed("QuestionsData")
       default: break
       }
       
-
-//    if segue.identifier == "showResults" {
-//      var resultsVC: ResultsViewController =  segue.destinationViewController as! ResultsViewController
-//      resultsVC.rightAnswersCounter = rightAnswersCounter
-//      resultsVC.currentLevel = "Level I"
-//    } else {
-//      var levelTwoVC: LevelTwoViewController = segue.destinationViewController as! LevelTwoViewController
-//      levelTwoVC.practiceMode = practiceMode
-//    }
-  }
+      
+      //    if segue.identifier == "showResults" {
+      //      var resultsVC: ResultsViewController =  segue.destinationViewController as! ResultsViewController
+      //      resultsVC.rightAnswersCounter = rightAnswersCounter
+      //      resultsVC.currentLevel = "Level I"
+      //    } else {
+      //      var levelTwoVC: LevelTwoViewController = segue.destinationViewController as! LevelTwoViewController
+      //      levelTwoVC.practiceMode = practiceMode
+      //    }
+    }
   }
   
   func adaptivePresentationStyleForPresentationController(controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
@@ -159,33 +155,33 @@ currentQuiz.loadQuestionsFromPlistNamed("QuestionsData")
     scoreNumberLabel.text = "\(rightAnswersCounter)"
     
     if currentQuiz.practiceMode == true {
-    buttonAnswer1.hidden = true
-    buttonAnswer2.hidden = true
-    buttonAnswer3.hidden = true
-    QuestionTextLabel.hidden = true
-    self.view.backgroundColor = UIColor.orangeColor()
+      buttonAnswer1.hidden = true
+      buttonAnswer2.hidden = true
+      buttonAnswer3.hidden = true
+      QuestionTextLabel.hidden = true
+      self.view.backgroundColor = UIColor.orangeColor()
     } else {
       currentQuestionCounter++
     }
-
+    
     if (currentQuestionCounter) < 10 {
       displayCurrentQuestion()
     } else {
       self.performSegueWithIdentifier("showResults", sender:self)
     }
     print("the current index in the exam array is " + "\(currentQuestionCounter)")
-      }
+  }
   
   @IBAction func continueButtonPressed(sender: AnyObject) {
     
     if currentQuiz.Questions[currentQuestionCounter].userAnswer == currentQuiz.Questions[currentQuestionCounter].rightAnswer {
-    currentQuestionCounter++
-
-    if (currentQuestionCounter) < 10 {
-      displayCurrentQuestion()
-    } else {
-  self.performSegueWithIdentifier("showResults", sender:self)
-    }
+      currentQuestionCounter++
+      
+      if (currentQuestionCounter) < 10 {
+        displayCurrentQuestion()
+      } else {
+        self.performSegueWithIdentifier("showResults", sender:self)
+      }
     }
     self.view.backgroundColor = UIColor.whiteColor()
     continueButton.hidden = true
@@ -194,9 +190,9 @@ currentQuiz.loadQuestionsFromPlistNamed("QuestionsData")
     buttonAnswer3.hidden = false
     QuestionTextLabel.hidden = false
   }
-
+  
   @IBAction func goBack(segue: UIStoryboardSegue) {
-  print("Someone unwind back to me")
-}
+    print("Someone unwind back to me")
+  }
 }
 
