@@ -9,7 +9,8 @@
 import Foundation
 
 struct Quiz {
-  var chapter: Chapter?
+  var chapters = [Chapter]()
+  var currentChapter: Chapter?
   var questionPoolFromPlist = [Question]()
   var Questions = [Question]()
   var bestScore:Int?
@@ -19,7 +20,14 @@ struct Quiz {
     set { defaults.setObject(newValue, forKey: "Mode") }
   }
   
-  func createChapters {
+  mutating func createChapters() {
+    
+    let theBasics = Chapter(name: "The Basics", plistFileName: "QuestionsData.plist")
+    let basicOperators = Chapter(name: "Basic Operators", plistFileName: "QuestionsData.plist")
+    chapters = [theBasics, basicOperators]
+//    chapters = ["The Basics", "Basic Operators", "Strings and Characters", "Collection Types", "Control Flow", "Functions", "Closures", "Enumerations", "Classes and Structures", "Properties", "Methods", "Subscripts", "Inheritance", "Initialization", "Deinitialization", "Automatic Reference Counting", "Optional Chaining", "Error Handling", "Type Casting", "Nested Types", "Extensions", "Protocols", "Generics", "Access Control", "Advanced Operators"]
+    
+  
     
   }
   
@@ -96,7 +104,7 @@ struct Question {
 }
 
 struct Chapter {
-  let name: String
+  var name: String
   let plistFileName: String
   
   init(name: String, plistFileName: String) {

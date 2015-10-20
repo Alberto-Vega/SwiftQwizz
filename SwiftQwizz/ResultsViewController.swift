@@ -23,7 +23,7 @@ import UIKit
     super.viewDidLoad()
     setResultLabels()
     stylingButtons(startAgainButton)
-    if let chapter = currentQuiz?.Chapter {
+    if let chapter = currentQuiz?.currentChapter {
     print("The current chapter in resultsvc: \(chapter)")
       currentChapterLabel.text = "Chapter: \(chapter)"
     }
@@ -61,7 +61,7 @@ import UIKit
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let tvc: ChaptersListTableViewController =  segue.destinationViewController as? ChaptersListTableViewController {
-          tvc.currentQuiz = currentQuiz
+          tvc.currentQuiz = currentQuiz!
     }
   }
   

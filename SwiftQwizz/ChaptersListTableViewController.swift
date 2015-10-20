@@ -9,17 +9,19 @@
 import UIKit
 
 class ChaptersListTableViewController: UITableViewController {
-  var currentQuiz:Quiz?
+  
+  var currentQuiz = Quiz()
   
   
-  var Chapters = ["The Basics", "Basic Operators", "Strings and Characters", "Collection Types", "Control Flow", "Functions", "Closures", "Enumerations", "Classes and Structures", "Properties", "Methods", "Subscripts", "Inheritance", "Initialization", "Deinitialization", "Automatic Reference Counting", "Optional Chaining", "Error Handling", "Type Casting", "Nested Types", "Extensions", "Protocols", "Generics", "Access Control", "Advanced Operators"]
+  
   
 //    var practiceMode:Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      currentQuiz.createChapters()
 //      let message = "The Class instance was not received in table view"
-      if let quizMode = currentQuiz?.practiceMode {
+      if let quizMode = currentQuiz.practiceMode {
 //      let messageToPrint = ("\(quizInstance.practiceMode) ?? \(message)")
 //        print("\(message) \(messageToPrint)")
         print("Practice mode in tvc is \(quizMode)")
@@ -45,16 +47,16 @@ class ChaptersListTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Chapters.count
+        return currentQuiz.chapters.count
       
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCellWithIdentifier("ChaptersListItem", forIndexPath: indexPath)
       let index = indexPath.row
-        currentQuiz?.Chapter = self.Chapters[index]
+        currentQuiz.currentChapter = self.currentQuiz.chapters[index]
       let chapterNameTextLabel = cell.viewWithTag(1) as! UILabel
-      chapterNameTextLabel.text = currentQuiz?.Chapter
+      chapterNameTextLabel.text = currentQuiz.currentChapter?.name
         return cell
     }
     
@@ -104,17 +106,16 @@ class ChaptersListTableViewController: UITableViewController {
           let selectedRow = indexPath.row
           print("the table view tapped index is: \(selectedRow)")
 
-          let chapter = Chapters[selectedRow]
+          let chapter = currentQuiz.chapters[selectedRow]
           
-          currentQuiz?.Chapter = chapter
+          currentQuiz.currentChapter = chapter
 //          print(currentChapter)
 //          LevelOneViewController.currentQuiz = currentQuiz!
           
-        if let quiz = currentQuiz {
-            LevelOneViewController.currentQuiz = quiz
+      
+            LevelOneViewController.currentQuiz = currentQuiz
           }
         }
       }
     }
-}
 }

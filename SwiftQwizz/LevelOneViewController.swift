@@ -39,9 +39,9 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    print("The current chapter is \(currentQuiz.Chapter)")
+    print("The current chapter is \(currentQuiz.currentChapter?.name)")
     print("The LevelOneViewControler practice mode: \(currentQuiz.practiceMode)")
-    currentChapterTextLabel.text = currentQuiz.Chapter
+    currentChapterTextLabel.text = currentQuiz.currentChapter?.name
 currentQuiz.loadQuestionsFromPlistNamed("QuestionsData")
     currentQuiz.createQuizFromRandomQuestions()
     displayCurrentQuestion()
