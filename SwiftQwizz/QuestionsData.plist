@@ -228,7 +228,7 @@
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>To add another item to our todo array we use the operator:</string>
+		<string>To add an array to another array we use the operator:</string>
 		<key>answer1</key>
 		<string>+=</string>
 		<key>answer2</key>
@@ -238,7 +238,7 @@
 		<key>rightAnswer</key>
 		<integer>1</integer>
     <key>rightAnswerMessage</key>
-    <string>To add another item to our todo array we use the operator: +=</string>
+    <string>To add an array to another array we use the operator: +=</string>
 	</dict>
 		<dict>
 		<key>question</key>
