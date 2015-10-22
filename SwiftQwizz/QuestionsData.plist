@@ -186,17 +186,18 @@
 	</dict>
   <dict>
     <key>question</key>
-    <string>Swift provides an additional integer type, Int. Which has the same size as the current platform’s native word size</string>
+    <string>Swift provides an additional integer type. Which has the same size as the current platform’s native word size. On a 32-bit platform, Int is the same size as Int32. On a 64-bit platform, Int is the same size as Int64.
+    </string>
     <key>answer1</key>
     <string>UInt8</string>
     <key>answer2</key>
-    <string>Int64bit</string>
+    <string>UInt64bit</string>
     <key>answer3</key>
     <string>Int</string>
     <key>rightAnswer</key>
     <integer>3</integer>
     <key>rightAnswerMessage</key>
-    <string>Swift provides an additional integer type, Int, which has the same size as the current platform’s native word size</string>
+    <string>Swift provides an additional integer type, 'Int'. Which has the same size as the current platform’s native word size. On a 32-bit platform, Int is the same size as Int32. “On a 64-bit platform, Int is the same size as Int64.</string>
   </dict>
 	<dict>
 		<key>question</key>
