@@ -19,6 +19,8 @@ struct Quiz {
     get { return defaults.objectForKey("Mode") as? Bool ?? false }
     set { defaults.setObject(newValue, forKey: "Mode") }
   }
+}
+extension Quiz {
   
   mutating func createChapters() {
     
@@ -40,7 +42,8 @@ struct Quiz {
         }
       }
     }
-  }
+        }
+  
   
   mutating func createQuizFromRandomQuestions() {
     
@@ -62,6 +65,7 @@ struct Quiz {
     }
   }
 }
+
 
 struct Question {
   var question: String
