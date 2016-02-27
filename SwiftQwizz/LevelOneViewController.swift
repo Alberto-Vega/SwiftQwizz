@@ -44,6 +44,8 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     currentQuiz.loadQuestionsFromPlistNamed("QuestionsData")
     currentQuiz.createQuizFromRandomQuestions()
     displayCurrentQuestion()
+    rightOrWrongTextLabel.hidden = true
+    continueButton.hidden = true
   }
   
   override func didReceiveMemoryWarning() {
@@ -159,7 +161,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
       buttonAnswer2.hidden = true
       buttonAnswer3.hidden = true
       QuestionTextLabel.hidden = true
-      self.view.backgroundColor = UIColor.orangeColor()
+//      self.view.backgroundColor = UIColor.orangeColor()
     } else {
       currentQuestionCounter++
     }
@@ -185,6 +187,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     }
     self.view.backgroundColor = UIColor.whiteColor()
     continueButton.hidden = true
+    rightOrWrongTextLabel.hidden = true
     buttonAnswer1.hidden = false
     buttonAnswer2.hidden = false
     buttonAnswer3.hidden = false
