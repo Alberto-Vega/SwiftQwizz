@@ -45,7 +45,7 @@ class ChaptersListTableViewController: UITableViewController {
       if let LevelOneViewController = segue.destinationViewController as? LevelOneViewController {
         if let indexPath = self.tableView.indexPathForSelectedRow {
           let selectedRow = indexPath.row
-          print("the table view tapped index is: \(selectedRow)")
+//          print("the table view tapped index is: \(selectedRow)")
           let chapter = currentQuiz.chapters[selectedRow]
           currentQuiz.currentChapter = chapter
           LevelOneViewController.currentQuiz = currentQuiz

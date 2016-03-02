@@ -23,7 +23,7 @@ import UIKit
     setResultLabels()
     stylingButtons(startAgainButton)
     if let chapter = currentQuiz?.currentChapter {
-    print("The current chapter in resultsvc: \(chapter)")
+//    print("The current chapter in resultsvc: \(chapter)")
       currentChapterLabel.text = "Chapter: \(chapter.name)"
     }
   }
@@ -42,7 +42,7 @@ import UIKit
   
   func setResultLabels() {
     if let rightAnswers = rightAnswersCounter {
-      print(" This is the unwrapped opcional value for right answers counter \(rightAnswers)")
+//      print(" This is the unwrapped opcional value for right answers counter \(rightAnswers)")
       let accuracyPercentage = (Double(rightAnswers)/10)*100
       if accuracyPercentage < 60 {
         endOfQuizMessage!.text = "Good try!"

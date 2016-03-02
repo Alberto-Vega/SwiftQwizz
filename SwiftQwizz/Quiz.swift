@@ -33,7 +33,7 @@ extension Quiz {
   }
   
   mutating func loadQuestionsFromPlistNamed(plistName: String) {
-    print("Loading Questions from Plist")
+//    print("Loading Questions from Plist")
     let questionsPath = NSBundle.mainBundle().pathForResource(plistName, ofType: "plist")
     if let questionObjects = NSArray(contentsOfFile: questionsPath!) as? [[String: AnyObject]] {
       for question in questionObjects {
@@ -49,7 +49,7 @@ extension Quiz {
   
   mutating func createQuizFromRandomQuestions() {
     
-    print("Creating current quiz from random questions on Plist")
+//    print("Creating current quiz from random questions on Plist")
     var previousIndexes = [Int]()
     while Questions.count < 10 {
 //      print("picking a random question index number...")
