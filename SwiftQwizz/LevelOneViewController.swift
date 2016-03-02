@@ -66,19 +66,19 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
       scoreNumberLabel.text = "\(rightAnswersCounter)"
       rightOrWrongTextLabel.text = "Yes!"
         
-      if currentQuiz.practiceMode == true {
-        displayAnswerFeedback()
-        stylingButtons(continueButton)
-        continueButton.hidden = false
-      }
+//      if currentQuiz.practiceMode == true {
+//        displayAnswerFeedback()
+//        stylingButtons(continueButton)
+//        continueButton.hidden = false
+//      }
     } else {
       rightOrWrongTextLabel.text = "Wrong"
       QuestionTextLabel.text = "Please try again."
         
-      if currentQuiz.practiceMode == true {
-        stylingButtons(continueButton)
-        continueButton.hidden = false
-      }
+//      if currentQuiz.practiceMode == true {
+//        stylingButtons(continueButton)
+//        continueButton.hidden = false
+//      }
     }
   }
   
@@ -116,15 +116,15 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
           rvc.currentQuiz = currentQuiz
         }
         
-      case "Show Settings":
-        if let svc = segue.destinationViewController as? SettingsTableViewController {
-          if let ppc = svc.popoverPresentationController {
-            ppc.delegate = self
-            if let mode = currentQuiz.practiceMode {
-              svc.practiceMode = mode
-            }
-          }
-        }
+//      case "Show Settings":
+//        if let svc = segue.destinationViewController as? SettingsTableViewController {
+//          if let ppc = svc.popoverPresentationController {
+//            ppc.delegate = self
+////            if let mode = currentQuiz.practiceMode {
+////              svc.practiceMode = mode
+////            }
+//          }
+//        }
       default: break
       }
       
@@ -158,17 +158,17 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     }
     updateScore()
     
-    if currentQuiz.practiceMode == true {
-      buttonAnswer1.hidden = true
-      buttonAnswer2.hidden = true
-      buttonAnswer3.hidden = true
-      QuestionTextLabel.hidden = false
-      rightOrWrongTextLabel.hidden = false
-        continueButton.hidden = false
-//      self.view.backgroundColor = UIColor.orangeColor()
-    } else {
+//    if currentQuiz.practiceMode == true {
+//      buttonAnswer1.hidden = true
+//      buttonAnswer2.hidden = true
+//      buttonAnswer3.hidden = true
+//      QuestionTextLabel.hidden = false
+//      rightOrWrongTextLabel.hidden = false
+//        continueButton.hidden = false
+////      self.view.backgroundColor = UIColor.orangeColor()
+//    } else {
       currentQuestionCounter++
-    }
+//    }
     
     if (currentQuestionCounter) < 10 {
       displayCurrentQuestion()

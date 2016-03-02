@@ -15,10 +15,10 @@ struct Quiz {
   var Questions = [Question]()
   var bestScore:Int?
   var defaults = NSUserDefaults.standardUserDefaults()
-  var practiceMode:Bool? {
-    get { return defaults.objectForKey("Mode") as? Bool ?? false }
-    set { defaults.setObject(newValue, forKey: "Mode") }
-  }
+//  var practiceMode:Bool? {
+//    get { return defaults.objectForKey("Mode") as? Bool ?? false }
+//    set { defaults.setObject(newValue, forKey: "Mode") }
+//  }
 }
 extension Quiz {
   

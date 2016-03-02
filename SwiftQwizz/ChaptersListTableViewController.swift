@@ -16,9 +16,9 @@ class ChaptersListTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     currentQuiz.createChapters()
-    if let quizMode = currentQuiz.practiceMode {
-      print("Practice mode in tvc is \(quizMode)")
-    }
+//    if let quizMode = currentQuiz.practiceMode {
+//      print("Practice mode in tvc is \(quizMode)")
+//    }
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = false
   }

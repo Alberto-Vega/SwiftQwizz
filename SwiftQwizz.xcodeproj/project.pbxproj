@@ -12,16 +12,15 @@
 		BF357B9C1BC75BA000D0C072 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF357B9A1BC75BA000D0C072 /* LaunchScreen.storyboard */; };
 		BF357BA71BC75BA000D0C072 /* SwiftQwizzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BA61BC75BA000D0C072 /* SwiftQwizzTests.swift */; };
 		BF357BB21BC75BA000D0C072 /* SwiftQwizzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BB11BC75BA000D0C072 /* SwiftQwizzUITests.swift */; };
-		BF357BC01BC75BF100D0C072 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BBF1BC75BF100D0C072 /* Quiz.swift */; settings = {ASSET_TAGS = (); }; };
-		BF357BC61BC76EC700D0C072 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BC51BC76EC700D0C072 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BF357BC81BC76EEC00D0C072 /* LevelOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BC71BC76EEC00D0C072 /* LevelOneViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BF357BCA1BC76F0500D0C072 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF357BC91BC76F0500D0C072 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		BF357BCC1BC76F1400D0C072 /* QuestionsDataLevelTwo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF357BCB1BC76F1400D0C072 /* QuestionsDataLevelTwo.plist */; settings = {ASSET_TAGS = (); }; };
-		BF357BCE1BC76F2400D0C072 /* QuestionsData.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF357BCD1BC76F2400D0C072 /* QuestionsData.plist */; settings = {ASSET_TAGS = (); }; };
-		BF357BD01BC76F6300D0C072 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BCF1BC76F6300D0C072 /* ResultsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BF357BD21BC76F6C00D0C072 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BD11BC76F6C00D0C072 /* SettingsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BF357BD41BC8A7D400D0C072 /* ChaptersListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BD31BC8A7D400D0C072 /* ChaptersListTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BF357BD61BC8C67000D0C072 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF357BD51BC8C67000D0C072 /* logo.png */; settings = {ASSET_TAGS = (); }; };
+		BF357BC01BC75BF100D0C072 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BBF1BC75BF100D0C072 /* Quiz.swift */; };
+		BF357BC61BC76EC700D0C072 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BC51BC76EC700D0C072 /* HomeViewController.swift */; };
+		BF357BC81BC76EEC00D0C072 /* LevelOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BC71BC76EEC00D0C072 /* LevelOneViewController.swift */; };
+		BF357BCA1BC76F0500D0C072 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF357BC91BC76F0500D0C072 /* Main.storyboard */; };
+		BF357BCC1BC76F1400D0C072 /* QuestionsDataLevelTwo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF357BCB1BC76F1400D0C072 /* QuestionsDataLevelTwo.plist */; };
+		BF357BCE1BC76F2400D0C072 /* QuestionsData.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF357BCD1BC76F2400D0C072 /* QuestionsData.plist */; };
+		BF357BD01BC76F6300D0C072 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BCF1BC76F6300D0C072 /* ResultsViewController.swift */; };
+		BF357BD41BC8A7D400D0C072 /* ChaptersListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BD31BC8A7D400D0C072 /* ChaptersListTableViewController.swift */; };
+		BF357BD61BC8C67000D0C072 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF357BD51BC8C67000D0C072 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +59,6 @@
 		BF357BCB1BC76F1400D0C072 /* QuestionsDataLevelTwo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuestionsDataLevelTwo.plist; sourceTree = "<group>"; };
 		BF357BCD1BC76F2400D0C072 /* QuestionsData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuestionsData.plist; sourceTree = "<group>"; };
 		BF357BCF1BC76F6300D0C072 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsViewController.swift; path = SwiftQwizz/ResultsViewController.swift; sourceTree = "<group>"; };
-		BF357BD11BC76F6C00D0C072 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = SwiftQwizz/SettingsTableViewController.swift; sourceTree = "<group>"; };
 		BF357BD31BC8A7D400D0C072 /* ChaptersListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChaptersListTableViewController.swift; path = SwiftQwizz/ChaptersListTableViewController.swift; sourceTree = "<group>"; };
 		BF357BD51BC8C67000D0C072 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				BF357BC51BC76EC700D0C072 /* HomeViewController.swift */,
-				BF357BD11BC76F6C00D0C072 /* SettingsTableViewController.swift */,
 				BF357BD31BC8A7D400D0C072 /* ChaptersListTableViewController.swift */,
 				BF357BC71BC76EEC00D0C072 /* LevelOneViewController.swift */,
 				BF357BCF1BC76F6300D0C072 /* ResultsViewController.swift */,
@@ -302,7 +299,6 @@
 				BF357BC61BC76EC700D0C072 /* HomeViewController.swift in Sources */,
 				BF357BC81BC76EEC00D0C072 /* LevelOneViewController.swift in Sources */,
 				BF357BD01BC76F6300D0C072 /* ResultsViewController.swift in Sources */,
-				BF357BD21BC76F6C00D0C072 /* SettingsTableViewController.swift in Sources */,
 				BF357BD41BC8A7D400D0C072 /* ChaptersListTableViewController.swift in Sources */,
 				BF357B921BC75BA000D0C072 /* AppDelegate.swift in Sources */,
 				BF357BC01BC75BF100D0C072 /* Quiz.swift in Sources */,

@@ -25,10 +25,10 @@ class HomeViewController: UIViewController, UIPopoverPresentationControllerDeleg
   }
   
   override func viewWillAppear(animated: Bool) {
-    if let mode = currentQuiz.practiceMode {
-      
-      print("The initial state of practice Mode in HomeView: \(mode)")
-    }
+//    if let mode = currentQuiz.practiceMode {
+//      
+//      print("The initial state of practice Mode in HomeView: \(mode)")
+//    }
   }
   
   override func didReceiveMemoryWarning() {
@@ -50,16 +50,16 @@ class HomeViewController: UIViewController, UIPopoverPresentationControllerDeleg
           //          }
         }
         
-      case "HomeShowSettings":
+//      case "HomeShowSettings":
         
-        if let svc = segue.destinationViewController as? SettingsTableViewController {
-          if let ppc = svc.popoverPresentationController {
-            ppc.delegate = self
-            if let mode = currentQuiz.practiceMode {
-              svc.practiceMode = mode
-            }
-          }
-        }
+//        if let svc = segue.destinationViewController as? SettingsTableViewController {
+//          if let ppc = svc.popoverPresentationController {
+//            ppc.delegate = self
+////            if let mode = currentQuiz.practiceMode {
+////              svc.practiceMode = mode
+////            }
+//          }
+//        }
       default: break
       }
     }

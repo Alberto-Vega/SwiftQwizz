@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="R6M-J8-CLz">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -351,13 +350,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="m0N-Ph-jfl">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="scG-Ry-Svi">
-                            <connections>
-                                <segue destination="fDt-2H-9qD" kind="popoverPresentation" identifier="Show Settings" popoverAnchorBarButtonItem="scG-Ry-Svi" id="X1K-lK-jdB">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="scG-Ry-Svi"/>
                     </navigationItem>
                     <connections>
                         <outlet property="QuestionTextLabel" destination="p74-sk-Hyh" id="Mip-Wt-IUE"/>
@@ -665,15 +658,7 @@
                             <constraint firstItem="UK0-p0-GQY" firstAttribute="centerX" secondItem="g6H-d6-Wni" secondAttribute="centerX" id="fuG-iR-yo4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="SmM-75-Apr">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="tPL-PA-wnc">
-                            <connections>
-                                <segue destination="fDt-2H-9qD" kind="popoverPresentation" identifier="HomeShowSettings" popoverAnchorBarButtonItem="tPL-PA-wnc" id="N2r-1z-O40">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="SmM-75-Apr"/>
                     <connections>
                         <outlet property="startButton" destination="Eh9-Nu-caD" id="Scn-59-egt"/>
                     </connections>
@@ -681,106 +666,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAB-ia-he4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="13" y="313"/>
-        </scene>
-        <!--Settings Table View Controller-->
-        <scene sceneID="DKs-Il-ijk">
-            <objects>
-                <tableViewController id="fDt-2H-9qD" customClass="SettingsTableViewController" customModule="SwiftQwizz" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jo6-Jm-RBj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="sBB-hs-Whm">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsItem" id="px3-yR-FZW">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="px3-yR-FZW" id="Xyl-0t-pG4">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Practice Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xps-62-GPY">
-                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Axx-0h-eAJ">
-                                                    <rect key="frame" x="-25" y="-15" width="51" height="31"/>
-                                                    <connections>
-                                                        <action selector="begginnerOrAdvancedSwitch:" destination="fDt-2H-9qD" eventType="valueChanged" id="Sjw-jK-VJI"/>
-                                                    </connections>
-                                                </switch>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Axx-0h-eAJ" firstAttribute="centerY" secondItem="Xyl-0t-pG4" secondAttribute="centerY" id="Pcw-8J-AWO"/>
-                                                <constraint firstItem="xps-62-GPY" firstAttribute="centerY" secondItem="Axx-0h-eAJ" secondAttribute="centerY" id="Zwy-ed-75V"/>
-                                                <constraint firstItem="xps-62-GPY" firstAttribute="leading" secondItem="Xyl-0t-pG4" secondAttribute="leadingMargin" id="c24-oh-R62"/>
-                                                <constraint firstItem="Axx-0h-eAJ" firstAttribute="trailing" secondItem="Xyl-0t-pG4" secondAttribute="trailingMargin" id="drQ-3G-Qz1"/>
-                                                <constraint firstItem="xps-62-GPY" firstAttribute="centerY" secondItem="Axx-0h-eAJ" secondAttribute="centerY" id="ted-M0-Y2e"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="xps-62-GPY"/>
-                                                    <exclude reference="Axx-0h-eAJ"/>
-                                                </mask>
-                                                <mask key="constraints">
-                                                    <exclude reference="Pcw-8J-AWO"/>
-                                                    <exclude reference="drQ-3G-Qz1"/>
-                                                    <exclude reference="Zwy-ed-75V"/>
-                                                    <exclude reference="c24-oh-R62"/>
-                                                    <exclude reference="ted-M0-Y2e"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="subviews">
-                                                    <include reference="xps-62-GPY"/>
-                                                    <include reference="Axx-0h-eAJ"/>
-                                                </mask>
-                                                <mask key="constraints">
-                                                    <include reference="Pcw-8J-AWO"/>
-                                                    <include reference="drQ-3G-Qz1"/>
-                                                    <include reference="Zwy-ed-75V"/>
-                                                    <include reference="c24-oh-R62"/>
-                                                    <exclude reference="ted-M0-Y2e"/>
-                                                </mask>
-                                            </variation>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsItem" id="ORo-7S-HUu">
-                                        <rect key="frame" x="0.0" y="44" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ORo-7S-HUu" id="aKe-j2-a7H">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsItem" id="WQG-RE-2hs">
-                                        <rect key="frame" x="0.0" y="88" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WQG-RE-2hs" id="1XD-BR-16n">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="fDt-2H-9qD" id="rAY-jU-PY8"/>
-                            <outlet property="delegate" destination="fDt-2H-9qD" id="bEl-ng-HDj"/>
-                        </connections>
-                    </tableView>
-                    <value key="contentSizeForViewInPopover" type="size" width="200" height="50"/>
-                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="practiceModeSwitch" destination="Axx-0h-eAJ" id="SRF-it-u8F"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xZo-sK-Gja" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1903" y="1065"/>
         </scene>
         <!--Chapters List Table View Controller-->
         <scene sceneID="VLb-la-TOj">
@@ -867,7 +752,4 @@
     <resources>
         <image name="logo.png" width="2880" height="2880"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="X1K-lK-jdB"/>
-    </inferredMetricsTieBreakers>
 </document>
