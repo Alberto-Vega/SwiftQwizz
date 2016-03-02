@@ -39,11 +39,13 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    print("The LevelOneViewControler practice mode: \(currentQuiz.practiceMode)")
+//    print("The LevelOneViewControler practice mode: \(currentQuiz.practiceMode)")
     currentChapterTextLabel.text = currentQuiz.currentChapter?.name
     currentQuiz.loadQuestionsFromPlistNamed("QuestionsData")
     currentQuiz.createQuizFromRandomQuestions()
     displayCurrentQuestion()
+    rightOrWrongTextLabel.hidden = true
+    continueButton.hidden = true
   }
   
   override func didReceiveMemoryWarning() {
@@ -60,8 +62,10 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
   
   func updateScore() {
     if currentQuiz.Questions[currentQuestionCounter].correctAnswer {
-      rightAnswersCounter += 1
+      rightAnswersCounter++
+      scoreNumberLabel.text = "\(rightAnswersCounter)"
       rightOrWrongTextLabel.text = "Yes!"
+        
       if currentQuiz.practiceMode == true {
         displayAnswerFeedback()
         stylingButtons(continueButton)
@@ -70,6 +74,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     } else {
       rightOrWrongTextLabel.text = "Wrong"
       QuestionTextLabel.text = "Please try again."
+        
       if currentQuiz.practiceMode == true {
         stylingButtons(continueButton)
         continueButton.hidden = false
@@ -152,14 +157,15 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
       currentQuiz.Questions[currentQuestionCounter].userAnswer = 0
     }
     updateScore()
-    scoreNumberLabel.text = "\(rightAnswersCounter)"
     
     if currentQuiz.practiceMode == true {
       buttonAnswer1.hidden = true
       buttonAnswer2.hidden = true
       buttonAnswer3.hidden = true
-      QuestionTextLabel.hidden = true
-      self.view.backgroundColor = UIColor.orangeColor()
+      QuestionTextLabel.hidden = false
+      rightOrWrongTextLabel.hidden = false
+        continueButton.hidden = false
+//      self.view.backgroundColor = UIColor.orangeColor()
     } else {
       currentQuestionCounter++
     }
@@ -169,7 +175,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     } else {
       self.performSegueWithIdentifier("showResults", sender:self)
     }
-    print("the current index in the exam array is " + "\(currentQuestionCounter)")
+//    print("the current index in the exam array is " + "\(currentQuestionCounter)")
   }
   
   @IBAction func continueButtonPressed(sender: AnyObject) {
@@ -185,6 +191,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     }
     self.view.backgroundColor = UIColor.whiteColor()
     continueButton.hidden = true
+    rightOrWrongTextLabel.hidden = true
     buttonAnswer1.hidden = false
     buttonAnswer2.hidden = false
     buttonAnswer3.hidden = false

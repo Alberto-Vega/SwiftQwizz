@@ -19,6 +19,8 @@ struct Quiz {
     get { return defaults.objectForKey("Mode") as? Bool ?? false }
     set { defaults.setObject(newValue, forKey: "Mode") }
   }
+}
+extension Quiz {
   
   mutating func createChapters() {
     
@@ -40,7 +42,8 @@ struct Quiz {
         }
       }
     }
-  }
+        }
+  
   
   mutating func createQuizFromRandomQuestions() {
     
@@ -63,6 +66,7 @@ struct Quiz {
   }
 }
 
+
 struct Question {
   var question: String
   var answer1: String
@@ -74,8 +78,8 @@ struct Question {
       print("The new value of userAnswer is:\(newValue)")
     }
     didSet {
-      if let answer = userAnswer {
-        correctAnswer = answer == rightAnswer ? true : false
+      if let userAnswer = userAnswer {
+        correctAnswer = userAnswer == rightAnswer ? true : false
         print("User answer is correct: \(correctAnswer)")
       }
     }
