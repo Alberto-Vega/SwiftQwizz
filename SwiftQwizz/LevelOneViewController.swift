@@ -98,14 +98,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
   func displayAnswerFeedback () {
     QuestionTextLabel.text = "\(currentQuiz.Questions[currentQuestionCounter].rightAnswerMessage)"
   }
-  //  func resetQuiz() {
-  //    rightAnswersCounter = 0
-  //    currentQuestionCounter = 0
-  //    currentQuizQuestions = []
-  //    println("Reseting questions to start again")
-  //    createQuizFromRandomQuestions()
-  //    displayCurrentQuestion()
-  //  }
+
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if let identifier = segue.identifier {
@@ -115,28 +108,9 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
           rvc.rightAnswersCounter = rightAnswersCounter
           rvc.currentQuiz = currentQuiz
         }
-        
-//      case "Show Settings":
-//        if let svc = segue.destinationViewController as? SettingsTableViewController {
-//          if let ppc = svc.popoverPresentationController {
-//            ppc.delegate = self
-////            if let mode = currentQuiz.practiceMode {
-////              svc.practiceMode = mode
-////            }
-//          }
-//        }
+
       default: break
       }
-      
-      
-      //    if segue.identifier == "showResults" {
-      //      var resultsVC: ResultsViewController =  segue.destinationViewController as! ResultsViewController
-      //      resultsVC.rightAnswersCounter = rightAnswersCounter
-      //      resultsVC.currentLevel = "Level I"
-      //    } else {
-      //      var levelTwoVC: LevelTwoViewController = segue.destinationViewController as! LevelTwoViewController
-      //      levelTwoVC.practiceMode = practiceMode
-      //    }
     }
   }
   
@@ -157,18 +131,8 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
       currentQuiz.Questions[currentQuestionCounter].userAnswer = 0
     }
     updateScore()
-    
-//    if currentQuiz.practiceMode == true {
-//      buttonAnswer1.hidden = true
-//      buttonAnswer2.hidden = true
-//      buttonAnswer3.hidden = true
-//      QuestionTextLabel.hidden = false
-//      rightOrWrongTextLabel.hidden = false
-//        continueButton.hidden = false
-////      self.view.backgroundColor = UIColor.orangeColor()
-//    } else {
+
       currentQuestionCounter++
-//    }
     
     if (currentQuestionCounter) < 10 {
       displayCurrentQuestion()
@@ -196,10 +160,6 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     buttonAnswer2.hidden = false
     buttonAnswer3.hidden = false
     QuestionTextLabel.hidden = false
-  }
-  
-  @IBAction func goBack(segue: UIStoryboardSegue) {
-    print("Someone unwind back to me")
   }
 }
 

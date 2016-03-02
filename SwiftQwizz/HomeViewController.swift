@@ -10,7 +10,6 @@ import UIKit
 
 class HomeViewController: UIViewController, UIPopoverPresentationControllerDelegate {
   //  private let defaults = NSUserDefaults.standardUserDefaults()
-  
   //  var practiceMode:Bool? {
   //    get { return defaults.objectForKey("Mode") as? Bool ?? false }
   //    set { defaults.setObject(newValue, forKey: "Mode") }
@@ -25,10 +24,6 @@ class HomeViewController: UIViewController, UIPopoverPresentationControllerDeleg
   }
   
   override func viewWillAppear(animated: Bool) {
-//    if let mode = currentQuiz.practiceMode {
-//      
-//      print("The initial state of practice Mode in HomeView: \(mode)")
-//    }
   }
   
   override func didReceiveMemoryWarning() {
@@ -45,22 +40,8 @@ class HomeViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         if let tvc: ChaptersListTableViewController =  segue.destinationViewController as? ChaptersListTableViewController {
           tvc.currentQuiz = currentQuiz
-          //          if let mode = currentQuiz.practiceMode {
-          //          tvc.practiceMode = mode
-          //          }
         }
-        
-//      case "HomeShowSettings":
-        
-//        if let svc = segue.destinationViewController as? SettingsTableViewController {
-//          if let ppc = svc.popoverPresentationController {
-//            ppc.delegate = self
-////            if let mode = currentQuiz.practiceMode {
-////              svc.practiceMode = mode
-////            }
-//          }
-//        }
-      default: break
+            default: break
       }
     }
   }
