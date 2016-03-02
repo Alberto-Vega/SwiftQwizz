@@ -8,12 +8,8 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UIPopoverPresentationControllerDelegate {
-  //  private let defaults = NSUserDefaults.standardUserDefaults()
-  //  var practiceMode:Bool? {
-  //    get { return defaults.objectForKey("Mode") as? Bool ?? false }
-  //    set { defaults.setObject(newValue, forKey: "Mode") }
-  //    }
+class HomeViewController: UIViewController {
+
   @IBOutlet weak var startButton: UIButton!
   var currentQuiz = Quiz()
   
@@ -46,9 +42,6 @@ class HomeViewController: UIViewController, UIPopoverPresentationControllerDeleg
     }
   }
   
-  func adaptivePresentationStyleForPresentationController(controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
-    return UIModalPresentationStyle.None
-  }
   func stylingButtons(button: UIButton) {
     button.layer.shadowRadius = 8
     button.layer.shadowOffset = CGSize.zero
