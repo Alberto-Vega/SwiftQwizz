@@ -25,8 +25,10 @@ extension Quiz {
   mutating func createChapters() {
     
     let theBasics = Chapter(name: "The Basics", plistFileName: "QuestionsData.plist")
-    let basicOperators = Chapter(name: "Basic Operators", plistFileName: "QuestionsData.plist")
-    chapters = [theBasics, basicOperators]
+//    let basicOperators = Chapter(name: "Basic Operators", plistFileName: "QuestionsData.plist")
+//    chapters = [theBasics, basicOperators]
+        chapters = [theBasics]
+
     //    chapters = ["The Basics", "Basic Operators", "Strings and Characters", "Collection Types", "Control Flow", "Functions", "Closures", "Enumerations", "Classes and Structures", "Properties", "Methods", "Subscripts", "Inheritance", "Initialization", "Deinitialization", "Automatic Reference Counting", "Optional Chaining", "Error Handling", "Type Casting", "Nested Types", "Extensions", "Protocols", "Generics", "Access Control", "Advanced Operators"]
   }
   
