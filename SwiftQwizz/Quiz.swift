@@ -78,8 +78,8 @@ struct Question {
       print("The new value of userAnswer is:\(newValue)")
     }
     didSet {
-      if let answer = userAnswer {
-        correctAnswer = answer == rightAnswer ? true : false
+      if let userAnswer = userAnswer {
+        correctAnswer = userAnswer == rightAnswer ? true : false
         print("User answer is correct: \(correctAnswer)")
       }
     }
