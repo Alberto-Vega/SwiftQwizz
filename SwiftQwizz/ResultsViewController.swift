@@ -16,7 +16,6 @@ import UIKit
   @IBOutlet weak var finalAccuracyLabel: UILabel!  
   @IBOutlet weak var startAgainButton: UIButton!
   var rightAnswersCounter: Int?
-//  var currentChapter: String?
   var currentQuiz: Quiz?
   
   override func viewDidLoad() {

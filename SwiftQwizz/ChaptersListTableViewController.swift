@@ -11,21 +11,14 @@ import UIKit
 class ChaptersListTableViewController: UITableViewController {
   
   var currentQuiz = Quiz()
-  //    var practiceMode:Bool?
   
   override func viewDidLoad() {
     super.viewDidLoad()
     currentQuiz.createChapters()
-    if let quizMode = currentQuiz.practiceMode {
-      print("Practice mode in tvc is \(quizMode)")
-    }
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = false
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
   
   // MARK: - Table view data source
