@@ -21,6 +21,7 @@
 		BF357BD01BC76F6300D0C072 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BCF1BC76F6300D0C072 /* ResultsViewController.swift */; };
 		BF357BD41BC8A7D400D0C072 /* ChaptersListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BD31BC8A7D400D0C072 /* ChaptersListTableViewController.swift */; };
 		BF357BD61BC8C67000D0C072 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF357BD51BC8C67000D0C072 /* logo.png */; };
+		BF713AD81C97E15E003E0345 /* QuestionsDataAdvanced.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF713AD71C97E15D003E0345 /* QuestionsDataAdvanced.plist */; };
 		BFA1B4101C929BCB0091661F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1B40F1C929BCB0091661F /* Question.swift */; };
 		BFA1B4121C929C340091661F /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1B4111C929C340091661F /* Chapter.swift */; };
 		BFA1B4141C929C9D0091661F /* QuizExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1B4131C929C9D0091661F /* QuizExtensions.swift */; };
@@ -64,6 +65,7 @@
 		BF357BCF1BC76F6300D0C072 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsViewController.swift; path = SwiftQwizz/ResultsViewController.swift; sourceTree = "<group>"; };
 		BF357BD31BC8A7D400D0C072 /* ChaptersListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChaptersListTableViewController.swift; path = SwiftQwizz/ChaptersListTableViewController.swift; sourceTree = "<group>"; };
 		BF357BD51BC8C67000D0C072 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		BF713AD71C97E15D003E0345 /* QuestionsDataAdvanced.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuestionsDataAdvanced.plist; sourceTree = "<group>"; };
 		BFA1B40F1C929BCB0091661F /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		BFA1B4111C929C340091661F /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
 		BFA1B4131C929C9D0091661F /* QuizExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizExtensions.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				BF357BD51BC8C67000D0C072 /* logo.png */,
 				BF357B9A1BC75BA000D0C072 /* LaunchScreen.storyboard */,
 				BF357BCB1BC76F1400D0C072 /* QuestionsDataLevelTwo.plist */,
+				BF713AD71C97E15D003E0345 /* QuestionsDataAdvanced.plist */,
 				BF357BCD1BC76F2400D0C072 /* QuestionsData.plist */,
 				BF357B9D1BC75BA000D0C072 /* Info.plist */,
 			);
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF357B9C1BC75BA000D0C072 /* LaunchScreen.storyboard in Resources */,
+				BF713AD81C97E15E003E0345 /* QuestionsDataAdvanced.plist in Resources */,
 				BF357B991BC75BA000D0C072 /* Assets.xcassets in Resources */,
 				BF357BD61BC8C67000D0C072 /* logo.png in Resources */,
 				BF357BCC1BC76F1400D0C072 /* QuestionsDataLevelTwo.plist in Resources */,
