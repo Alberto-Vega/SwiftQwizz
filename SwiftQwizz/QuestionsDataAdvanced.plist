@@ -116,7 +116,7 @@
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>Which is correct regarding optional form of the type cast operator (as?)?&lt;/string&gt;
+		<string>Which is correct regarding optional form of the type cast operator (as?).
             &lt;key&gt;answer1</string>
 		<key>answer1</key>
 		<string>Return value will be nil if the downcast was not possible.</string>
