@@ -11,9 +11,10 @@ import Foundation
 extension Quiz {
     
     mutating func createChapters() {
-        let theBasics = Chapter(name: "The Basics", plistFileName: "QuestionsData.plist")
-        
-        chapters = [theBasics]
+        let theBasics = Chapter(name: "The Basics", plistFileName: "QuestionsData")
+        chapters.append(theBasics)
+//        let advanced = Chapter(name: "Advanced", plistFileName: "QuestionsDataAdvanced.plist")
+//        chapters.append(advanced)
     }
     
     mutating func loadQuestionsFromPlistNamed(plistName: String) {

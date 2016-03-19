@@ -11,12 +11,12 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
-    var currentQuiz = Quiz()
+//    var currentQuiz = Quiz()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.orangeColor()
-        stylingButtons(startButton)
+//        stylingButtons(startButton)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -30,14 +30,14 @@ class HomeViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if let identifier = segue.identifier {
-            switch identifier {
-            case "ShowChapterListTableView":
-                
-                if let tvc: ChaptersListTableViewController =  segue.destinationViewController as? ChaptersListTableViewController {
-                    tvc.currentQuiz = currentQuiz
-                }
-            default: break
-            }
+//            switch identifier {
+//            case "ShowChapterListTableView":
+////                
+////                if let tvc: ChaptersListTableViewController =  segue.destinationViewController as? ChaptersListTableViewController {
+////                    tvc.currentQuiz = currentQuiz
+//                }
+//            default: break
+//            }
         }
     }
     

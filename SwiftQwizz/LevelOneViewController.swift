@@ -40,9 +40,15 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     override func viewDidLoad() {
         super.viewDidLoad()
         //    print("The LevelOneViewControler practice mode: \(currentQuiz.practiceMode)")
-        currentChapterTextLabel.text = currentQuiz.currentChapter?.name
-        currentQuiz.loadQuestionsFromPlistNamed("QuestionsData")
+        if let currentQuizChapter =  currentQuiz.currentChapter {
+        currentChapterTextLabel.text = currentQuizChapter.name
+        currentQuiz.loadQuestionsFromPlistNamed(currentQuizChapter.plistFileName)
+//        for index in 1...currentQuiz.chapters.count {
+//        currentQuiz.loadQuestionsFromPlistNamed(currentQuiz.chapters[index].plistFileName)
+//        }
+        
         currentQuiz.createQuizFromRandomQuestions()
+        }
         displayCurrentQuestion()
         rightOrWrongTextLabel.hidden = true
         continueButton.hidden = true

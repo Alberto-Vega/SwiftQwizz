@@ -14,6 +14,6 @@ struct Chapter {
     
     init(name: String, plistFileName: String) {
         self.name = name
-        self.plistFileName = name
+        self.plistFileName = plistFileName
     }
 }
