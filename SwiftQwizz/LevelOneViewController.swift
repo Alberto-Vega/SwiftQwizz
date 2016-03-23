@@ -103,7 +103,6 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
                     rvc.rightAnswersCounter = rightAnswersCounter
                     rvc.currentQuiz = currentQuiz
                 }
-                
             default: break
             }
         }

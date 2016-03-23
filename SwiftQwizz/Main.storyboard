@@ -128,12 +128,15 @@
                                     <constraint firstItem="Bpg-Xg-ifo" firstAttribute="top" secondItem="Eh8-Ou-X19" secondAttribute="top" constant="20" symbolic="YES" id="yUx-f6-rmJ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="hdB-2m-DK7" userLabel="AnswerContainerView">
-                                <rect key="frame" x="20" y="470" width="560" height="110"/>
+                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="hdB-2m-DK7" userLabel="AnswerContainerView">
+                                <rect key="frame" x="20" y="460" width="560" height="120"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKK-Ze-sst">
-                                        <rect key="frame" x="20" y="0.0" width="520" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="uKK-Ze-sst">
+                                        <rect key="frame" x="20" y="0.0" width="520" height="35"/>
                                         <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="dcq-nP-zUQ"/>
+                                        </constraints>
                                         <state key="normal" title="True">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -145,8 +148,8 @@
                                             <action selector="answer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dyb-TQ-Shu"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEv-Ec-7W5">
-                                        <rect key="frame" x="20" y="39" width="520" height="32"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="GEv-Ec-7W5">
+                                        <rect key="frame" x="20" y="43" width="520" height="34"/>
                                         <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="False">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -159,8 +162,8 @@
                                             <action selector="answer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tez-FA-acp"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLz-ex-WIk">
-                                        <rect key="frame" x="20" y="79" width="520" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KLz-ex-WIk">
+                                        <rect key="frame" x="20" y="85" width="520" height="35"/>
                                         <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Not entirely True">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -177,7 +180,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="KLz-ex-WIk" firstAttribute="leading" secondItem="hdB-2m-DK7" secondAttribute="leading" constant="20" symbolic="YES" id="4Lk-JW-CiH"/>
-                                    <constraint firstAttribute="trailing" secondItem="uKK-Ze-sst" secondAttribute="trailing" constant="20" symbolic="YES" id="FLT-NO-a83"/>
                                     <constraint firstAttribute="trailing" secondItem="KLz-ex-WIk" secondAttribute="trailing" constant="20" symbolic="YES" id="MuD-1k-SnY"/>
                                     <constraint firstItem="GEv-Ec-7W5" firstAttribute="top" secondItem="uKK-Ze-sst" secondAttribute="bottom" constant="8" symbolic="YES" id="Njz-yk-h4z"/>
                                     <constraint firstItem="uKK-Ze-sst" firstAttribute="leading" secondItem="hdB-2m-DK7" secondAttribute="leading" constant="20" symbolic="YES" id="QA6-ao-68m"/>
@@ -186,18 +188,17 @@
                                     <constraint firstItem="KLz-ex-WIk" firstAttribute="height" secondItem="uKK-Ze-sst" secondAttribute="height" id="buN-MZ-uhD"/>
                                     <constraint firstItem="GEv-Ec-7W5" firstAttribute="leading" secondItem="hdB-2m-DK7" secondAttribute="leading" constant="20" symbolic="YES" id="cJr-HY-q3z"/>
                                     <constraint firstItem="uKK-Ze-sst" firstAttribute="top" secondItem="hdB-2m-DK7" secondAttribute="top" id="czV-jH-erD"/>
-                                    <constraint firstAttribute="height" constant="110" identifier="AnswerContainerHeight" id="pYL-UQ-0bW"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="110" identifier="AnswerContainerHeight" id="pYL-UQ-0bW"/>
                                     <constraint firstAttribute="bottom" secondItem="KLz-ex-WIk" secondAttribute="bottom" id="vxd-go-nxP"/>
                                     <constraint firstItem="KLz-ex-WIk" firstAttribute="top" secondItem="GEv-Ec-7W5" secondAttribute="bottom" constant="8" symbolic="YES" id="wBt-9h-ZJ2"/>
                                     <constraint firstAttribute="trailing" secondItem="GEv-Ec-7W5" secondAttribute="trailing" constant="20" symbolic="YES" id="wnO-fR-9Ti"/>
-                                    <constraint firstAttribute="height" constant="120" id="yUD-Mb-qch">
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="yUD-Mb-qch">
                                         <variation key="heightClass=regular-widthClass=regular" constant="180"/>
                                     </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="yUD-Mb-qch"/>
-                                        <exclude reference="FLT-NO-a83"/>
+                                        <exclude reference="pYL-UQ-0bW"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -308,7 +309,7 @@
                             <constraint firstItem="2Rv-vH-tC2" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="3sq-pu-jhE"/>
                             <constraint firstAttribute="trailing" secondItem="hdB-2m-DK7" secondAttribute="trailing" constant="20" symbolic="YES" identifier="AnswerContainerTrailing" id="7yn-WI-Ysd"/>
                             <constraint firstItem="Eh8-Ou-X19" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="9Zm-5e-EEd"/>
-                            <constraint firstItem="hdB-2m-DK7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6ah-Vi-lRU" secondAttribute="bottom" priority="250" identifier="answerContainerTop" id="ATY-nj-yHn"/>
+                            <constraint firstItem="hdB-2m-DK7" firstAttribute="top" relation="lessThanOrEqual" secondItem="6ah-Vi-lRU" secondAttribute="bottom" priority="250" constant="220" identifier="answerContainerTop" id="ATY-nj-yHn"/>
                             <constraint firstItem="2Rv-vH-tC2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="DC4-0r-s4y"/>
                             <constraint firstItem="hdB-2m-DK7" firstAttribute="top" secondItem="Izi-VH-DUT" secondAttribute="bottom" constant="67" id="Dph-dE-7Pu"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hdB-2m-DK7" secondAttribute="bottom" constant="20" id="EWC-fD-dKm">

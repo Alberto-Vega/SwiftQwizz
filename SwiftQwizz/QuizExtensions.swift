@@ -13,8 +13,12 @@ extension Quiz {
     mutating func createChapters() {
         let theBasics = Chapter(name: "The Basics", plistFileName: "QuestionsData")
         chapters.append(theBasics)
-//        let advanced = Chapter(name: "Advanced", plistFileName: "QuestionsDataAdvanced.plist")
-//        chapters.append(advanced)
+        let advanced = Chapter(name: "Advanced", plistFileName: "QuestionsDataAdvanced")
+        chapters.append(advanced)
+        
+//        for chapter in chapters {
+//            loadQuestionsFromPlistNamed(chapter.plistFileName)
+//        }
     }
     
     mutating func loadQuestionsFromPlistNamed(plistName: String) {

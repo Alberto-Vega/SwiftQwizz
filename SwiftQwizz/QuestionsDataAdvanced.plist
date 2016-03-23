@@ -46,7 +46,7 @@
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>What is the name of the of the Objective-C Bridging Header given a product module named Project?</string>
+		<string>What is the name of the Objective-C Bridging Header given a product module named Project?</string>
 		<key>answer1</key>
 		<string>Project-Bridging-Swift.h</string>
 		<key>answer2</key>
@@ -106,7 +106,7 @@
 		<key>answer1</key>
 		<string>Prefix its name with the name of the type it is nested within.</string>
 		<key>answer2</key>
-		<string>It is impossible, nested types can&apos;t be used outside of definition.</string>
+		<string>Nested types can&apos;t be used outside of definition.</string>
 		<key>answer3</key>
 		<string>It can be used from anywhere in the same block.</string>
 		<key>rightAnswer</key>
@@ -116,8 +116,7 @@
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>Which is correct regarding optional form of the type cast operator (as?).
-            &lt;key&gt;answer1</string>
+		<string>Which is correct regarding optional form of the type cast operator (as?).</string>
 		<key>answer1</key>
 		<string>Return value will be nil if the downcast was not possible.</string>
 		<key>answer2</key>
@@ -137,7 +136,7 @@
 		<key>answer2</key>
 		<string>Array</string>
 		<key>answer3</key>
-		<string>NA</string>
+		<string>Both are included.</string>
 		<key>rightAnswer</key>
 		<integer>3</integer>
 		<key>rightAnswerMessage</key>
@@ -205,29 +204,15 @@
 		<key>question</key>
 		<string>Which of these statements is a valid way to extend the capabilities of our theoretical class, ExampleClass to conform to protocol MyProtocol?</string>
 		<key>answer1</key>
-		<string>extension ExampleClass(MyProtocol) {  }</string>
+		<string>extension ExampleClass(MyProtocol) {...}</string>
 		<key>answer2</key>
-		<string>extension ExampleClass, prot MyProtocol {  }</string>
+		<string>extension ExampleClass, prot MyProtocol {...}</string>
 		<key>answer3</key>
-		<string>extension ExampleClass: MyProtocol {  }</string>
+		<string>extension ExampleClass: MyProtocol {...}</string>
 		<key>rightAnswer</key>
 		<integer>3</integer>
 		<key>rightAnswerMessage</key>
 		<string>The correct way to add protocol conformance with an extension is  ExampleClass: MyProtocol {  }</string>
-	</dict>
-	<dict>
-		<key>question</key>
-		<string>What is used to import Objective-C files in to Swift?</string>
-		<key>answer1</key>
-		<string>Objective-C classes are automatically imported.</string>
-		<key>answer2</key>
-		<string>Objective-C classes are imported in the Swift file using the class.</string>
-		<key>answer3</key>
-		<string>Objective-C classes are imported via a Bridging Header.</string>
-		<key>rightAnswer</key>
-		<integer>1</integer>
-		<key>rightAnswerMessage</key>
-		<string>To import a set of Objective-C files in the same app target as your Swift code, you rely on an Objective-C bridging header to expose those files to Swift.</string>
 	</dict>
 	<dict>
 		<key>question</key>
@@ -261,31 +246,17 @@
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>What is the result of the following code? func playerScore(name: String, score: Int) -&gt; String { return &quot;Hello \(name)! Your score is \(score)&quot;.}     playerScore(&quot;Alberto&quot;, 100)</string>
+		<string>What is the result of the following code? func playerScore(name: String, score: Int) -&gt; String { return &quot;Hello \(name)! Your score is \(score)&quot;.}     playerScore(&quot;Bob&quot;, 100)</string>
 		<key>answer1</key>
-		<string>Hello Alberto! Your score is 100.</string>
+		<string>Hello Bob! Your score is 100.</string>
 		<key>answer2</key>
-		<string>name: Alberto, score: 100</string>
+		<string>name: Bob, score: 100</string>
 		<key>answer3</key>
-		<string>playerScore = &quot;Hello Alberto! Your score is 100.&quot;</string>
+		<string>playerScore = &quot;Hello Bob! Your score is 100.&quot;</string>
 		<key>rightAnswer</key>
 		<integer>1</integer>
 		<key>rightAnswerMessage</key>
 		<string>The function returns Hello Alberto! Your score is 100.</string>
-	</dict>
-	<dict>
-		<key>question</key>
-		<string>Which of the following structures has both computed and stored properties?</string>
-		<key>answer1</key>
-		<string>struct Rect { var origin = CGPointZero var center: CGPoint { get { // } set { // } } }</string>
-		<key>answer2</key>
-		<string>struct Rect { var center: CGPoint { get { // } set { // } } }</string>
-		<key>answer3</key>
-		<string>struct Rect { var origin = CGPointZero var center: CGPointMake(0,0) }</string>
-		<key>rightAnswer</key>
-		<integer>1</integer>
-		<key>rightAnswerMessage</key>
-		<string> struct Rect { var origin = CGPointZero var center: CGPoint { get { // } set { // } } } has both a computed and a stored property.</string>
 	</dict>
 	<dict>
 		<key>question</key>
@@ -319,7 +290,7 @@
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>7. What does a retainCount represent in ARC?</string>
+		<string>What does a retainCount represent in ARC?</string>
 		<key>answer1</key>
 		<string>The current number of strong references to an object.</string>
 		<key>answer2</key>

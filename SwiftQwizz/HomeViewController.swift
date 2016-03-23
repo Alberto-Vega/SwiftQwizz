@@ -27,9 +27,9 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if let identifier = segue.identifier {
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+//        if let identifier = segue.identifier {
 //            switch identifier {
 //            case "ShowChapterListTableView":
 ////                
@@ -38,8 +38,8 @@ class HomeViewController: UIViewController {
 //                }
 //            default: break
 //            }
-        }
-    }
+//        }
+//    }
     
     func stylingButtons(button: UIButton) {
         button.layer.shadowRadius = 8
