@@ -8,11 +8,9 @@
 
 import Foundation
 
-struct Quiz {
+class Quiz {
     var chapters = [Chapter]()
     var currentChapter: Chapter?
-    var questionPoolFromPlist = [Question]()
-    var Questions = [Question]()
     var bestScore:Int?
     var defaults = NSUserDefaults.standardUserDefaults()
 }

@@ -33,16 +33,22 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     @IBOutlet weak var rightOrWrongTextLabel: UILabel!
     @IBOutlet weak var continueButton: UIButton!
     
-    var currentQuiz = Quiz()
+    var currentChapter:Chapter?
     var rightAnswersCounter = 0
     var currentQuestionCounter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //    print("The LevelOneViewControler practice mode: \(currentQuiz.practiceMode)")
-        currentChapterTextLabel.text = currentQuiz.currentChapter?.name
-        currentQuiz.loadQuestionsFromPlistNamed("QuestionsData")
-        currentQuiz.createQuizFromRandomQuestions()
+        if let currentQuizChapter =  currentChapter {
+            currentChapterTextLabel.text = currentQuizChapter.name
+            currentQuizChapter.loadQuestionsFromPlistNamed(currentQuizChapter.plistFileName)
+            //        for index in 1...currentQuiz.chapters.count {
+            //        currentQuiz.loadQuestionsFromPlistNamed(currentQuiz.chapters[index].plistFileName)
+            //        }
+            
+            currentQuizChapter.createQuizFromRandomQuestions()
+        }
         displayCurrentQuestion()
         rightOrWrongTextLabel.hidden = true
         continueButton.hidden = true
@@ -61,31 +67,38 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     }
     
     func updateScore() {
-        if currentQuiz.Questions[currentQuestionCounter].correctAnswer {
-            rightAnswersCounter++
-            scoreNumberLabel.text = "\(rightAnswersCounter)"
-            rightOrWrongTextLabel.text = "Yes!"
-        } else {
-            rightOrWrongTextLabel.text = "Wrong"
-            QuestionTextLabel.text = "Please try again."
+        if let currentChapter =  currentChapter {
+            if currentChapter.Questions[currentQuestionCounter].correctAnswer {
+                rightAnswersCounter += 1
+                scoreNumberLabel.text = "\(rightAnswersCounter)"
+                rightOrWrongTextLabel.text = "Yes!"
+            } else {
+                rightOrWrongTextLabel.text = "Wrong"
+                QuestionTextLabel.text = "Please try again."
+            }
         }
     }
     
     func displayCurrentQuestion() {
-        if currentQuestionCounter < currentQuiz.Questions.count {
-            QuestionTextLabel.text = currentQuiz.Questions[currentQuestionCounter].question
-            buttonAnswer1.setTitle(currentQuiz.Questions[currentQuestionCounter].answer1, forState: .Normal)
-            buttonAnswer2.setTitle(currentQuiz.Questions[currentQuestionCounter].answer2,
-                forState: .Normal)
-            buttonAnswer3.setTitle(currentQuiz.Questions[currentQuestionCounter].answer3, forState: .Normal)
-            
-            questionNumberLabel.text = "\(currentQuestionCounter + 1)"
-            scoreNumberLabel.text = "\(rightAnswersCounter)"
+        if let currentChapter = currentChapter {
+            if currentQuestionCounter < currentChapter.Questions.count {
+                QuestionTextLabel.text = currentChapter.Questions[currentQuestionCounter].question
+                buttonAnswer1.setTitle(currentChapter.Questions[currentQuestionCounter].answer1, forState: .Normal)
+                buttonAnswer2.setTitle(currentChapter.Questions[currentQuestionCounter].answer2,
+                                       forState: .Normal)
+                buttonAnswer3.setTitle(currentChapter.Questions[currentQuestionCounter].answer3, forState: .Normal)
+                
+                questionNumberLabel.text = "\(currentQuestionCounter + 1)"
+                scoreNumberLabel.text = "\(rightAnswersCounter)"
+            }
         }
     }
     
     func displayAnswerFeedback () {
-        QuestionTextLabel.text = "\(currentQuiz.Questions[currentQuestionCounter].rightAnswerMessage)"
+        
+        if let currentChapter = currentChapter {
+            QuestionTextLabel.text = "\(currentChapter.Questions[currentQuestionCounter].rightAnswerMessage)"
+        }
     }
     
     
@@ -95,9 +108,8 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
             case "showResults":
                 if let rvc: ResultsViewController =  segue.destinationViewController as? ResultsViewController {
                     rvc.rightAnswersCounter = rightAnswersCounter
-                    rvc.currentQuiz = currentQuiz
+                    rvc.currentChapter = currentChapter
                 }
-                
             default: break
             }
         }
@@ -108,20 +120,21 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     }
     
     @IBAction func answer(sender: UIButton) {
+        guard let currentChapter = currentChapter else { return print("currentChapter is nil")}
         
         switch sender {
         case buttonAnswer1:
-            currentQuiz.Questions[currentQuestionCounter].userAnswer = 1
+            currentChapter.Questions[currentQuestionCounter].userAnswer = 1
         case buttonAnswer2:
-            currentQuiz.Questions[currentQuestionCounter].userAnswer = 2
+            currentChapter.Questions[currentQuestionCounter].userAnswer = 2
         case buttonAnswer3:
-            currentQuiz.Questions[currentQuestionCounter].userAnswer = 3
+            currentChapter.Questions[currentQuestionCounter].userAnswer = 3
         default:
-            currentQuiz.Questions[currentQuestionCounter].userAnswer = 0
+            currentChapter.Questions[currentQuestionCounter].userAnswer = 0
         }
         updateScore()
         
-        currentQuestionCounter++
+        currentQuestionCounter += 1
         
         if (currentQuestionCounter) < 10 {
             displayCurrentQuestion()
@@ -132,10 +145,10 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     }
     
     @IBAction func continueButtonPressed(sender: AnyObject) {
+        guard let currentChapter = currentChapter else { return print("currentChapter is nil")}
         
-        if currentQuiz.Questions[currentQuestionCounter].userAnswer == currentQuiz.Questions[currentQuestionCounter].rightAnswer {
-            currentQuestionCounter++
-            
+        if currentChapter.Questions[currentQuestionCounter].userAnswer == currentChapter.Questions[currentQuestionCounter].rightAnswer {
+            currentQuestionCounter += 1
             if (currentQuestionCounter) < 10 {
                 displayCurrentQuestion()
             } else {

@@ -8,12 +8,14 @@
 
 import Foundation
 
-struct Chapter {
+class Chapter {
     var name: String
     let plistFileName: String
-    
+    var questionPoolFromPlist = [Question]()
+    var Questions = [Question]()
+
     init(name: String, plistFileName: String) {
         self.name = name
-        self.plistFileName = name
+        self.plistFileName = plistFileName
     }
 }

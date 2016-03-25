@@ -17,13 +17,13 @@ class ResultsViewController:UIViewController {
     @IBOutlet weak var startAgainButton: UIButton!
     
     var rightAnswersCounter: Int?
-    var currentQuiz: Quiz?
+    var currentChapter: Chapter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setResultLabels()
         stylingButtons(startAgainButton)
-        if let chapter = currentQuiz?.currentChapter {
+        if let chapter = currentChapter {
             //    print("The current chapter in resultsvc: \(chapter)")
             currentChapterLabel.text = "Chapter: \(chapter.name)"
         }
@@ -49,13 +49,6 @@ class ResultsViewController:UIViewController {
             }
             finalScoreLabel!.text = "\(rightAnswers)"
             finalAccuracyLabel!.text = "\(accuracyPercentage)" + " %"
-        }
-    }
-    
-    // MARK: - Navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let tvc: ChaptersListTableViewController =  segue.destinationViewController as? ChaptersListTableViewController {
-            tvc.currentQuiz = currentQuiz!
         }
     }
 }
