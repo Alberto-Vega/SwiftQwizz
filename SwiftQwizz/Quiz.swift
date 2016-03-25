@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Quiz {
+class Quiz {
     var chapters = [Chapter]()
     var currentChapter: Chapter?
     var bestScore:Int?
