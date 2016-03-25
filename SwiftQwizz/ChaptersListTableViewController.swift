@@ -48,7 +48,7 @@ class ChaptersListTableViewController: UITableViewController {
                     //          print("the table view tapped index is: \(selectedRow)")
                     let selectedChapter = currentQuiz.chapters[selectedRow]
                     currentQuiz.currentChapter = selectedChapter
-                    LevelOneViewController.currentQuiz = currentQuiz
+                    LevelOneViewController.currentChapter = currentQuiz.currentChapter
                 }
             }
         }

@@ -18,7 +18,7 @@
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>Constants are pieces of data that we want to reference, but that we know won&apos;t have a changing value. To declare them We use the keyword:</string>
+		<string>Constants are pieces of data that we want to reference, but that we know won&apos;t have a changing value. To declare them we use the keyword:</string>
 		<key>answer1</key>
 		<string>var</string>
 		<key>answer2</key>
