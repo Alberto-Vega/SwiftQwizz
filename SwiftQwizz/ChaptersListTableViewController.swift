@@ -33,12 +33,17 @@ class ChaptersListTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ChaptersListItem", forIndexPath: indexPath)
-        let index = indexPath.row
-        currentQuiz.currentChapter = self.currentQuiz.chapters[index]
-        let chapterNameTextLabel = cell.viewWithTag(1) as! UILabel
-        chapterNameTextLabel.text = currentQuiz.currentChapter?.name
+        
+        configureCell(cell, indexPath: indexPath)
         return cell
     }
+    
+    func configureCell(cell:UITableViewCell, indexPath: NSIndexPath) {
+        currentQuiz.currentChapter = self.currentQuiz.chapters[indexPath.row]
+        let chapterNameTextLabel = cell.viewWithTag(1) as! UILabel
+        chapterNameTextLabel.text = currentQuiz.currentChapter?.name
+    }
+    
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowLevelOneViewController" {
