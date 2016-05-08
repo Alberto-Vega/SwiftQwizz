@@ -595,7 +595,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OrangeGradient" translatesAutoresizingMaskIntoConstraints="NO" id="Fft-6s-Hbh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fft-6s-Hbh">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="800" text="Swift Qwizz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UK0-p0-GQY">
@@ -629,6 +629,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wLd-5b-eYM" firstAttribute="top" secondItem="UK0-p0-GQY" secondAttribute="bottom" priority="750" constant="8" symbolic="YES" id="1Yo-aw-6GA"/>
                             <constraint firstItem="fw7-J4-3P8" firstAttribute="top" secondItem="Eh9-Nu-caD" secondAttribute="bottom" priority="250" constant="8" symbolic="YES" id="4gC-AL-wwa"/>
@@ -752,7 +753,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="OrangeGradient" width="2250" height="4002"/>
         <image name="logo.png" width="2880" height="2880"/>
     </resources>
 </document>

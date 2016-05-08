@@ -51,7 +51,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         }
         displayCurrentQuestion()
         rightOrWrongTextLabel.hidden = true
-        continueButton.hidden = true
+//        continueButton.hidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,8 +60,8 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     }
     
     func stylingButtons(button: UIButton) {
-        button.layer.shadowRadius = 8
-        button.layer.shadowOffset = CGSize.zero
+        button.layer.shadowRadius = 4
+        button.layer.shadowOffset = CGSizeMake(-2, 4)
         button.layer.shadowColor = UIColor.blackColor().CGColor
         button.layer.shadowOpacity = 0.5
     }
@@ -70,12 +70,36 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         if let currentChapter =  currentChapter {
             if currentChapter.Questions[currentQuestionCounter].correctAnswer {
                 rightAnswersCounter += 1
+                displayAnswerFeedback(correct: true)
                 scoreNumberLabel.text = "\(rightAnswersCounter)"
-                rightOrWrongTextLabel.text = "Yes!"
+//                rightOrWrongTextLabel.text = "Yes!"
             } else {
-                rightOrWrongTextLabel.text = "Wrong"
-                QuestionTextLabel.text = "Please try again."
+                displayAnswerFeedback(correct: false)
+//                rightOrWrongTextLabel.text = "Wrong"
+//                QuestionTextLabel.text = "Please try again."
             }
+        }
+    }
+    
+    func animateRightAnswer(rightAnswer rightAnswer: Int?) {
+        guard let rightAnswer = rightAnswer else { print("right answer is nil"); return }
+        switch rightAnswer {
+        case 1:
+            animateAnswerLabels(buttonAnswer2)
+            animateAnswerLabels(buttonAnswer3)
+
+        case 2:
+            animateAnswerLabels(buttonAnswer1)
+            animateAnswerLabels(buttonAnswer3)
+
+        case 3:
+            animateAnswerLabels(buttonAnswer1)
+            animateAnswerLabels(buttonAnswer2)
+        default:
+            animateAnswerLabels(buttonAnswer1)
+            animateAnswerLabels(buttonAnswer2)
+            animateAnswerLabels(buttonAnswer3)
+
         }
     }
     
@@ -94,10 +118,15 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         }
     }
     
-    func displayAnswerFeedback () {
+    func displayAnswerFeedback(correct correct: Bool) {
         
-        if let currentChapter = currentChapter {
-            QuestionTextLabel.text = "\(currentChapter.Questions[currentQuestionCounter].rightAnswerMessage)"
+//        if let currentChapter = currentChapter {
+////            QuestionTextLabel.text = "\(currentChapter.Questions[currentQuestionCounter].rightAnswerMessage)"
+//        }
+        if correct {
+            QuestionTextLabel.text = "Nice Job this is the right answer:"
+        } else {
+            QuestionTextLabel.text = "I'm afraid the correct answer is: "
         }
     }
     
@@ -115,9 +144,9 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         }
     }
     
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
-        return UIModalPresentationStyle.None
-    }
+//    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+//        return UIModalPresentationStyle.FormSheet
+//    }
     
     @IBAction func answer(sender: UIButton) {
         guard let currentChapter = currentChapter else { return print("currentChapter is nil")}
@@ -132,16 +161,27 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         default:
             currentChapter.Questions[currentQuestionCounter].userAnswer = 0
         }
+        animateRightAnswer(rightAnswer: currentChapter.Questions[currentQuestionCounter].userAnswer)
         updateScore()
         
         currentQuestionCounter += 1
-        
-        if (currentQuestionCounter) < 10 {
-            displayCurrentQuestion()
-        } else {
-            self.performSegueWithIdentifier("showResults", sender:self)
-        }
+
         //    print("the current index in the exam array is " + "\(currentQuestionCounter)")
+    }
+    
+    func animateAnswerLabels(label: UIView) {
+        
+        delay(seconds: 0) {
+            UIView.transitionWithView(label, duration: 0.8, options: .TransitionFlipFromBottom, animations: {
+                label.hidden = true
+                }, completion: { (true) in
+                    UIView.transitionWithView(label, duration: 0.6, options: .TransitionFlipFromTop, animations: {
+                        label.hidden = false
+                        
+                        }, completion: { (true) in
+                    })
+            })
+        }
     }
     
     @IBAction func continueButtonPressed(sender: AnyObject) {

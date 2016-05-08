@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ChaptersListTableViewController: UITableViewController {
+class ChaptersListTableViewController: UITableViewController, SegueHandlerType {
+    
+    enum SegueIdentifier: String {
+        case ShowLevelOneViewController
+    }
     
     var currentQuiz = Quiz()
     
@@ -46,7 +50,11 @@ class ChaptersListTableViewController: UITableViewController {
     
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ShowLevelOneViewController" {
+        let segueIdentifier = segueIdentifierForSegue(segue)
+        
+        switch segueIdentifier {
+        case .ShowLevelOneViewController:
+            
             if let LevelOneViewController = segue.destinationViewController as? LevelOneViewController {
                 if let indexPath = self.tableView.indexPathForSelectedRow {
                     let selectedRow = indexPath.row
