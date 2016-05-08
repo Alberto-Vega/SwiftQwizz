@@ -210,7 +210,7 @@
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyJ-eo-VR4">
-                                <rect key="frame" x="266" y="647" width="69" height="33"/>
+                                <rect key="frame" x="266" y="249" width="69" height="33"/>
                                 <color key="backgroundColor" red="0.83678582700000004" green="0.01713946219" blue="0.1218814413" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Pv8-Dj-fpj"/>
@@ -318,7 +318,7 @@
                             </constraint>
                             <constraint firstItem="6ah-Vi-lRU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="KjB-kg-iAx"/>
                             <constraint firstItem="Izi-VH-DUT" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" identifier="QuestionCounterContainerBottom" id="Ntr-fE-Rq4"/>
-                            <constraint firstAttribute="bottom" secondItem="vyJ-eo-VR4" secondAttribute="bottom" constant="-80" id="Oif-tn-QuD"/>
+                            <constraint firstAttribute="bottom" secondItem="vyJ-eo-VR4" secondAttribute="bottom" constant="300" id="Oif-tn-QuD"/>
                             <constraint firstAttribute="trailing" secondItem="Eh8-Ou-X19" secondAttribute="trailing" constant="20" symbolic="YES" id="QRH-C1-KBN"/>
                             <constraint firstAttribute="bottom" secondItem="hdB-2m-DK7" secondAttribute="bottom" constant="20" symbolic="YES" identifier="AnswerContainerBottom" id="RGc-Wi-GJN">
                                 <variation key="heightClass=regular-widthClass=regular" constant="20" symbolic="YES"/>
@@ -338,17 +338,21 @@
                             <constraint firstItem="Izi-VH-DUT" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="kCu-iu-HrC">
                                 <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                             </constraint>
+                            <constraint firstItem="vyJ-eo-VR4" firstAttribute="top" secondItem="6ah-Vi-lRU" secondAttribute="bottom" constant="8" symbolic="YES" id="lbk-4v-KF7"/>
                             <constraint firstItem="Eh8-Ou-X19" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="vfJ-8n-4nS">
                                 <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                             </constraint>
+                            <constraint firstItem="hdB-2m-DK7" firstAttribute="top" secondItem="vyJ-eo-VR4" secondAttribute="bottom" constant="130" id="wty-60-kaw"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="kCu-iu-HrC"/>
                                 <exclude reference="dMP-gJ-ABW"/>
+                                <exclude reference="Oif-tn-QuD"/>
                                 <exclude reference="Dph-dE-7Pu"/>
                                 <exclude reference="djX-9O-CUA"/>
                                 <exclude reference="euL-DP-bRH"/>
+                                <exclude reference="wty-60-kaw"/>
                                 <exclude reference="QRH-C1-KBN"/>
                                 <exclude reference="WjP-9p-E0M"/>
                                 <exclude reference="vfJ-8n-4nS"/>
@@ -375,6 +379,7 @@
                         <outlet property="buttonAnswer2" destination="GEv-Ec-7W5" id="ZfT-Dh-ajz"/>
                         <outlet property="buttonAnswer3" destination="KLz-ex-WIk" id="e7Q-kK-eSx"/>
                         <outlet property="continueButton" destination="vyJ-eo-VR4" id="W2j-Qw-4Za"/>
+                        <outlet property="continueButtonXConstraint" destination="b1a-d2-ppJ" id="OFL-Ux-kHZ"/>
                         <outlet property="currentChapterTextLabel" destination="2Rv-vH-tC2" id="Ggd-u6-Xe3"/>
                         <outlet property="questionNumberLabel" destination="MMT-QN-hOn" id="p0a-6g-yuM"/>
                         <outlet property="rightOrWrongTextLabel" destination="kSP-0L-ltz" id="8Lc-j4-KCQ"/>
