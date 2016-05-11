@@ -15,6 +15,8 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var scoreNumberLabel: UILabel!
     @IBOutlet var QuestionTextLabel: UILabel!
+    
+    @IBOutlet weak var answerContainerView: UIView!
     @IBOutlet var buttonAnswer1: UIButton! {
         didSet {
             stylingButtons(buttonAnswer1)
@@ -74,7 +76,9 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
             if currentChapter.Questions[currentQuestionCounter].correctAnswer == true {
                 rightAnswersCounter += 1
                 displayAnswerFeedback(correct: true)
+//                animateAnswerButtons(scoreNumberLabel, show: false)
                 scoreNumberLabel.text = "\(rightAnswersCounter)"
+                animateAnswerButtons(scoreNumberLabel, show: true)
 //                rightOrWrongTextLabel.text = "Yes!"
             } else {
                 displayAnswerFeedback(correct: false)
@@ -90,20 +94,24 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         guard let rightAnswer = rightAnswer else { print("right answer is nil"); return }
         switch rightAnswer {
         case 1:
+            buttonAnswer1.enabled = false
             animateAnswerButtons(buttonAnswer2, show: false)
             animateAnswerButtons(buttonAnswer3, show: false)
 
         case 2:
+            buttonAnswer2.enabled = false
             animateAnswerButtons(buttonAnswer1, show: false)
             animateAnswerButtons(buttonAnswer3, show: false)
 
         case 3:
+            buttonAnswer3.enabled = false
             animateAnswerButtons(buttonAnswer1, show: false)
             animateAnswerButtons(buttonAnswer2, show: false)
         default:
-            animateAnswerButtons(buttonAnswer1, show: false)
-            animateAnswerButtons(buttonAnswer2, show: false)
-            animateAnswerButtons(buttonAnswer3, show: false)
+            break
+//            animateAnswerButtons(buttonAnswer1, show: false)
+//            animateAnswerButtons(buttonAnswer2, show: false)
+//            animateAnswerButtons(buttonAnswer3, show: false)
 
         }
     }
@@ -117,11 +125,34 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
                                        forState: .Normal)
                 buttonAnswer3.setTitle(currentChapter.Questions[currentQuestionCounter].answer3, forState: .Normal)
                 
+//                animateAnswerButtons(questionNumberLabel, show: false)
                 questionNumberLabel.text = "\(currentQuestionCounter + 1)"
-                scoreNumberLabel.text = "\(rightAnswersCounter)"
+                animateAnswerButtons(questionNumberLabel, show: true)
+//                animateAnswerButtons(scoreNumberLabel, show: true)
+//                scoreNumberLabel.text = "\(rightAnswersCounter)"
+                
             }
         }
     }
+    
+//    func answerContainer(minimize minimize: Bool) {
+//        
+//        if let answerContainerViewConstraints = answerContainerView.superview?.constraints {
+//            for constraint in answerContainerViewConstraints {
+//                if constraint.identifier == "AnswerContainerHeight" {
+//                    constraint.active = false
+//                    
+//                    let newConstraint = NSLayoutConstraint(item: answerContainerView, attribute: .Height, relatedBy: .Equal, toItem: answerContainerView.superview!, attribute: .Height, multiplier: minimize ? 0.085 : 0.25, constant: 0)
+//                    newConstraint.identifier = "AnswerContainerHeight"
+//                    newConstraint.active = true
+//                }
+//            }
+//        }
+//        
+//        UIView.animateWithDuration(0.33, delay: 0, options: .CurveEaseOut, animations: { 
+//            self.view.layoutIfNeeded()
+//            }, completion: nil)
+//    }
     
     func displayAnswerFeedback(correct correct: Bool) {
         
@@ -168,7 +199,8 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
             currentChapter.Questions[currentQuestionCounter].userAnswer = 0
         }
         animateRightAnswer(rightAnswer: currentChapter.Questions[currentQuestionCounter].rightAnswer)
-        displayCurrentQuestion()
+//        answerContainer(minimize: true)
+//        displayCurrentQuestion()
         self.updateScore()
         currentQuestionCounter += 1
 
@@ -178,16 +210,19 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     
     func animateConstraint(constraint: NSLayoutConstraint, constant: CGFloat) {
         constraint.constant = constant
-        UIView.animateWithDuration(1.0, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 10.0, options: .CurveEaseOut, animations: { 
+        UIView.animateWithDuration(1.0, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 08.0, options: .CurveEaseOut, animations: {
             self.view.layoutIfNeeded()
             }, completion: nil)
     }
+    
     func animateAnswerButtons(label: UIView, show: Bool) {
         if !show {
         delay(seconds: 0) {
             UIView.transitionWithView(label, duration: 0.8, options: .TransitionFlipFromBottom, animations: {
                 label.hidden = true
                 }, completion: { (true) in
+//                    self.answerContainerView.addSubview(label)
+
             })
         }
         } else {
@@ -195,17 +230,22 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
                 label.hidden = false
                 
                 }, completion: { (true) in
+//                    label.removeFromSuperview()
             })
         }
     }
     
     @IBAction func continueButtonPressed(sender: AnyObject) {
         guard let currentChapter = currentChapter else { return print("currentChapter is nil")}
-        
+//        answerContainer(minimize: false)
         animateConstraint(continueButtonXConstraint, constant: 0 - self.view.bounds.width * 0.65)
+        
         animateAnswerButtons(buttonAnswer1, show: true)
         animateAnswerButtons(buttonAnswer2, show: true)
         animateAnswerButtons(buttonAnswer3, show: true)
+        buttonAnswer1.enabled = true
+        buttonAnswer2.enabled = true
+        buttonAnswer3.enabled = true
         
 //        self.updateScore()
         if (currentQuestionCounter) < 10 {
