@@ -42,10 +42,10 @@
                                 </variation>
                             </label>
                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Izi-VH-DUT" userLabel="QuestionCounterContainerView">
-                                <rect key="frame" x="20" y="64" width="98" height="82"/>
+                                <rect key="frame" x="20" y="64" width="106" height="82"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVC-TR-26l">
-                                        <rect key="frame" x="20" y="20" width="58" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVC-TR-26l">
+                                        <rect key="frame" x="20" y="20" width="66" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMT-QN-hOn">
-                                        <rect key="frame" x="20" y="45" width="58" height="17"/>
+                                        <rect key="frame" x="20" y="45" width="66" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -129,7 +129,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="hdB-2m-DK7" userLabel="AnswerContainerView">
-                                <rect key="frame" x="20" y="413" width="560" height="150"/>
+                                <rect key="frame" x="20" y="417" width="560" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="uKK-Ze-sst">
                                         <rect key="frame" x="20" y="0.0" width="520" height="45"/>
@@ -216,32 +216,10 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ah-Vi-lRU" userLabel="QuestionContainerView">
-                                <rect key="frame" x="20" y="156" width="560" height="85"/>
+                                <rect key="frame" x="20" y="195" width="560" height="46"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="250" text="Yes!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSP-0L-ltz">
-                                        <rect key="frame" x="251" y="0.0" width="59" height="39"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="59" id="Svu-cW-47T"/>
-                                            <constraint firstAttribute="height" constant="39" id="gB0-Kr-ypu"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="Svu-cW-47T"/>
-                                                <exclude reference="gB0-Kr-ypu"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <mask key="constraints">
-                                                <include reference="Svu-cW-47T"/>
-                                                <include reference="gB0-Kr-ypu"/>
-                                            </mask>
-                                        </variation>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="750" verticalCompressionResistancePriority="752" text="“The value of a constant doesn’t need to be known at compile time, but you must assign it a value exactly once.”" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="p74-sk-Hyh">
-                                        <rect key="frame" x="0.0" y="39" width="560" height="46"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="152" id="vze-Rc-CKp">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="177"/>
@@ -267,19 +245,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="kSP-0L-ltz" firstAttribute="centerX" secondItem="6ah-Vi-lRU" secondAttribute="centerX" id="3zC-7l-h2t"/>
-                                    <constraint firstItem="p74-sk-Hyh" firstAttribute="top" secondItem="kSP-0L-ltz" secondAttribute="bottom" constant="8" symbolic="YES" id="J8w-hl-0gP"/>
+                                    <constraint firstItem="p74-sk-Hyh" firstAttribute="top" secondItem="6ah-Vi-lRU" secondAttribute="top" id="JfL-KS-D2u"/>
                                     <constraint firstAttribute="trailing" secondItem="p74-sk-Hyh" secondAttribute="trailing" id="YKa-Wy-3Ky"/>
                                     <constraint firstAttribute="bottom" secondItem="p74-sk-Hyh" secondAttribute="bottom" id="iID-kC-QPS"/>
-                                    <constraint firstItem="p74-sk-Hyh" firstAttribute="top" secondItem="kSP-0L-ltz" secondAttribute="bottom" priority="250" id="tmd-sm-hWb"/>
                                     <constraint firstItem="p74-sk-Hyh" firstAttribute="leading" secondItem="6ah-Vi-lRU" secondAttribute="leading" id="vq4-yS-swt"/>
-                                    <constraint firstItem="kSP-0L-ltz" firstAttribute="top" secondItem="6ah-Vi-lRU" secondAttribute="top" id="wwl-sP-DvI"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="J8w-hl-0gP"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyJ-eo-VR4">
                                 <rect key="frame" x="266" y="567" width="69" height="33"/>
@@ -311,7 +281,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6ah-Vi-lRU" firstAttribute="top" secondItem="Izi-VH-DUT" secondAttribute="bottom" priority="249" constant="10" identifier="QuestionCounterContainerBottom" id="1Ck-wg-WwR"/>
+                            <constraint firstItem="6ah-Vi-lRU" firstAttribute="top" secondItem="Izi-VH-DUT" secondAttribute="bottom" multiplier="4:3" priority="249" identifier="QuestionCounterContainerBottom" id="1Ck-wg-WwR"/>
                             <constraint firstItem="2Rv-vH-tC2" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="3sq-pu-jhE"/>
                             <constraint firstAttribute="trailing" secondItem="hdB-2m-DK7" secondAttribute="trailing" constant="20" symbolic="YES" identifier="AnswerContainerTrailing" id="7yn-WI-Ysd"/>
                             <constraint firstItem="Eh8-Ou-X19" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="9Zm-5e-EEd"/>
@@ -321,7 +291,7 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hdB-2m-DK7" secondAttribute="bottom" constant="20" id="EWC-fD-dKm">
                                 <variation key="heightClass=regular-widthClass=regular" constant="50"/>
                             </constraint>
-                            <constraint firstItem="vyJ-eo-VR4" firstAttribute="top" secondItem="hdB-2m-DK7" secondAttribute="bottom" constant="4" id="HVK-rN-1Q5"/>
+                            <constraint firstItem="vyJ-eo-VR4" firstAttribute="top" secondItem="hdB-2m-DK7" secondAttribute="bottom" id="HVK-rN-1Q5"/>
                             <constraint firstItem="6ah-Vi-lRU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="KjB-kg-iAx"/>
                             <constraint firstItem="Izi-VH-DUT" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" identifier="QuestionCounterContainerBottom" id="Ntr-fE-Rq4"/>
                             <constraint firstAttribute="bottom" secondItem="vyJ-eo-VR4" secondAttribute="bottom" constant="300" id="Oif-tn-QuD"/>
@@ -396,7 +366,6 @@
                         <outlet property="continueButtonXConstraint" destination="b1a-d2-ppJ" id="OFL-Ux-kHZ"/>
                         <outlet property="currentChapterTextLabel" destination="2Rv-vH-tC2" id="Ggd-u6-Xe3"/>
                         <outlet property="questionNumberLabel" destination="MMT-QN-hOn" id="p0a-6g-yuM"/>
-                        <outlet property="rightOrWrongTextLabel" destination="kSP-0L-ltz" id="8Lc-j4-KCQ"/>
                         <outlet property="scoreNumberLabel" destination="h2v-MT-gZC" id="eLn-ag-mH3"/>
                         <segue destination="CPi-1f-irq" kind="presentation" identifier="showResults" id="5Zs-p3-Dbm"/>
                     </connections>

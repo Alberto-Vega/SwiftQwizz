@@ -15,7 +15,6 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var scoreNumberLabel: UILabel!
     @IBOutlet var QuestionTextLabel: UILabel!
-    
     @IBOutlet weak var answerContainerView: UIView!
     @IBOutlet var buttonAnswer1: UIButton! {
         didSet {
@@ -32,10 +31,9 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
             stylingButtons(buttonAnswer3)
         }
     }
-    @IBOutlet weak var rightOrWrongTextLabel: UILabel!
+//    @IBOutlet weak var rightOrWrongTextLabel: UILabel!
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet var continueButtonXConstraint: NSLayoutConstraint!
-    
     
     var currentChapter:Chapter?
     var rightAnswersCounter = 0
@@ -54,7 +52,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
             currentQuizChapter.createQuizFromRandomQuestions()
         }
         displayCurrentQuestion()
-        rightOrWrongTextLabel.hidden = true
+//        rightOrWrongTextLabel.hidden = true
         self.continueButtonXConstraint.constant = 0 - self.view.bounds.width * 0.65
 //        continueButton.hidden = true
     }
@@ -126,7 +124,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
                 buttonAnswer3.setTitle(currentChapter.Questions[currentQuestionCounter].answer3, forState: .Normal)
                 
 //                animateAnswerButtons(questionNumberLabel, show: false)
-                questionNumberLabel.text = "\(currentQuestionCounter + 1)"
+                questionNumberLabel.text = "\(10 - currentQuestionCounter)"
                 animateAnswerButtons(questionNumberLabel, show: true)
 //                animateAnswerButtons(scoreNumberLabel, show: true)
 //                scoreNumberLabel.text = "\(rightAnswersCounter)"
@@ -210,7 +208,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     
     func animateConstraint(constraint: NSLayoutConstraint, constant: CGFloat) {
         constraint.constant = constant
-        UIView.animateWithDuration(1.0, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 08.0, options: .CurveEaseOut, animations: {
+        UIView.animateWithDuration(1.0, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 07.0, options: .CurveEaseOut, animations: {
             self.view.layoutIfNeeded()
             }, completion: nil)
     }
