@@ -88,6 +88,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         }
     }
     
+    
     func animateRightAnswer(rightAnswer rightAnswer: Int?) {
         guard let rightAnswer = rightAnswer else { print("right answer is nil"); return }
         switch rightAnswer {
@@ -117,15 +118,20 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     func displayCurrentQuestion() {
         if let currentChapter = currentChapter {
             if currentQuestionCounter < currentChapter.Questions.count {
+
                 QuestionTextLabel.text = currentChapter.Questions[currentQuestionCounter].question
+                animateQuestionLabel(QuestionTextLabel, show: true, animation: UIViewAnimationOptions.TransitionFlipFromTop, delayTime: 0)
+//                animateAnswerButtons(QuestionTextLabel, show: true)
+
                 buttonAnswer1.setTitle(currentChapter.Questions[currentQuestionCounter].answer1, forState: .Normal)
                 buttonAnswer2.setTitle(currentChapter.Questions[currentQuestionCounter].answer2,
                                        forState: .Normal)
                 buttonAnswer3.setTitle(currentChapter.Questions[currentQuestionCounter].answer3, forState: .Normal)
                 
 //                animateAnswerButtons(questionNumberLabel, show: false)
+//                animateAnswerButtons(questionNumberLabel, show: true)
+
                 questionNumberLabel.text = "\(10 - currentQuestionCounter)"
-                animateAnswerButtons(questionNumberLabel, show: true)
 //                animateAnswerButtons(scoreNumberLabel, show: true)
 //                scoreNumberLabel.text = "\(rightAnswersCounter)"
                 
@@ -157,11 +163,20 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
 //        if let currentChapter = currentChapter {
 ////            QuestionTextLabel.text = "\(currentChapter.Questions[currentQuestionCounter].rightAnswerMessage)"
 //        }
-        if correct {
-            QuestionTextLabel.text = "Nice Job this is the right answer:"
-        } else {
-            QuestionTextLabel.text = "I'm afraid the correct answer is: "
+        animateQuestionLabel(QuestionTextLabel, show: false, animation: .TransitionCrossDissolve, delayTime: 0)
+        delay(seconds: 0.4) { 
+            if correct {
+                self.animateAnswerButtons(self.QuestionTextLabel, show: true)
+                self.QuestionTextLabel.text = "Nice Job this is the right answer:"
+                
+                
+            } else {
+                self.animateAnswerButtons(self.QuestionTextLabel, show: true)
+                self.QuestionTextLabel.text = "I'm afraid the correct answer is: "
+                
+            }
         }
+        
         animateConstraint(continueButtonXConstraint, constant: 0)
     }
     
@@ -206,6 +221,8 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         //    print("the current index in the exam array is " + "\(currentQuestionCounter)")
     }
     
+//MARK: -  Animations.
+    
     func animateConstraint(constraint: NSLayoutConstraint, constant: CGFloat) {
         constraint.constant = constant
         UIView.animateWithDuration(1.0, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 07.0, options: .CurveEaseOut, animations: {
@@ -233,8 +250,29 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         }
     }
     
+    func animateQuestionLabel(label: UILabel, show: Bool, animation: UIViewAnimationOptions, delayTime: Double) {
+//        UIView.transitionWithView(label, duration: 0.8, options: .TransitionFlipFromBottom, animations: { 
+//            label.hidden = show
+//}) { (true) in
+//        }
+        delay(seconds: delayTime) {
+            if(!show) {
+                UIView.transitionWithView(label, duration: 0.8, options: animation, animations: {
+                    label.hidden = true
+                    }, completion: nil)
+            } else {
+                UIView.transitionWithView(label, duration: 0.8, options: animation, animations: {
+                    label.hidden = false
+                    }, completion: nil)
+                
+                
+            }
+        }
+
+    }
+    
     @IBAction func continueButtonPressed(sender: AnyObject) {
-        guard let currentChapter = currentChapter else { return print("currentChapter is nil")}
+//        guard let currentChapter = currentChapter else { return print("currentChapter is nil")}
 //        answerContainer(minimize: false)
         animateConstraint(continueButtonXConstraint, constant: 0 - self.view.bounds.width * 0.65)
         
@@ -244,13 +282,17 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         buttonAnswer1.enabled = true
         buttonAnswer2.enabled = true
         buttonAnswer3.enabled = true
+        animateQuestionLabel(QuestionTextLabel, show: false, animation: .TransitionFlipFromBottom, delayTime: 0.0)
         
 //        self.updateScore()
-        if (currentQuestionCounter) < 10 {
-            displayCurrentQuestion()
-        } else {
-            self.performSegueWithIdentifier("showResults", sender:self)
+        delay(seconds: 0.4) {
+            if (self.currentQuestionCounter) < 10 {
+                self.displayCurrentQuestion()
+            } else {
+                self.performSegueWithIdentifier("showResults", sender:self)
+            }
         }
+
 
 
 //        if currentChapter.Questions[currentQuestionCounter].userAnswer == currentChapter.Questions[currentQuestionCounter].rightAnswer {
