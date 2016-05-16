@@ -239,7 +239,7 @@
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                         </variation>
                                     </label>
                                 </subviews>
@@ -274,15 +274,21 @@
                                         <include reference="cDJ-Ig-cw2"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                </variation>
                                 <connections>
                                     <action selector="continueButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Mt7-2C-E7n"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the correct answer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYs-KC-oa5">
-                                <rect key="frame" x="199" y="388" width="202" height="21"/>
+                                <rect key="frame" x="199" y="376" width="202" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -311,7 +317,7 @@
                             <constraint firstItem="hdB-2m-DK7" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.25" identifier="AnswerContainerHeight" id="VGd-Og-kJ5"/>
                             <constraint firstItem="Izi-VH-DUT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" identifier="QuestionCounterContainerLeading" id="VKS-Jw-CpI"/>
                             <constraint firstAttribute="trailing" secondItem="Eh8-Ou-X19" secondAttribute="trailing" constant="20" symbolic="YES" id="WjP-9p-E0M"/>
-                            <constraint firstItem="hdB-2m-DK7" firstAttribute="top" secondItem="PYs-KC-oa5" secondAttribute="bottom" constant="8" symbolic="YES" id="XRF-1t-gZW"/>
+                            <constraint firstItem="hdB-2m-DK7" firstAttribute="top" secondItem="PYs-KC-oa5" secondAttribute="bottom" constant="20" id="XRF-1t-gZW"/>
                             <constraint firstItem="hdB-2m-DK7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" identifier="AnswerContainerLeading" id="agq-mJ-zce"/>
                             <constraint firstItem="vyJ-eo-VR4" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="b1a-d2-ppJ"/>
                             <constraint firstItem="p74-sk-Hyh" firstAttribute="top" secondItem="Izi-VH-DUT" secondAttribute="bottom" constant="49" id="dMP-gJ-ABW">
@@ -578,7 +584,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajj-aW-g5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2196" y="305"/>
+            <point key="canvasLocation" x="2380.5" y="193.5"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Qfh-NA-m8J">
@@ -691,6 +697,9 @@
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <color key="textColor" red="1" green="0.44313728810000003" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>

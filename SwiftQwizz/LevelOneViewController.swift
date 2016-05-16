@@ -143,24 +143,24 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         }
     }
     
-//    func answerContainer(minimize minimize: Bool) {
-//        
-//        if let answerContainerViewConstraints = answerContainerView.superview?.constraints {
-//            for constraint in answerContainerViewConstraints {
-//                if constraint.identifier == "AnswerContainerHeight" {
-//                    constraint.active = false
-//                    
-//                    let newConstraint = NSLayoutConstraint(item: answerContainerView, attribute: .Height, relatedBy: .Equal, toItem: answerContainerView.superview!, attribute: .Height, multiplier: minimize ? 0.085 : 0.25, constant: 0)
-//                    newConstraint.identifier = "AnswerContainerHeight"
-//                    newConstraint.active = true
-//                }
-//            }
-//        }
-//        
-//        UIView.animateWithDuration(0.33, delay: 0, options: .CurveEaseOut, animations: { 
-//            self.view.layoutIfNeeded()
-//            }, completion: nil)
-//    }
+    func answerContainer(minimize minimize: Bool) {
+        
+        if let answerContainerViewConstraints = answerContainerView.superview?.constraints {
+            for constraint in answerContainerViewConstraints {
+                if constraint.identifier == "AnswerContainerHeight" {
+                    constraint.active = false
+                    
+                    let newConstraint = NSLayoutConstraint(item: answerContainerView, attribute: .Height, relatedBy: .Equal, toItem: answerContainerView.superview!, attribute: .Height, multiplier: minimize ? 0.085 : 0.25, constant: 0)
+                    newConstraint.identifier = "AnswerContainerHeight"
+                    newConstraint.active = true
+                }
+            }
+        }
+        
+        UIView.animateWithDuration(0.33, delay: 0, options: .CurveEaseOut, animations: { 
+            self.view.layoutIfNeeded()
+            }, completion: nil)
+    }
     
     func displayAnswerFeedback(correct correct: Bool) {
         
