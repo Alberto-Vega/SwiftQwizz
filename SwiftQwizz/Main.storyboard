@@ -216,16 +216,16 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ah-Vi-lRU" userLabel="QuestionContainerView">
-                                <rect key="frame" x="20" y="195" width="560" height="46"/>
+                                <rect key="frame" x="20" y="195" width="560" height="51"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="750" verticalCompressionResistancePriority="752" text="“The value of a constant doesn’t need to be known at compile time, but you must assign it a value exactly once.”" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="p74-sk-Hyh">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="46"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="51"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="152" id="vze-Rc-CKp">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="177"/>
                                             </constraint>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -278,6 +278,12 @@
                                     <action selector="continueButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Mt7-2C-E7n"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the correct answer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYs-KC-oa5">
+                                <rect key="frame" x="199" y="388" width="202" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -285,7 +291,6 @@
                             <constraint firstItem="2Rv-vH-tC2" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="3sq-pu-jhE"/>
                             <constraint firstAttribute="trailing" secondItem="hdB-2m-DK7" secondAttribute="trailing" constant="20" symbolic="YES" identifier="AnswerContainerTrailing" id="7yn-WI-Ysd"/>
                             <constraint firstItem="Eh8-Ou-X19" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="9Zm-5e-EEd"/>
-                            <constraint firstItem="hdB-2m-DK7" firstAttribute="top" relation="lessThanOrEqual" secondItem="6ah-Vi-lRU" secondAttribute="bottom" priority="250" constant="220" identifier="answerContainerTop" id="ATY-nj-yHn"/>
                             <constraint firstItem="2Rv-vH-tC2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="DC4-0r-s4y"/>
                             <constraint firstItem="hdB-2m-DK7" firstAttribute="top" secondItem="Izi-VH-DUT" secondAttribute="bottom" constant="67" id="Dph-dE-7Pu"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hdB-2m-DK7" secondAttribute="bottom" constant="20" id="EWC-fD-dKm">
@@ -294,6 +299,7 @@
                             <constraint firstItem="vyJ-eo-VR4" firstAttribute="top" secondItem="hdB-2m-DK7" secondAttribute="bottom" id="HVK-rN-1Q5"/>
                             <constraint firstItem="6ah-Vi-lRU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="KjB-kg-iAx"/>
                             <constraint firstItem="Izi-VH-DUT" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" identifier="QuestionCounterContainerBottom" id="Ntr-fE-Rq4"/>
+                            <constraint firstItem="PYs-KC-oa5" firstAttribute="top" relation="lessThanOrEqual" secondItem="6ah-Vi-lRU" secondAttribute="bottom" priority="250" constant="142" id="OFK-za-ihg"/>
                             <constraint firstAttribute="bottom" secondItem="vyJ-eo-VR4" secondAttribute="bottom" constant="300" id="Oif-tn-QuD"/>
                             <constraint firstAttribute="trailing" secondItem="Eh8-Ou-X19" secondAttribute="trailing" constant="20" symbolic="YES" id="QRH-C1-KBN"/>
                             <constraint firstAttribute="bottom" secondItem="hdB-2m-DK7" secondAttribute="bottom" constant="20" symbolic="YES" identifier="AnswerContainerBottom" id="RGc-Wi-GJN">
@@ -305,6 +311,7 @@
                             <constraint firstItem="hdB-2m-DK7" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.25" identifier="AnswerContainerHeight" id="VGd-Og-kJ5"/>
                             <constraint firstItem="Izi-VH-DUT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" identifier="QuestionCounterContainerLeading" id="VKS-Jw-CpI"/>
                             <constraint firstAttribute="trailing" secondItem="Eh8-Ou-X19" secondAttribute="trailing" constant="20" symbolic="YES" id="WjP-9p-E0M"/>
+                            <constraint firstItem="hdB-2m-DK7" firstAttribute="top" secondItem="PYs-KC-oa5" secondAttribute="bottom" constant="8" symbolic="YES" id="XRF-1t-gZW"/>
                             <constraint firstItem="hdB-2m-DK7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" identifier="AnswerContainerLeading" id="agq-mJ-zce"/>
                             <constraint firstItem="vyJ-eo-VR4" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="b1a-d2-ppJ"/>
                             <constraint firstItem="p74-sk-Hyh" firstAttribute="top" secondItem="Izi-VH-DUT" secondAttribute="bottom" constant="49" id="dMP-gJ-ABW">
@@ -313,6 +320,7 @@
                             <constraint firstItem="hdB-2m-DK7" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="djX-9O-CUA"/>
                             <constraint firstItem="hdB-2m-DK7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="euL-DP-bRH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6ah-Vi-lRU" secondAttribute="trailing" id="fTQ-ne-UQN"/>
+                            <constraint firstItem="PYs-KC-oa5" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="jwr-Ml-MVP"/>
                             <constraint firstItem="Izi-VH-DUT" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="kCu-iu-HrC">
                                 <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                             </constraint>
@@ -366,13 +374,14 @@
                         <outlet property="continueButtonXConstraint" destination="b1a-d2-ppJ" id="OFL-Ux-kHZ"/>
                         <outlet property="currentChapterTextLabel" destination="2Rv-vH-tC2" id="Ggd-u6-Xe3"/>
                         <outlet property="questionNumberLabel" destination="MMT-QN-hOn" id="p0a-6g-yuM"/>
+                        <outlet property="rightOrWrongLabel" destination="PYs-KC-oa5" id="Qi1-l7-GDi"/>
                         <outlet property="scoreNumberLabel" destination="h2v-MT-gZC" id="eLn-ag-mH3"/>
                         <segue destination="CPi-1f-irq" kind="presentation" identifier="showResults" id="5Zs-p3-Dbm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1465.5" y="313"/>
+            <point key="canvasLocation" x="1681" y="210"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="zWV-8d-1KE">
