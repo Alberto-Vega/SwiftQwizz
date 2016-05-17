@@ -67,10 +67,13 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     }
     
     func stylingButtons(button: UIButton) {
-        button.layer.shadowRadius = 4
-        button.layer.shadowOffset = CGSizeMake(-2, 4)
-        button.layer.shadowColor = UIColor.blackColor().CGColor
-        button.layer.shadowOpacity = 0.5
+        button.layer.cornerRadius = 9
+        button.layer.borderColor = UIColor.orangeColor().CGColor
+        button.layer.borderWidth = 1
+//        button.layer.shadowRadius = 4
+//        button.layer.shadowOffset = CGSizeMake(-2, 4)
+//        button.layer.shadowColor = UIColor.blackColor().CGColor
+//        button.layer.shadowOpacity = 0.5
     }
     
     func updateScore() {
@@ -312,6 +315,19 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
 //        buttonAnswer2.hidden = false
 //        buttonAnswer3.hidden = false
 //        QuestionTextLabel.hidden = false
+    }
+    
+}
+
+extension UIView {
+    @IBInspectable var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
+        }
     }
 }
 
