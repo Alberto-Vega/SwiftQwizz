@@ -600,7 +600,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fft-6s-Hbh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradientBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Fft-6s-Hbh">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="800" text="Swift Qwizz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UK0-p0-GQY">
@@ -616,9 +616,9 @@
                                 <rect key="frame" x="210" y="143" width="180" height="180"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eh9-Nu-caD">
-                                <rect key="frame" x="240" y="502" width="120" height="90"/>
-                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.59607843137254901" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -627,7 +627,7 @@
                                     <rect key="frame" x="150" y="460" width="60" height="60"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="44"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                 </variation>
                                 <connections>
                                     <segue destination="5Ru-eA-dRO" kind="show" identifier="ShowChapterListTableView" id="qzQ-X6-jqm"/>
@@ -637,7 +637,7 @@
                         <color key="backgroundColor" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wLd-5b-eYM" firstAttribute="top" secondItem="UK0-p0-GQY" secondAttribute="bottom" priority="750" constant="8" symbolic="YES" id="1Yo-aw-6GA"/>
-                            <constraint firstItem="fw7-J4-3P8" firstAttribute="top" secondItem="Eh9-Nu-caD" secondAttribute="bottom" priority="250" constant="8" symbolic="YES" id="4gC-AL-wwa"/>
+                            <constraint firstItem="fw7-J4-3P8" firstAttribute="top" secondItem="Eh9-Nu-caD" secondAttribute="bottom" priority="250" id="4gC-AL-wwa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Fft-6s-Hbh" secondAttribute="trailing" id="4u9-TF-OmV"/>
                             <constraint firstItem="Fft-6s-Hbh" firstAttribute="width" secondItem="g6H-d6-Wni" secondAttribute="width" id="5j5-w5-URl"/>
                             <constraint firstItem="Fft-6s-Hbh" firstAttribute="height" secondItem="g6H-d6-Wni" secondAttribute="height" id="9iq-0H-d6m"/>
@@ -647,13 +647,15 @@
                             <constraint firstItem="wLd-5b-eYM" firstAttribute="height" secondItem="g6H-d6-Wni" secondAttribute="height" multiplier="0.3" id="Ijb-7u-cnG"/>
                             <constraint firstItem="Eh9-Nu-caD" firstAttribute="top" relation="lessThanOrEqual" secondItem="wLd-5b-eYM" secondAttribute="bottom" constant="150" id="QO2-bv-rhg"/>
                             <constraint firstItem="Eh9-Nu-caD" firstAttribute="centerX" secondItem="g6H-d6-Wni" secondAttribute="centerX" id="Ws6-Ua-N9l"/>
+                            <constraint firstItem="UK0-p0-GQY" firstAttribute="top" secondItem="fgc-z1-YC0" secondAttribute="bottom" constant="8" id="Xki-6q-gSK"/>
                             <constraint firstItem="fw7-J4-3P8" firstAttribute="top" secondItem="Fft-6s-Hbh" secondAttribute="bottom" id="cit-Jx-XIS"/>
                             <constraint firstItem="wLd-5b-eYM" firstAttribute="centerX" secondItem="g6H-d6-Wni" secondAttribute="centerX" id="ePf-MP-hjR"/>
                             <constraint firstItem="Fft-6s-Hbh" firstAttribute="centerX" secondItem="g6H-d6-Wni" secondAttribute="centerX" id="edJ-xo-Vms"/>
-                            <constraint firstItem="Eh9-Nu-caD" firstAttribute="height" relation="greaterThanOrEqual" secondItem="g6H-d6-Wni" secondAttribute="height" multiplier="0.15" id="fGe-5w-qXI"/>
+                            <constraint firstItem="Eh9-Nu-caD" firstAttribute="height" relation="greaterThanOrEqual" secondItem="g6H-d6-Wni" secondAttribute="height" multiplier="0.1" id="fGe-5w-qXI"/>
                             <constraint firstItem="Fft-6s-Hbh" firstAttribute="leading" secondItem="g6H-d6-Wni" secondAttribute="leadingMargin" id="fNd-1E-yuU"/>
                             <constraint firstItem="UK0-p0-GQY" firstAttribute="centerX" secondItem="g6H-d6-Wni" secondAttribute="centerX" id="fuG-iR-yo4"/>
-                            <constraint firstItem="Eh9-Nu-caD" firstAttribute="width" relation="greaterThanOrEqual" secondItem="g6H-d6-Wni" secondAttribute="width" multiplier="0.2" id="ks6-Ri-Ksa"/>
+                            <constraint firstItem="Eh9-Nu-caD" firstAttribute="width" relation="greaterThanOrEqual" secondItem="g6H-d6-Wni" secondAttribute="width" id="ks6-Ri-Ksa"/>
+                            <constraint firstItem="UK0-p0-GQY" firstAttribute="top" secondItem="g6H-d6-Wni" secondAttribute="topMargin" constant="72" id="pJo-cF-2wt"/>
                             <constraint firstItem="Fft-6s-Hbh" firstAttribute="top" secondItem="fgc-z1-YC0" secondAttribute="bottom" id="xDl-Y7-iBY"/>
                         </constraints>
                         <variation key="default">
@@ -661,6 +663,8 @@
                                 <exclude reference="4u9-TF-OmV"/>
                                 <exclude reference="fNd-1E-yuU"/>
                                 <exclude reference="xDl-Y7-iBY"/>
+                                <exclude reference="EiH-1U-mxP"/>
+                                <exclude reference="Xki-6q-gSK"/>
                                 <exclude reference="QO2-bv-rhg"/>
                                 <exclude reference="cit-Jx-XIS"/>
                             </mask>
@@ -761,6 +765,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gradientBackground" width="375" height="667"/>
         <image name="logo.png" width="2880" height="2880"/>
     </resources>
 </document>
