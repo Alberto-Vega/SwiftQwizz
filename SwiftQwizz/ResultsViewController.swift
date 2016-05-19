@@ -14,7 +14,7 @@ class ResultsViewController:UIViewController {
     @IBOutlet weak var currentChapterLabel: UILabel!
     @IBOutlet weak var finalScoreLabel: UILabel!
     @IBOutlet weak var finalAccuracyLabel: UILabel!
-    @IBOutlet weak var startAgainButton: UIButton!
+    @IBOutlet weak var startAgainButton: GradientButton!
     
     var rightAnswersCounter: Int?
     var currentChapter: Chapter?

@@ -9,6 +9,7 @@
 import UIKit
 import QuartzCore
 
+//@IBDesignable
 class GradientButton: UIButton {
     
     let gradientLayer: CAGradientLayer = {
@@ -32,18 +33,10 @@ class GradientButton: UIButton {
         let gradientAnimation = CABasicAnimation(keyPath: "locations")
         gradientAnimation.fromValue = [0.0, 0.0, 0.25]
         gradientAnimation.toValue = [0.75, 1.0, 1.0]
-        gradientAnimation.duration = 3.0
+        gradientAnimation.duration = 2.5
         gradientAnimation.repeatCount = Float.infinity
         gradientLayer.addAnimation(gradientAnimation, forKey: nil)
         
         maskView = self.titleLabel
     }
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
-
 }

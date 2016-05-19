@@ -105,7 +105,6 @@
 		BF357B851BC75BA000D0C072 = {
 			isa = PBXGroup;
 			children = (
-				BF9E59001CED3CDE00CF978F /* GradientButton.swift */,
 				BF357B901BC75BA000D0C072 /* SwiftQwizz */,
 				BF357BA51BC75BA000D0C072 /* SwiftQwizzTests */,
 				BF357BB01BC75BA000D0C072 /* SwiftQwizzUITests */,
@@ -128,6 +127,7 @@
 			children = (
 				BF357B911BC75BA000D0C072 /* AppDelegate.swift */,
 				BF109B7E1CD2E89100D19B8A /* SegueHandlerType.swift */,
+				BF9E59021CED537900CF978F /* Views */,
 				BF357BC11BC76E0A00D0C072 /* Models */,
 				BF357BC41BC76E9F00D0C072 /* Controllers */,
 				BF357BC91BC76F0500D0C072 /* Main.storyboard */,
@@ -181,6 +181,15 @@
 				BF357BCF1BC76F6300D0C072 /* ResultsViewController.swift */,
 			);
 			name = Controllers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		BF9E59021CED537900CF978F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E59001CED3CDE00CF978F /* GradientButton.swift */,
+			);
+			name = Views;
 			path = ..;
 			sourceTree = "<group>";
 		};
