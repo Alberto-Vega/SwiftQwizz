@@ -19,30 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Rv-vH-tC2">
-                                <rect key="frame" x="269" y="72" width="62" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="gCi-Ky-GXy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="gCi-Ky-GXy"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="gCi-Ky-GXy"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                </variation>
-                            </label>
                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Izi-VH-DUT" userLabel="QuestionCounterContainerView">
-                                <rect key="frame" x="20" y="64" width="114" height="88"/>
+                                <rect key="frame" x="20" y="72" width="114" height="88"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVC-TR-26l">
                                         <rect key="frame" x="20" y="20" width="74" height="20"/>
@@ -83,7 +61,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Eh8-Ou-X19" userLabel="ScoreContainerView">
-                                <rect key="frame" x="497" y="64" width="83" height="88"/>
+                                <rect key="frame" x="497" y="72" width="83" height="88"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpg-Xg-ifo">
                                         <rect key="frame" x="20" y="20" width="43" height="20"/>
@@ -218,7 +196,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ah-Vi-lRU" userLabel="QuestionContainerView">
-                                <rect key="frame" x="20" y="203" width="560" height="51"/>
+                                <rect key="frame" x="20" y="160" width="560" height="51"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="750" verticalCompressionResistancePriority="752" text="“The value of a constant doesn’t need to be known at compile time, but you must assign it a value exactly once.”" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="p74-sk-Hyh">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="51"/>
@@ -253,13 +231,13 @@
                                     <constraint firstItem="p74-sk-Hyh" firstAttribute="leading" secondItem="6ah-Vi-lRU" secondAttribute="leading" id="vq4-yS-swt"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyJ-eo-VR4">
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyJ-eo-VR4" customClass="GradientButton" customModule="SwiftQwizz" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="570" width="600" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Pv8-Dj-fpj"/>
                                     <constraint firstAttribute="height" constant="80" id="cDJ-Ig-cw2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" red="0.97647058819999999" green="0.59607843140000005" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -295,18 +273,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6ah-Vi-lRU" firstAttribute="top" secondItem="Izi-VH-DUT" secondAttribute="bottom" multiplier="4:3" priority="249" identifier="QuestionCounterContainerBottom" id="1Ck-wg-WwR"/>
-                            <constraint firstItem="2Rv-vH-tC2" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="3sq-pu-jhE"/>
+                            <constraint firstItem="6ah-Vi-lRU" firstAttribute="top" secondItem="Izi-VH-DUT" secondAttribute="bottom" identifier="QuestionCounterContainerBottom" id="1Ck-wg-WwR"/>
                             <constraint firstAttribute="trailing" secondItem="hdB-2m-DK7" secondAttribute="trailing" constant="20" symbolic="YES" identifier="AnswerContainerTrailing" id="7yn-WI-Ysd"/>
-                            <constraint firstItem="Eh8-Ou-X19" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="9Zm-5e-EEd"/>
-                            <constraint firstItem="2Rv-vH-tC2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="DC4-0r-s4y"/>
+                            <constraint firstItem="Eh8-Ou-X19" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="9Zm-5e-EEd"/>
                             <constraint firstItem="hdB-2m-DK7" firstAttribute="top" secondItem="Izi-VH-DUT" secondAttribute="bottom" constant="67" id="Dph-dE-7Pu"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hdB-2m-DK7" secondAttribute="bottom" constant="20" id="EWC-fD-dKm">
                                 <variation key="heightClass=regular-widthClass=regular" constant="50"/>
                             </constraint>
                             <constraint firstItem="vyJ-eo-VR4" firstAttribute="top" secondItem="hdB-2m-DK7" secondAttribute="bottom" id="HVK-rN-1Q5"/>
                             <constraint firstItem="6ah-Vi-lRU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="KjB-kg-iAx"/>
-                            <constraint firstItem="Izi-VH-DUT" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" identifier="QuestionCounterContainerBottom" id="Ntr-fE-Rq4"/>
+                            <constraint firstItem="Izi-VH-DUT" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" identifier="QuestionCounterContainerBottom" id="Ntr-fE-Rq4"/>
                             <constraint firstItem="PYs-KC-oa5" firstAttribute="top" relation="lessThanOrEqual" secondItem="6ah-Vi-lRU" secondAttribute="bottom" priority="250" constant="142" id="OFK-za-ihg"/>
                             <constraint firstAttribute="bottom" secondItem="vyJ-eo-VR4" secondAttribute="bottom" constant="300" id="Oif-tn-QuD"/>
                             <constraint firstItem="vyJ-eo-VR4" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="OjT-EQ-fat"/>
@@ -382,7 +358,6 @@
                         <outlet property="buttonAnswer3" destination="KLz-ex-WIk" id="e7Q-kK-eSx"/>
                         <outlet property="continueButton" destination="vyJ-eo-VR4" id="W2j-Qw-4Za"/>
                         <outlet property="continueButtonXConstraint" destination="b1a-d2-ppJ" id="OFL-Ux-kHZ"/>
-                        <outlet property="currentChapterTextLabel" destination="2Rv-vH-tC2" id="Ggd-u6-Xe3"/>
                         <outlet property="questionNumberLabel" destination="MMT-QN-hOn" id="p0a-6g-yuM"/>
                         <outlet property="rightOrWrongLabel" destination="PYs-KC-oa5" id="Qi1-l7-GDi"/>
                         <outlet property="scoreNumberLabel" destination="h2v-MT-gZC" id="eLn-ag-mH3"/>

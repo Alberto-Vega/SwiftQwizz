@@ -11,7 +11,6 @@ import CoreData
 
 class LevelOneViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
-    @IBOutlet weak var currentChapterTextLabel: UILabel!
     @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var scoreNumberLabel: UILabel!
     @IBOutlet var QuestionTextLabel: UILabel!
@@ -33,7 +32,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         }
     }
 //    @IBOutlet weak var rightOrWrongTextLabel: UILabel!
-    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var continueButton: GradientButton!
     @IBOutlet var continueButtonXConstraint: NSLayoutConstraint!
     
     var currentChapter:Chapter?
@@ -44,7 +43,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         super.viewDidLoad()
         //    print("The LevelOneViewControler practice mode: \(currentQuiz.practiceMode)")
         if let currentQuizChapter =  currentChapter {
-            currentChapterTextLabel.text = currentQuizChapter.name
+            self.navigationItem.title = currentQuizChapter.name
             currentQuizChapter.loadQuestionsFromPlistNamed(currentQuizChapter.plistFileName)
             //        for index in 1...currentQuiz.chapters.count {
             //        currentQuiz.loadQuestionsFromPlistNamed(currentQuiz.chapters[index].plistFileName)
