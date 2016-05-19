@@ -15,7 +15,6 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var scoreNumberLabel: UILabel!
     @IBOutlet var QuestionTextLabel: UILabel!
-    
     @IBOutlet weak var rightOrWrongLabel: UILabel!
     @IBOutlet weak var answerContainerView: UIView!
     @IBOutlet var buttonAnswer1: UIButton! {
@@ -57,8 +56,17 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         self.QuestionTextLabel.hidden = true
         self.rightOrWrongLabel.hidden = true
 //        rightOrWrongTextLabel.hidden = true
-        self.continueButtonXConstraint.constant = 0 - self.view.bounds.width * 0.65
+        self.continueButtonXConstraint.constant = 0 - self.view.bounds.width * 1.5
 //        continueButton.hidden = true
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden = false
+//        self.navigationItem.backBarButtonItem?.tintColor = UIColor(red: 250, green: 217, blue: 97, alpha: 100)
+//        self.navigationController?.navigationBar.tintColor = UIColor(red: 250, green: 217, blue: 97, alpha: 1)
+//        self.navigationController?.navigationBar.
+
     }
     
     override func didReceiveMemoryWarning() {

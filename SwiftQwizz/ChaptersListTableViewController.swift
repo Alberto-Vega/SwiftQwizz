@@ -21,6 +21,12 @@ class ChaptersListTableViewController: UITableViewController, SegueHandlerType {
         currentQuiz.createChapters()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.navigationItem.backBarButtonItem?.action
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

@@ -23,6 +23,7 @@
 		BF357BD41BC8A7D400D0C072 /* ChaptersListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357BD31BC8A7D400D0C072 /* ChaptersListTableViewController.swift */; };
 		BF357BD61BC8C67000D0C072 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF357BD51BC8C67000D0C072 /* logo.png */; };
 		BF713AD81C97E15E003E0345 /* QuestionsDataAdvanced.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF713AD71C97E15D003E0345 /* QuestionsDataAdvanced.plist */; };
+		BF9E59011CED3CDE00CF978F /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E59001CED3CDE00CF978F /* GradientButton.swift */; };
 		BFA1B4101C929BCB0091661F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1B40F1C929BCB0091661F /* Question.swift */; };
 		BFA1B4121C929C340091661F /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1B4111C929C340091661F /* Chapter.swift */; };
 		BFA1B4141C929C9D0091661F /* QuizExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1B4131C929C9D0091661F /* QuizExtensions.swift */; };
@@ -69,6 +70,7 @@
 		BF357BD31BC8A7D400D0C072 /* ChaptersListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChaptersListTableViewController.swift; path = SwiftQwizz/ChaptersListTableViewController.swift; sourceTree = "<group>"; };
 		BF357BD51BC8C67000D0C072 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		BF713AD71C97E15D003E0345 /* QuestionsDataAdvanced.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuestionsDataAdvanced.plist; sourceTree = "<group>"; };
+		BF9E59001CED3CDE00CF978F /* GradientButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		BFA1B40F1C929BCB0091661F /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		BFA1B4111C929C340091661F /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
 		BFA1B4131C929C9D0091661F /* QuizExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizExtensions.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		BF357B851BC75BA000D0C072 = {
 			isa = PBXGroup;
 			children = (
+				BF9E59001CED3CDE00CF978F /* GradientButton.swift */,
 				BF357B901BC75BA000D0C072 /* SwiftQwizz */,
 				BF357BA51BC75BA000D0C072 /* SwiftQwizzTests */,
 				BF357BB01BC75BA000D0C072 /* SwiftQwizzUITests */,
@@ -317,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF357BC61BC76EC700D0C072 /* HomeViewController.swift in Sources */,
+				BF9E59011CED3CDE00CF978F /* GradientButton.swift in Sources */,
 				BFE8DA551CA4CC8D00830B86 /* ChapterExtensions.swift in Sources */,
 				BF357BC81BC76EEC00D0C072 /* LevelOneViewController.swift in Sources */,
 				BF357BD01BC76F6300D0C072 /* ResultsViewController.swift in Sources */,

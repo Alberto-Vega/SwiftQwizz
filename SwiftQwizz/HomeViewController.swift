@@ -14,10 +14,10 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBarHidden = true
     }
     
     override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
     }
     
     override func didReceiveMemoryWarning() {
