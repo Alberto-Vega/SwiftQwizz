@@ -117,7 +117,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
                 buttonAnswer3.setTitle(currentChapter.Questions[currentQuestionCounter].answer3, forState: .Normal)
                 animateAnswerButtons(questionNumberLabel, show: true)
                 
-                questionNumberLabel.text = "\(currentQuestionCounter) of 10"
+                questionNumberLabel.text = "\(currentQuestionCounter + 1) of 10"
             }
         }
     }

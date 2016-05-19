@@ -9,7 +9,7 @@
 import UIKit
 import QuartzCore
 
-//@IBDesignable
+@IBDesignable
 class GradientButton: UIButton {
     
     let gradientLayer: CAGradientLayer = {
@@ -36,7 +36,6 @@ class GradientButton: UIButton {
         gradientAnimation.duration = 2.5
         gradientAnimation.repeatCount = Float.infinity
         gradientLayer.addAnimation(gradientAnimation, forKey: nil)
-        
         maskView = self.titleLabel
     }
 }
