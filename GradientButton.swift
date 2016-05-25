@@ -33,7 +33,7 @@ class GradientButton: UIButton {
         let gradientAnimation = CABasicAnimation(keyPath: "locations")
         gradientAnimation.fromValue = [0.0, 0.0, 0.25]
         gradientAnimation.toValue = [0.75, 1.0, 1.0]
-        gradientAnimation.duration = 2.5
+        gradientAnimation.duration = 3
         gradientAnimation.repeatCount = Float.infinity
         gradientLayer.addAnimation(gradientAnimation, forKey: nil)
         maskView = self.titleLabel

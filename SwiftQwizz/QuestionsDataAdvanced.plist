@@ -4,20 +4,6 @@
 <array>
 	<dict>
 		<key>question</key>
-		<string>When declaring a function, what symbol is used to indicate that an internal parameter name should also be used as an external parameter?</string>
-		<key>answer1</key>
-		<string>_</string>
-		<key>answer2</key>
-		<string>#</string>
-		<key>answer3</key>
-		<string>@</string>
-		<key>rightAnswer</key>
-		<integer>2</integer>
-		<key>rightAnswerMessage</key>
-		<string>If the internal name is descriptive enough and can be used as the external name, then you can use implicit external naming with #. example: func simple(#i: Int, #j: Int)</string>
-	</dict>
-	<dict>
-		<key>question</key>
 		<string>In the following code, what is the super class name? class Audi: Car {...}</string>
 		<key>answer1</key>
 		<string>Audi</string>
@@ -176,9 +162,9 @@
 		<key>question</key>
 		<string>What is used to import Objective-C files in to Swift?</string>
 		<key>answer1</key>
-		<string>Objective-C classes are automatically imported.</string>
+		<string>They are automatically imported.</string>
 		<key>answer2</key>
-		<string>Objective-C classes are imported in the Swift file using the class.</string>
+		<string>They are imported in the Swift file using the class.</string>
 		<key>answer3</key>
 		<string>Objective-C classes are imported via a Bridging Header.</string>
 		<key>rightAnswer</key>
@@ -292,11 +278,11 @@
 		<key>question</key>
 		<string>What does a retainCount represent in ARC?</string>
 		<key>answer1</key>
-		<string>The current number of strong references to an object.</string>
+		<string>Current number of strong references to an object.</string>
 		<key>answer2</key>
-		<string>The current number of instances of an object.</string>
+		<string>Current number of instances of an object.</string>
 		<key>answer3</key>
-		<string>The total number of objects currently being retained in memory.</string>
+		<string>Number of objects being retained in memory.</string>
 		<key>rightAnswer</key>
 		<integer>1</integer>
 		<key>rightAnswerMessage</key>
