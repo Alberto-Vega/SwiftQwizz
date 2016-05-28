@@ -24,6 +24,7 @@ class ChaptersListTableViewController: UITableViewController, SegueHandlerType {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = false
+        self.navigationItem.title = "Chapters"
         self.navigationController?.navigationItem.backBarButtonItem?.action
     }
     

@@ -44,7 +44,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         self.questionNumberLabel.hidden = true
         self.QuestionTextLabel.hidden = true
         self.rightOrWrongLabel.hidden = true
-        self.continueButtonXConstraint.constant = 0 - self.view.bounds.width * 1.5
+        self.continueButtonXConstraint.constant = 0 - self.view.bounds.width * 2
     }
     
     override func viewWillAppear(animated: Bool) {
