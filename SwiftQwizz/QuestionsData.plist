@@ -271,7 +271,7 @@
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>Loop which states while something is true execute a block of code. It stops execution when that condition turns to false.</string>
+		<string>This loop states: while something is true execute a block of code. It stops execution when that condition turns to false.</string>
 		<key>answer1</key>
 		<string>Do-While Loop</string>
 		<key>answer2</key>
