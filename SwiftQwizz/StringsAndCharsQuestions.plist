@@ -102,7 +102,7 @@
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>Is a fixed sequence of textual characters surrounded by a pair of double quotes(&quot;&quot;).</string>
+		<string>It&apos;s a fixed sequence of textual characters surrounded by a pair of double quotes(&quot;&quot;).</string>
 		<key>answer1</key>
 		<string>String.</string>
 		<key>answer2</key>
@@ -140,7 +140,7 @@
 		<key>rightAnswer</key>
 		<integer>2</integer>
 		<key>rightAnswerMessage</key>
-		<string>Floating Point Numbers or Float are numbers with a fractional part like 3.7 or -15094.4 In addition to that, this type of numbers can store very large number that don&apos;t fit in an Int</string>
+		<string></string>
 	</dict>
 	<dict>
 		<key>question</key>
@@ -160,7 +160,7 @@
 		<key>question</key>
 		<string>You can access the individual Character values for a String by:</string>
 		<key>answer1</key>
-		<string>characters property.</string>
+		<string>iterating its characters property.</string>
 		<key>answer2</key>
 		<string>converting it into an array.</string>
 		<key>answer3</key>
@@ -220,7 +220,7 @@
 		<key>answer2</key>
 		<string>Addition assignement (+=).</string>
 		<key>answer3</key>
-		<string>unescaped backlash (\).</string>
+		<string>unescaped backslash (\).</string>
 		<key>rightAnswer</key>
 		<integer>2</integer>
 		<key>rightAnswerMessage</key>
@@ -228,101 +228,283 @@
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>To add an array to another array we use the operator:</string>
+		<string>This is a way to construct a new String value from a mix of constants, variables, literals and expressions by including their values inside a string literal.</string>
 		<key>answer1</key>
-		<string>+=</string>
+		<string>Concatenation.</string>
 		<key>answer2</key>
-		<string>++</string>
+		<string>String Interpolation.</string>
 		<key>answer3</key>
-		<string>==</string>
-		<key>rightAnswer</key>
-		<integer>1</integer>
-		<key>rightAnswerMessage</key>
-		<string>To add an array to another array we use the operator: +=</string>
-	</dict>
-	<dict>
-		<key>question</key>
-		<string>This collection type allows you to store key-value pairs and access the value by providing the key.</string>
-		<key>answer1</key>
-		<string>Dictionary</string>
-		<key>answer2</key>
-		<string>Tuple</string>
-		<key>answer3</key>
-		<string>Array</string>
-		<key>rightAnswer</key>
-		<integer>1</integer>
-		<key>rightAnswerMessage</key>
-		<string>Dictionary is a collection type that allows you to store key-value pairs and access the value by providing the key.</string>
-	</dict>
-	<dict>
-		<key>question</key>
-		<string>Loop which ensures that your block of code is executed at least once.</string>
-		<key>answer1</key>
-		<string>While Loop</string>
-		<key>answer2</key>
-		<string>Do-While Loop</string>
-		<key>answer3</key>
-		<string>For Loop</string>
+		<string>String literal.</string>
 		<key>rightAnswer</key>
 		<integer>2</integer>
 		<key>rightAnswerMessage</key>
-		<string>Do-While Loop ensures that your block of code is executed at least once.</string>
+		<string></string>
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>This loop states: while something is true execute a block of code. It stops execution when that condition turns to false.</string>
+		<string>This is an example of string interpolation: The value of  multiplier variable is inserted into a string literal as:</string>
 		<key>answer1</key>
-		<string>Do-While Loop</string>
+		<string>\(multiplier)</string>
 		<key>answer2</key>
-		<string>For Loop</string>
+		<string>+ multiplier</string>
 		<key>answer3</key>
-		<string>While Loop</string>
-		<key>rightAnswer</key>
-		<integer>3</integer>
-		<key>rightAnswerMessage</key>
-		<string>While Loop states that while something is true execute a block of code. It stops execution when that condition turns to false.</string>
-	</dict>
-	<dict>
-		<key>question</key>
-		<string>Loop variant where it creates a temporary variable and assigns it a value while iterating over the array.</string>
-		<key>answer1</key>
-		<string>While Loop</string>
-		<key>answer2</key>
-		<string>For Loop</string>
-		<key>answer3</key>
-		<string>For-In</string>
-		<key>rightAnswer</key>
-		<integer>3</integer>
-		<key>rightAnswerMessage</key>
-		<string>For-In Loop creates a temporary variable and assigns it a value while iterating over the array.</string>
-	</dict>
-	<dict>
-		<key>question</key>
-		<string>1…10 – is a range of numbers from 1 to 10. The three dots are known as a _____ range because the upper limit is inclusive.</string>
-		<key>answer1</key>
-		<string>Closed</string>
-		<key>answer2</key>
-		<string>Half-Closed</string>
-		<key>answer3</key>
-		<string>Explicit</string>
+		<string>+= multiplier</string>
 		<key>rightAnswer</key>
 		<integer>1</integer>
 		<key>rightAnswerMessage</key>
-		<string>1…10 – is a range of numbers from 1 to 10. The three dots are known as a Closed range because the upper limit is inclusive.</string>
+		<string></string>
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>1..&lt;10 – is a range of numbers from 1 to 9. The two dots with a lesser-than sign is known as a ______ range because the upper limit is non-inclusive.</string>
+		<string>The expressions you write inside paranthesis within an interpolated string cannot contain:</string>
 		<key>answer1</key>
-		<string>Half-Closed</string>
+		<string>unescaped backslash(\)</string>
 		<key>answer2</key>
-		<string>Closed</string>
+		<string>string literals</string>
 		<key>answer3</key>
-		<string>Explicit</string>
+		<string>backslash (/)</string>
 		<key>rightAnswer</key>
 		<integer>1</integer>
 		<key>rightAnswerMessage</key>
-		<string>1..&lt;10 – is a range of numbers from 1 to 9. The two dots with a lesser-than sign is known as a Half-Closed range because the upper limit is non-inclusive.</string>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This is a series of characters, such as &quot;hello&quot;, &quot;world&quot; or &quot;albatross&quot;</string>
+		<key>answer1</key>
+		<string>String</string>
+		<key>answer2</key>
+		<string>Character</string>
+		<key>answer3</key>
+		<string>Character array</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>var emptyString = String() creates a:</string>
+		<key>answer1</key>
+		<string>string literal.</string>
+		<key>answer2</key>
+		<string>empty string.</string>
+		<key>answer3</key>
+		<string>nil.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>When you called the .isEmpty property of a string you get:</string>
+		<key>answer1</key>
+		<string>0 or 1.</string>
+		<key>answer2</key>
+		<string>Boolean.</string>
+		<key>answer3</key>
+		<string>String lenght.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Is an international standard for encoding, representing, and processing text in different writing systems. It enables you to represent almost any character from any language in a standarized form.</string>
+		<key>answer1</key>
+		<string>ASCII</string>
+		<key>answer2</key>
+		<string>Unicode</string>
+		<key>answer3</key>
+		<string>String</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Behind the scenes, Swift&apos;s native String type is built from:</string>
+		<key>answer1</key>
+		<string>Objective-c char.</string>
+		<key>answer2</key>
+		<string>Unicode scalar values.</string>
+		<key>answer3</key>
+		<string>NSString.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This is a unique 21-bit number for a character or modifier, such as U+0061 for LATIN SMALL LETTER A(&quot;a&quot;), or U+1F425 for FRONT-FACING BABY CHICK(&quot;🐥&quot;).</string>
+		<key>answer1</key>
+		<string>ASCII value</string>
+		<key>answer2</key>
+		<string>Unicode scalar</string>
+		<key>answer3</key>
+		<string>ANSI value</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>It can include the following special characters: \0 (null character), \\(backslash), \t (horizontal tab), \n (line feed), \r (carriage return), \&quot; (double quote) and \&apos; (single quote) and an arbitrary unicode scalar written as \u{n}.</string>
+		<key>answer1</key>
+		<string>NSString.</string>
+		<key>answer2</key>
+		<string>String literal.</string>
+		<key>answer3</key>
+		<string>String interpolation.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>It is a sequence of one or more Unicode scalars that (when combined) produce a single human-readable character.</string>
+		<key>answer1</key>
+		<string>ASCII character.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>Extended grapheme cluster.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Every instance of Swift&apos;s Character type represents a single:</string>
+		<key>answer1</key>
+		<string>char.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>Extended grapheme cluster.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>These are a flexible way to represent many complex script characters as a single Character value.</string>
+		<key>answer1</key>
+		<string>ASCII character.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>Extended grapheme cluster.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>To retrieve a count of the Character values in a string, the characters property has a property called</string>
+		<key>answer1</key>
+		<string>lenght.</string>
+		<key>answer2</key>
+		<string>count.</string>
+		<key>answer3</key>
+		<string>characters.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>If you initialize a new string with the four character word cafe and then append a COMBINING ACUTE ACCENT (U+0301) to the end of the string, the resulting string will have a character count of:</string>
+		<key>answer1</key>
+		<string>5</string>
+		<key>answer2</key>
+		<string>4</string>
+		<key>answer3</key>
+		<string>6</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You access and modify a string through its methods and properties, or by using:</string>
+		<key>answer1</key>
+		<string>ASCII character values.</string>
+		<key>answer2</key>
+		<string>converting it to an array or characters</string>
+		<key>answer3</key>
+		<string>subscript syntax</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Use this property to access the position of the first Character of a String.</string>
+		<key>answer1</key>
+		<string>String.index.</string>
+		<key>answer2</key>
+		<string>startIndex.</string>
+		<key>answer3</key>
+		<string>endIndex.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This value can access its immediately preceding index by calling the predecessor() method, and its immediately succeeding index by calling the successor() method.</string>
+		<key>answer1</key>
+		<string>String.index.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>characters.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Any index in a String can be accessed from any other index by using the:</string>
+		<key>answer1</key>
+		<string>Extended grapheme cluster.</string>
+		<key>answer2</key>
+		<string>characters.</string>
+		<key>answer3</key>
+		<string>advancedBy(_:).</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You can use this property of the characters property to create a Range of all the indexes used to access individual characters in a string. A use case would be to iterate trough all the Characters of a String.</string>
+		<key>answer1</key>
+		<string>lenght.</string>
+		<key>answer2</key>
+		<string>indices.</string>
+		<key>answer3</key>
+		<string>advancedBy(_:).</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
 	</dict>
 </array>
 </plist>
