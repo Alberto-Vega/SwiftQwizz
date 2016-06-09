@@ -18,7 +18,7 @@
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>This Swift types provide a fast, Unicode-compliant way to work with text in your code.</string>
+		<string>These Swift types provide a fast, Unicode-compliant way to work with text in your code.</string>
 		<key>answer1</key>
 		<string>NSString and char.</string>
 		<key>answer2</key>
@@ -48,11 +48,11 @@
 		<key>question</key>
 		<string>var greeting = &apos;Hello World&apos; is an example of a </string>
 		<key>answer1</key>
-		<string>constant</string>
+		<string>Constant</string>
 		<key>answer2</key>
-		<string>explicit string type</string>
+		<string>Explicit string type</string>
 		<key>answer3</key>
-		<string>inferred type string</string>
+		<string>Inferred type string</string>
 		<key>rightAnswer</key>
 		<integer>3</integer>
 		<key>rightAnswerMessage</key>
@@ -76,11 +76,11 @@
 		<key>question</key>
 		<string>Swift uses this process to include the name of a constant or variable as a placeholder in a longer string, and to prompt Swift to replace it with the current value of that constant or variable.</string>
 		<key>answer1</key>
-		<string>String Interpolation</string>
+		<string>String Interpolation.</string>
 		<key>answer2</key>
-		<string>Concatenation</string>
+		<string>Concatenation.</string>
 		<key>answer3</key>
-		<string>none of the above</string>
+		<string>Appending.</string>
 		<key>rightAnswer</key>
 		<integer>1</integer>
 		<key>rightAnswerMessage</key>
@@ -106,9 +106,9 @@
 		<key>answer1</key>
 		<string>String.</string>
 		<key>answer2</key>
-		<string>mutable string</string>
+		<string>Mutable string</string>
 		<key>answer3</key>
-		<string>string literal.</string>
+		<string>String literal.</string>
 		<key>rightAnswer</key>
 		<integer>1</integer>
 		<key>rightAnswerMessage</key>
@@ -146,11 +146,11 @@
 		<key>question</key>
 		<string>Swift&apos;s copy by default String behavior ensures that when a function passes you a String value, the String passed will:</string>
 		<key>answer1</key>
-		<string>be modified.</string>
+		<string>Be modified.</string>
 		<key>answer2</key>
-		<string>not be modified unless you do.</string>
+		<string>Not be modified unless you do.</string>
 		<key>answer3</key>
-		<string>be inmutable.</string>
+		<string>Be inmutable.</string>
 		<key>rightAnswer</key>
 		<integer>2</integer>
 		<key>rightAnswerMessage</key>
@@ -160,11 +160,11 @@
 		<key>question</key>
 		<string>You can access the individual Character values for a String by:</string>
 		<key>answer1</key>
-		<string>iterating its characters property.</string>
+		<string>Iterating its characters property.</string>
 		<key>answer2</key>
-		<string>converting it into an array.</string>
+		<string>Converting it into an array.</string>
 		<key>answer3</key>
-		<string>type cast to NSString.</string>
+		<string>Type casting to NSString.</string>
 		<key>rightAnswer</key>
 		<integer>1</integer>
 		<key>rightAnswerMessage</key>
@@ -188,7 +188,7 @@
 		<key>question</key>
 		<string>You can append a Characer value to a String variable with the String method:</string>
 		<key>answer1</key>
-		<string>StringFromChar.</string>
+		<string>stringFromChar().</string>
 		<key>answer2</key>
 		<string>append().</string>
 		<key>answer3</key>
@@ -220,7 +220,7 @@
 		<key>answer2</key>
 		<string>Addition assignement (+=).</string>
 		<key>answer3</key>
-		<string>unescaped backslash (\).</string>
+		<string>Unescaped backslash (\).</string>
 		<key>rightAnswer</key>
 		<integer>2</integer>
 		<key>rightAnswerMessage</key>
@@ -258,11 +258,11 @@
 		<key>question</key>
 		<string>The expressions you write inside paranthesis within an interpolated string cannot contain:</string>
 		<key>answer1</key>
-		<string>unescaped backslash(\)</string>
+		<string>Unescaped backslash(\)</string>
 		<key>answer2</key>
-		<string>string literals</string>
+		<string>String literals</string>
 		<key>answer3</key>
-		<string>backslash (/)</string>
+		<string>Backslash (/)</string>
 		<key>rightAnswer</key>
 		<integer>1</integer>
 		<key>rightAnswerMessage</key>
@@ -286,11 +286,11 @@
 		<key>question</key>
 		<string>var emptyString = String() creates a:</string>
 		<key>answer1</key>
-		<string>string literal.</string>
+		<string>String literal.</string>
 		<key>answer2</key>
-		<string>empty string.</string>
+		<string>Empty string.</string>
 		<key>answer3</key>
-		<string>nil.</string>
+		<string>nil object.</string>
 		<key>rightAnswer</key>
 		<integer>2</integer>
 		<key>rightAnswerMessage</key>
@@ -410,7 +410,7 @@
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>To retrieve a count of the Character values in a string, the characters property has a property called</string>
+		<string>To retrieve a count of the Character values in a string, the characters property has a property:</string>
 		<key>answer1</key>
 		<string>lenght.</string>
 		<key>answer2</key>
@@ -442,9 +442,9 @@
 		<key>answer1</key>
 		<string>ASCII character values.</string>
 		<key>answer2</key>
-		<string>converting it to an array or characters</string>
+		<string>Converting it to an array or characters</string>
 		<key>answer3</key>
-		<string>subscript syntax</string>
+		<string>Subscript syntax</string>
 		<key>rightAnswer</key>
 		<integer>3</integer>
 		<key>rightAnswerMessage</key>

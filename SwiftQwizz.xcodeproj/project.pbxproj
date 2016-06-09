@@ -27,7 +27,6 @@
 		BF9E59011CED3CDE00CF978F /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E59001CED3CDE00CF978F /* GradientButton.swift */; };
 		BFA1B4101C929BCB0091661F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1B40F1C929BCB0091661F /* Question.swift */; };
 		BFA1B4121C929C340091661F /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1B4111C929C340091661F /* Chapter.swift */; };
-		BFA1B4141C929C9D0091661F /* QuizExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1B4131C929C9D0091661F /* QuizExtensions.swift */; };
 		BFE8DA551CA4CC8D00830B86 /* ChapterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8DA541CA4CC8D00830B86 /* ChapterExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +74,6 @@
 		BF9E59001CED3CDE00CF978F /* GradientButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		BFA1B40F1C929BCB0091661F /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		BFA1B4111C929C340091661F /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
-		BFA1B4131C929C9D0091661F /* QuizExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizExtensions.swift; sourceTree = "<group>"; };
 		BFE8DA541CA4CC8D00830B86 /* ChapterExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				BF357BBF1BC75BF100D0C072 /* Quiz.swift */,
-				BFA1B4131C929C9D0091661F /* QuizExtensions.swift */,
 				BFE8DA541CA4CC8D00830B86 /* ChapterExtensions.swift */,
 				BFA1B4111C929C340091661F /* Chapter.swift */,
 				BFA1B40F1C929BCB0091661F /* Question.swift */,
@@ -338,7 +335,6 @@
 				BF357BC81BC76EEC00D0C072 /* LevelOneViewController.swift in Sources */,
 				BF357BD01BC76F6300D0C072 /* ResultsViewController.swift in Sources */,
 				BF109B7F1CD2E89100D19B8A /* SegueHandlerType.swift in Sources */,
-				BFA1B4141C929C9D0091661F /* QuizExtensions.swift in Sources */,
 				BF357BD41BC8A7D400D0C072 /* ChaptersListTableViewController.swift in Sources */,
 				BF357B921BC75BA000D0C072 /* AppDelegate.swift in Sources */,
 				BFA1B4101C929BCB0091661F /* Question.swift in Sources */,

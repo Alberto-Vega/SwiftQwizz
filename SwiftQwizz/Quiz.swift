@@ -15,6 +15,22 @@ class Quiz {
     var defaults = NSUserDefaults.standardUserDefaults()
 }
 
+extension Quiz {
+    func createChapters() {
+        let theBasics = Chapter(name: "The Basics", plistFileName: "QuestionsData")
+        chapters.append(theBasics)
+        let strings = Chapter(name: "Strings and Characters", plistFileName: "StringsAndCharsQuestions")
+        chapters.append(strings)
+        let advanced = Chapter(name: "Advanced", plistFileName: "QuestionsDataAdvanced")
+        chapters.append(advanced)
+    }
+    
+//    func addChapter(name: String, plistFileName: String) {
+//        let newChapter = Chapter(name: name, plistFileName: plistFileName)
+//        self.chapters.append(newChapter)
+//    }
+}
+
 
 
 
