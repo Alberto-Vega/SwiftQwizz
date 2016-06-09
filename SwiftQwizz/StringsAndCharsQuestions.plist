@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>question</key>
+		<string>Swift Strings are represented by the type:</string>
+		<key>answer1</key>
+		<string>NSString</string>
+		<key>answer2</key>
+		<string>String</string>
+		<key>answer3</key>
+		<string>Character</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This Swift types provide a fast, Unicode-compliant way to work with text in your code.</string>
+		<key>answer1</key>
+		<string>NSString and char.</string>
+		<key>answer2</key>
+		<string>String and Character.</string>
+		<key>answer3</key>
+		<string>String literals.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>String mutability is managed by choosing between:</string>
+		<key>answer1</key>
+		<string>Constant and Variable.</string>
+		<key>answer2</key>
+		<string>NSMutableString and NSString.</string>
+		<key>answer3</key>
+		<string>MutableString and String.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>var greeting = &apos;Hello World&apos; is an example of a </string>
+		<key>answer1</key>
+		<string>constant</string>
+		<key>answer2</key>
+		<string>explicit string type</string>
+		<key>answer3</key>
+		<string>inferred type string</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string>var greeting = &apos;Hello World&apos; is an example of an Inferred type string.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>To create an inmutable String you need to use the keyword</string>
+		<key>answer1</key>
+		<string>constant</string>
+		<key>answer2</key>
+		<string>let</string>
+		<key>answer3</key>
+		<string>var</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Swift uses this process to include the name of a constant or variable as a placeholder in a longer string, and to prompt Swift to replace it with the current value of that constant or variable.</string>
+		<key>answer1</key>
+		<string>String Interpolation</string>
+		<key>answer2</key>
+		<string>Concatenation</string>
+		<key>answer3</key>
+		<string>none of the above</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>Swift uses String Interpolation to include the name of a constant or variable as a placeholder in a longer string, and to prompt Swift to replace it with the current value of that constant or variable.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Swift&apos;s String type is bridged with Foundation&apos;s class:</string>
+		<key>answer1</key>
+		<string>NSString</string>
+		<key>answer2</key>
+		<string>NSObject</string>
+		<key>answer3</key>
+		<string>char</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Is a fixed sequence of textual characters surrounded by a pair of double quotes(&quot;&quot;).</string>
+		<key>answer1</key>
+		<string>String.</string>
+		<key>answer2</key>
+		<string>mutable string</string>
+		<key>answer3</key>
+		<string>string literal.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>If you create a new String value in Swift and you pass it to a function or assign it to a constant or variable:</string>
+		<key>answer1</key>
+		<string>It gets passed by reference.</string>
+		<key>answer2</key>
+		<string>It passes it&apos;s address in memory.</string>
+		<key>answer3</key>
+		<string>It is passed by copy.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Swift&apos;s String type is a ______ type.</string>
+		<key>answer1</key>
+		<string>Reference type.</string>
+		<key>answer2</key>
+		<string>Value type.</string>
+		<key>answer3</key>
+		<string>NSString type.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string>Floating Point Numbers or Float are numbers with a fractional part like 3.7 or -15094.4 In addition to that, this type of numbers can store very large number that don&apos;t fit in an Int</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Swift&apos;s copy by default String behavior ensures that when a function passes you a String value, the String passed will:</string>
+		<key>answer1</key>
+		<string>be modified.</string>
+		<key>answer2</key>
+		<string>not be modified unless you do.</string>
+		<key>answer3</key>
+		<string>be inmutable.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You can access the individual Character values for a String by:</string>
+		<key>answer1</key>
+		<string>characters property.</string>
+		<key>answer2</key>
+		<string>converting it into an array.</string>
+		<key>answer3</key>
+		<string>type cast to NSString.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You can&apos;t append a String or Character to an existing Character variable, because a Character value must:</string>
+		<key>answer1</key>
+		<string>Be mutable.</string>
+		<key>answer2</key>
+		<string>Contain a single character only.</string>
+		<key>answer3</key>
+		<string>Conform to a protocol.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You can append a Characer value to a String variable with the String method:</string>
+		<key>answer1</key>
+		<string>StringFromChar.</string>
+		<key>answer2</key>
+		<string>append().</string>
+		<key>answer3</key>
+		<string>concatenate().</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Strings values can be added together or concatenated to create a new String value using:</string>
+		<key>answer1</key>
+		<string>Addition operator (+).</string>
+		<key>answer2</key>
+		<string>Addition assignement (+=).</string>
+		<key>answer3</key>
+		<string>.append().</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>It is a collection of data items which can be accessed via an index beginning with 0.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You can also append a String value to an existing String variable using:</string>
+		<key>answer1</key>
+		<string>Addition operator (+).</string>
+		<key>answer2</key>
+		<string>Addition assignement (+=).</string>
+		<key>answer3</key>
+		<string>unescaped backlash (\).</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>To add an array to another array we use the operator:</string>
+		<key>answer1</key>
+		<string>+=</string>
+		<key>answer2</key>
+		<string>++</string>
+		<key>answer3</key>
+		<string>==</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>To add an array to another array we use the operator: +=</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This collection type allows you to store key-value pairs and access the value by providing the key.</string>
+		<key>answer1</key>
+		<string>Dictionary</string>
+		<key>answer2</key>
+		<string>Tuple</string>
+		<key>answer3</key>
+		<string>Array</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>Dictionary is a collection type that allows you to store key-value pairs and access the value by providing the key.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Loop which ensures that your block of code is executed at least once.</string>
+		<key>answer1</key>
+		<string>While Loop</string>
+		<key>answer2</key>
+		<string>Do-While Loop</string>
+		<key>answer3</key>
+		<string>For Loop</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string>Do-While Loop ensures that your block of code is executed at least once.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This loop states: while something is true execute a block of code. It stops execution when that condition turns to false.</string>
+		<key>answer1</key>
+		<string>Do-While Loop</string>
+		<key>answer2</key>
+		<string>For Loop</string>
+		<key>answer3</key>
+		<string>While Loop</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string>While Loop states that while something is true execute a block of code. It stops execution when that condition turns to false.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Loop variant where it creates a temporary variable and assigns it a value while iterating over the array.</string>
+		<key>answer1</key>
+		<string>While Loop</string>
+		<key>answer2</key>
+		<string>For Loop</string>
+		<key>answer3</key>
+		<string>For-In</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string>For-In Loop creates a temporary variable and assigns it a value while iterating over the array.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>1…10 – is a range of numbers from 1 to 10. The three dots are known as a _____ range because the upper limit is inclusive.</string>
+		<key>answer1</key>
+		<string>Closed</string>
+		<key>answer2</key>
+		<string>Half-Closed</string>
+		<key>answer3</key>
+		<string>Explicit</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>1…10 – is a range of numbers from 1 to 10. The three dots are known as a Closed range because the upper limit is inclusive.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>1..&lt;10 – is a range of numbers from 1 to 9. The two dots with a lesser-than sign is known as a ______ range because the upper limit is non-inclusive.</string>
+		<key>answer1</key>
+		<string>Half-Closed</string>
+		<key>answer2</key>
+		<string>Closed</string>
+		<key>answer3</key>
+		<string>Explicit</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>1..&lt;10 – is a range of numbers from 1 to 9. The two dots with a lesser-than sign is known as a Half-Closed range because the upper limit is non-inclusive.</string>
+	</dict>
+</array>
+</plist>

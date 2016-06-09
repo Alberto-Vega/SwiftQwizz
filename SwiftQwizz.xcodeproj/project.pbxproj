@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF109B7F1CD2E89100D19B8A /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF109B7E1CD2E89100D19B8A /* SegueHandlerType.swift */; };
+		BF19D0351D08ECF300CDFC0E /* StringsAndCharsQuestions.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF19D0341D08ECF300CDFC0E /* StringsAndCharsQuestions.plist */; };
 		BF357B921BC75BA000D0C072 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF357B911BC75BA000D0C072 /* AppDelegate.swift */; };
 		BF357B991BC75BA000D0C072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF357B981BC75BA000D0C072 /* Assets.xcassets */; };
 		BF357B9C1BC75BA000D0C072 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF357B9A1BC75BA000D0C072 /* LaunchScreen.storyboard */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		BF109B7E1CD2E89100D19B8A /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegueHandlerType.swift; path = ../SegueHandlerType.swift; sourceTree = "<group>"; };
+		BF19D0341D08ECF300CDFC0E /* StringsAndCharsQuestions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StringsAndCharsQuestions.plist; sourceTree = "<group>"; };
 		BF357B8E1BC75BA000D0C072 /* SwiftQwizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftQwizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF357B911BC75BA000D0C072 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF357B981BC75BA000D0C072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				BF357BCB1BC76F1400D0C072 /* QuestionsDataLevelTwo.plist */,
 				BF713AD71C97E15D003E0345 /* QuestionsDataAdvanced.plist */,
 				BF357BCD1BC76F2400D0C072 /* QuestionsData.plist */,
+				BF19D0341D08ECF300CDFC0E /* StringsAndCharsQuestions.plist */,
 				BF357B9D1BC75BA000D0C072 /* Info.plist */,
 			);
 			path = SwiftQwizz;
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF357B9C1BC75BA000D0C072 /* LaunchScreen.storyboard in Resources */,
+				BF19D0351D08ECF300CDFC0E /* StringsAndCharsQuestions.plist in Resources */,
 				BF713AD81C97E15E003E0345 /* QuestionsDataAdvanced.plist in Resources */,
 				BF357B991BC75BA000D0C072 /* Assets.xcassets in Resources */,
 				BF357BD61BC8C67000D0C072 /* logo.png in Resources */,
