@@ -94,7 +94,7 @@
 		<key>answer2</key>
 		<string>Nested types can&apos;t be used outside of definition.</string>
 		<key>answer3</key>
-		<string>It can be used from anywhere in the same block.</string>
+		<string>From anywhere in the same block.</string>
 		<key>rightAnswer</key>
 		<integer>1</integer>
 		<key>rightAnswerMessage</key>

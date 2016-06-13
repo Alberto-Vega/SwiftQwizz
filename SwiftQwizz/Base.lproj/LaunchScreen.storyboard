@@ -32,10 +32,10 @@
                                 <exclude reference="tdr-hb-Hl3"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="nWh-US-hbe"/>
                                 <exclude reference="KI4-L1-S25"/>
                                 <exclude reference="Zqo-Ap-PwR"/>
                                 <exclude reference="cE4-A5-8us"/>
-                                <exclude reference="nWh-US-hbe"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -43,10 +43,10 @@
                                 <include reference="tdr-hb-Hl3"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="nWh-US-hbe"/>
                                 <include reference="KI4-L1-S25"/>
                                 <include reference="Zqo-Ap-PwR"/>
                                 <include reference="cE4-A5-8us"/>
-                                <include reference="nWh-US-hbe"/>
                             </mask>
                         </variation>
                     </view>
