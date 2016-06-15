@@ -122,7 +122,6 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
                                        forState: .Normal)
                 buttonAnswer3.setTitle(currentChapter.Questions[currentQuestionCounter].answer3, forState: .Normal)
                 
-                //                animateView(questionNumberLabel, show: true, animation: .TransitionFlipFromTop, delayTime: 0.0, completion: )
                 animateView(questionNumberLabel, show: true, animation: .TransitionFlipFromTop, delayTime: 0.0, completion: nil)
                 self.questionNumberLabel.text = "\(self.currentQuestionCounter + 1) of 10"
             }
@@ -201,22 +200,6 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
             self.view.layoutIfNeeded()
             }, completion: nil)
     }
-    
-    //    func animateView(view: UIView, show: Bool) {
-    //        if !show {
-    //            delay(seconds: 0) {
-    //                UIView.transitionWithView(view, duration: 0.8, options: .TransitionFlipFromBottom, animations: {
-    //                    view.hidden = true
-    //                    }, completion: { (true) in
-    //                })
-    //            }
-    //        } else {
-    //            UIView.transitionWithView(view, duration: 0.6, options: .TransitionFlipFromTop, animations: {
-    //                view.hidden = false
-    //                }, completion: { (true) in
-    //            })
-    //        }
-    //    }
     
     func animateView(label: UIView, show: Bool, animation: UIViewAnimationOptions, delayTime: Double, completion: (() ->())?) {
         delay(seconds: delayTime) {

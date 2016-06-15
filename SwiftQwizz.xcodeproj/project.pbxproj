@@ -129,6 +129,7 @@
 				BF357BC41BC76E9F00D0C072 /* Controllers */,
 				BF9E59021CED537900CF978F /* Views */,
 				BF357BC11BC76E0A00D0C072 /* Models */,
+				BFC6B9241D0F33F900E9CDA9 /* Utility */,
 				BF357B981BC75BA000D0C072 /* Assets.xcassets */,
 				BF357BD51BC8C67000D0C072 /* logo.png */,
 			);
@@ -160,7 +161,6 @@
 				BFE8DA541CA4CC8D00830B86 /* ChapterExtensions.swift */,
 				BFA1B4111C929C340091661F /* Chapter.swift */,
 				BFA1B40F1C929BCB0091661F /* Question.swift */,
-				BF109B7E1CD2E89100D19B8A /* SegueHandlerType.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -199,6 +199,14 @@
 				BF19D0341D08ECF300CDFC0E /* StringsAndCharsQuestions.plist */,
 			);
 			name = "App Global";
+			sourceTree = "<group>";
+		};
+		BFC6B9241D0F33F900E9CDA9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				BF109B7E1CD2E89100D19B8A /* SegueHandlerType.swift */,
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
