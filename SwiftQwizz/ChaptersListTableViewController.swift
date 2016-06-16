@@ -46,7 +46,7 @@ class ChaptersListTableViewController: UITableViewController, SegueHandlerType {
                     let selectedChapter = currentQuiz.chapters[selectedRow]
                     currentQuiz.currentChapter = selectedChapter
                     LevelOneViewController.currentChapter = currentQuiz.currentChapter
-                    Flurry.logEvent("\(currentQuiz.currentChapter?.name)")
+                    Flurry.logEvent("Chapter tapped \(selectedChapter.name)")
                 }
             }
         }

@@ -124,7 +124,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
                 
                 animateView(questionNumberLabel, show: true, animation: .TransitionFlipFromTop, delayTime: 0.0, completion: nil)
                 self.questionNumberLabel.text = "\(self.currentQuestionCounter + 1) of 10"
-                Flurry.logEvent("Question Number: \(QuestionTextLabel.text) seen")
+                Flurry.logEvent("Question Number: \(self.currentQuestionCounter + 1) seen")
             }
         }
     }
