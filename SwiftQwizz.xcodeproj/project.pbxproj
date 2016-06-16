@@ -27,7 +27,11 @@
 		BF9E59011CED3CDE00CF978F /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E59001CED3CDE00CF978F /* GradientButton.swift */; };
 		BFA1B4101C929BCB0091661F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1B40F1C929BCB0091661F /* Question.swift */; };
 		BFA1B4121C929C340091661F /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1B4111C929C340091661F /* Chapter.swift */; };
+		BFA5B7751D1346C0005B18F0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA5B7741D1346C0005B18F0 /* SystemConfiguration.framework */; };
+		BFA5B7771D1346D5005B18F0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA5B7761D1346D5005B18F0 /* Security.framework */; };
+		BFA5B77A1D134720005B18F0 /* libFlurry_7.6.4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA5B7791D134720005B18F0 /* libFlurry_7.6.4.a */; };
 		BFE8DA551CA4CC8D00830B86 /* ChapterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8DA541CA4CC8D00830B86 /* ChapterExtensions.swift */; };
+		BFFDFEB81D1366DE00B06DDD /* APIKeyValueForApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFDFEB71D1366DE00B06DDD /* APIKeyValueForApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +78,13 @@
 		BF9E59001CED3CDE00CF978F /* GradientButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		BFA1B40F1C929BCB0091661F /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		BFA1B4111C929C340091661F /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
+		BFA5B7741D1346C0005B18F0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BFA5B7761D1346D5005B18F0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BFA5B7781D134720005B18F0 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		BFA5B7791D134720005B18F0 /* libFlurry_7.6.4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_7.6.4.a; sourceTree = "<group>"; };
+		BFA5B77C1D1347AF005B18F0 /* SwiftQwizz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftQwizz-Bridging-Header.h"; sourceTree = "<group>"; };
 		BFE8DA541CA4CC8D00830B86 /* ChapterExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterExtensions.swift; sourceTree = "<group>"; };
+		BFFDFEB71D1366DE00B06DDD /* APIKeyValueForApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyValueForApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFA5B7771D1346D5005B18F0 /* Security.framework in Frameworks */,
+				BFA5B77A1D134720005B18F0 /* libFlurry_7.6.4.a in Frameworks */,
+				BFA5B7751D1346C0005B18F0 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +142,9 @@
 				BF357BC41BC76E9F00D0C072 /* Controllers */,
 				BF9E59021CED537900CF978F /* Views */,
 				BF357BC11BC76E0A00D0C072 /* Models */,
+				BFA5B77B1D134747005B18F0 /* Flurry */,
 				BFC6B9241D0F33F900E9CDA9 /* Utility */,
+				BFA5B77D1D13513A005B18F0 /* Frameworks */,
 				BF357B981BC75BA000D0C072 /* Assets.xcassets */,
 				BF357BD51BC8C67000D0C072 /* logo.png */,
 			);
@@ -188,10 +203,31 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		BFA5B77B1D134747005B18F0 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				BFA5B7781D134720005B18F0 /* Flurry.h */,
+				BFA5B7791D134720005B18F0 /* libFlurry_7.6.4.a */,
+				BFA5B77C1D1347AF005B18F0 /* SwiftQwizz-Bridging-Header.h */,
+			);
+			name = Flurry;
+			sourceTree = "<group>";
+		};
+		BFA5B77D1D13513A005B18F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFA5B7761D1346D5005B18F0 /* Security.framework */,
+				BFA5B7741D1346C0005B18F0 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		BFC6B9231D0F2DDF00E9CDA9 /* App Global */ = {
 			isa = PBXGroup;
 			children = (
 				BF357B911BC75BA000D0C072 /* AppDelegate.swift */,
+				BFFDFEB71D1366DE00B06DDD /* APIKeyValueForApp.swift */,
 				BF357B9D1BC75BA000D0C072 /* Info.plist */,
 				BF357BCB1BC76F1400D0C072 /* QuestionsDataLevelTwo.plist */,
 				BF713AD71C97E15D003E0345 /* QuestionsDataAdvanced.plist */,
@@ -351,6 +387,7 @@
 				BF357BC81BC76EEC00D0C072 /* LevelOneViewController.swift in Sources */,
 				BF357BD01BC76F6300D0C072 /* ResultsViewController.swift in Sources */,
 				BF109B7F1CD2E89100D19B8A /* SegueHandlerType.swift in Sources */,
+				BFFDFEB81D1366DE00B06DDD /* APIKeyValueForApp.swift in Sources */,
 				BF357BD41BC8A7D400D0C072 /* ChaptersListTableViewController.swift in Sources */,
 				BF357B921BC75BA000D0C072 /* AppDelegate.swift in Sources */,
 				BFA1B4101C929BCB0091661F /* Question.swift in Sources */,
@@ -495,9 +532,14 @@
 				INFOPLIST_FILE = SwiftQwizz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SwiftQwizz",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftQwizz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftQwizz/SwiftQwizz-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -511,9 +553,14 @@
 				INFOPLIST_FILE = SwiftQwizz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SwiftQwizz",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftQwizz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftQwizz/SwiftQwizz-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

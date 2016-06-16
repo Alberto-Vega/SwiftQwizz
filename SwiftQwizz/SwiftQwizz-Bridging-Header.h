@@ -8,6 +8,7 @@
 
 #ifndef SwiftQwizz_Bridging_Header_h
 #define SwiftQwizz_Bridging_Header_h
+#import "Flurry.h"
 
 
 #endif /* SwiftQwizz_Bridging_Header_h */

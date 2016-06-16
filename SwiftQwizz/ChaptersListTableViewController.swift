@@ -32,7 +32,29 @@ class ChaptersListTableViewController: UITableViewController, SegueHandlerType {
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: - Table view data source
+    
+    // MARK: - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let segueIdentifier = segueIdentifierForSegue(segue)
+        
+        switch segueIdentifier {
+        case .ShowLevelOneViewController:
+            
+            if let LevelOneViewController = segue.destinationViewController as? LevelOneViewController {
+                if let indexPath = self.tableView.indexPathForSelectedRow {
+                    let selectedRow = indexPath.row
+                    let selectedChapter = currentQuiz.chapters[selectedRow]
+                    currentQuiz.currentChapter = selectedChapter
+                    LevelOneViewController.currentChapter = currentQuiz.currentChapter
+                    Flurry.logEvent("\(currentQuiz.currentChapter?.name)")
+                }
+            }
+        }
+    }
+}
+
+
+extension ChaptersListTableViewController {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -53,23 +75,5 @@ class ChaptersListTableViewController: UITableViewController, SegueHandlerType {
         currentQuiz.currentChapter = self.currentQuiz.chapters[indexPath.row]
         let chapterNameTextLabel = cell.viewWithTag(1) as! UILabel
         chapterNameTextLabel.text = currentQuiz.currentChapter?.name
-    }
-    
-    // MARK: - Navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let segueIdentifier = segueIdentifierForSegue(segue)
-        
-        switch segueIdentifier {
-        case .ShowLevelOneViewController:
-            
-            if let LevelOneViewController = segue.destinationViewController as? LevelOneViewController {
-                if let indexPath = self.tableView.indexPathForSelectedRow {
-                    let selectedRow = indexPath.row
-                    let selectedChapter = currentQuiz.chapters[selectedRow]
-                    currentQuiz.currentChapter = selectedChapter
-                    LevelOneViewController.currentChapter = currentQuiz.currentChapter
-                }
-            }
-        }
     }
 }

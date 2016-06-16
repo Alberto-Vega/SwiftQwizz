@@ -20,9 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
-  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
+  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    Flurry.startSession(APIKeyForApp.SwiftQwizz.rawValue)
+    Flurry.logEvent("Launched Application", timed: true)
 //    UINavigationBar.appearance().tintColor = UIColor(red: 250, green: 217, blue: 97, alpha: 100)
     UINavigationBar.appearance().tintColor = UIColor.orangeColor()
     UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.orangeColor()]
@@ -50,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   func applicationWillTerminate(application: UIApplication) {
+    Flurry.endTimedEvent("Launched Application", withParameters: nil)
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
 

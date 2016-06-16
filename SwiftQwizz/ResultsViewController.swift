@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ResultsViewController:UIViewController {
+class ResultsViewController:UIViewController, SegueHandlerType {
+    
+    enum SegueIdentifier: String {
+        case ShowChaptersListTableViewController
+    }
     
     @IBOutlet weak var endOfQuizMessage: UILabel!
     @IBOutlet weak var currentChapterLabel: UILabel!
@@ -26,6 +30,7 @@ class ResultsViewController:UIViewController {
         if let chapter = currentChapter {
             //    print("The current chapter in resultsvc: \(chapter)")
             currentChapterLabel.text = "Chapter: \(chapter.name)"
+        Flurry.logEvent("Finished Quizz")
         }
     }
     
@@ -49,6 +54,15 @@ class ResultsViewController:UIViewController {
             }
             finalScoreLabel!.text = "\(rightAnswers)"
             finalAccuracyLabel!.text = "\(accuracyPercentage)" + " %"
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let segueIdentifier = segueIdentifierForSegue(segue)
+        switch segueIdentifier {
+        case .ShowChaptersListTableViewController:
+            
+            Flurry.logEvent("Re started")
         }
     }
 }

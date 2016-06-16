@@ -483,7 +483,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="c5e-dC-fHS" kind="presentation" id="gJy-UF-Kux"/>
+                                    <segue destination="c5e-dC-fHS" kind="presentation" identifier="ShowChaptersListTableViewController" id="gJy-UF-Kux"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Chapter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pn-l7-Es8">
