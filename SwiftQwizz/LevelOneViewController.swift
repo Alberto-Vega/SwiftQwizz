@@ -191,7 +191,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         animateRightAnswer(rightAnswer: currentChapter.Questions[currentQuestionCounter].rightAnswer)
         self.updateScore()
         currentQuestionCounter += 1
-        Flurry.logEvent("Questions answered + \(currentQuestionCounter)")
+        Flurry.logEvent("Question \(currentQuestionCounter) answered")
         Flurry.logEvent("Question Answered")
     }
     

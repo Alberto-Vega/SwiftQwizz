@@ -74,6 +74,20 @@
 	</dict>
 	<dict>
 		<key>question</key>
+		<string>To create a mutable String you need to use the keyword</string>
+		<key>answer1</key>
+		<string>NSMutableString</string>
+		<key>answer2</key>
+		<string>var</string>
+		<key>answer3</key>
+		<string>MutableString</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
 		<string>Swift uses this process to include the name of a constant or variable as a placeholder in a longer string, and to prompt Swift to replace it with the current value of that constant or variable.</string>
 		<key>answer1</key>
 		<string>String Interpolation.</string>
@@ -438,7 +452,7 @@
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>You access and modify a string through its methods and properties, or by using:</string>
+		<string>You access and modify a string through its methods and properties, or by:</string>
 		<key>answer1</key>
 		<string>ASCII character values.</string>
 		<key>answer2</key>
@@ -447,6 +461,21 @@
 		<string>Subscript syntax</string>
 		<key>rightAnswer</key>
 		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Each String value has an associated index type, which corresponds to the position of each Character in the string.
+        </string>
+		<key>answer1</key>
+		<string>String.index.</string>
+		<key>answer2</key>
+		<string>startIndex.</string>
+		<key>answer3</key>
+		<string>endIndex.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>
@@ -503,6 +532,90 @@
 		<string>advancedBy(_:).</string>
 		<key>rightAnswer</key>
 		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>let greeting = &quot;Hola&quot;;  greeting[greeting.endIndex.predecessor()] this code is accessing the character:</string>
+		<key>answer1</key>
+		<string>l</string>
+		<key>answer2</key>
+		<string>a</string>
+		<key>answer3</key>
+		<string>H</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>It is not a valid argument to subscript, and is always reachable from startIndex by zero or more applications of successor().</string>
+		<key>answer1</key>
+		<string>String.CharacterView.Index</string>
+		<key>answer2</key>
+		<string>String.Index</string>
+		<key>answer3</key>
+		<string>endIndex</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You can use this property of the characters property to create a Range of all the indexes used to access individual characters in a string. A use case would be to iterate trough all the Characters of a String.</string>
+		<key>answer1</key>
+		<string>lenght.</string>
+		<key>answer2</key>
+		<string>indices.</string>
+		<key>answer3</key>
+		<string>advancedBy(_:).</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>If a String is empty, startIndex and endIndex:</string>
+		<key>answer1</key>
+		<string>are nil.</string>
+		<key>answer2</key>
+		<string>will trigger runtime error.</string>
+		<key>answer3</key>
+		<string>are equal.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Any index in a String can be accessed from any other index by chaining these methods together:</string>
+		<key>answer1</key>
+		<string>endIndex and startIndex.</string>
+		<key>answer2</key>
+		<string>predecessor() and successor()</string>
+		<key>answer3</key>
+		<string>String.Index</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Different characters can require different amounts of memory to store, so in order to determine which Character is  at a particular position:</string>
+		<key>answer1</key>
+		<string>iterate over each Unicode scalar of that String.</string>
+		<key>answer2</key>
+		<string>must access it&apos;s index.</string>
+		<key>answer3</key>
+		<string>convert it to an array.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>

@@ -62,7 +62,7 @@ class ResultsViewController:UIViewController, SegueHandlerType {
         switch segueIdentifier {
         case .ShowChaptersListTableViewController:
             
-            Flurry.logEvent("Re started")
+            Flurry.logEvent("Again button tapped")
         }
     }
 }
