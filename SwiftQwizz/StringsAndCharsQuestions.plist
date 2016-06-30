@@ -759,5 +759,201 @@
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>
+	<dict>
+		<key>question</key>
+		<string>These include UTF-8, UTF-16 and UTF-32 encoding forms.</string>
+		<key>answer1</key>
+		<string>Unicode scalars</string>
+		<key>answer2</key>
+		<string>Unicode-defined encoding forms.</string>
+		<key>answer3</key>
+		<string>Unicode equality.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>When a Unicode string is written to a text file or some other storage, the Unicode scalars in that string are encoded in one of several:</string>
+		<key>answer1</key>
+		<string>Characters.</string>
+		<key>answer2</key>
+		<string>Unicode-defined encoding forms.</string>
+		<key>answer3</key>
+		<string>Unicode equality.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Each Unicode-defined encoding form encodes strings in small chunks know as:</string>
+		<key>answer1</key>
+		<string>Unicode scalars.</string>
+		<key>answer2</key>
+		<string>code units.</string>
+		<key>answer3</key>
+		<string>Characters.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Encodes a string as 8-bit code units:</string>
+		<key>answer1</key>
+		<string>Character.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>UTF-8</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Encodes a string as 16-bit code units:</string>
+		<key>answer1</key>
+		<string>Character.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>UTF-16</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Encodes a string as 32-bit code units:</string>
+		<key>answer1</key>
+		<string>Character.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>UTF-32</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You can iterate over a string with a for-in statement, to access its individual Character values as:</string>
+		<key>answer1</key>
+		<string>code units.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>Unicode extended grapheme clusters.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>The string utf8 and utf16  properties are  collections of:</string>
+		<key>answer1</key>
+		<string>Character.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>UTF-8 and UTF-16 code units.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This string property is a collection fo 21-bit Unicode scalar values, equivalent to the string&apos;s UTF-32 encoding form.</string>
+		<key>answer1</key>
+		<string>unicodeScalars.</string>
+		<key>answer2</key>
+		<string>Characters.</string>
+		<key>answer3</key>
+		<string>UTF-32</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You can access a Unicode scalar representation of a String value by iterating over its property:</string>
+		<key>answer1</key>
+		<string>Characters.</string>
+		<key>answer2</key>
+		<string>unicodeScalars.</string>
+		<key>answer3</key>
+		<string>UTF-32</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>The string unicodeScalars property is of type:</string>
+		<key>answer1</key>
+		<string>Character.</string>
+		<key>answer2</key>
+		<string>UnicodeScalar.</string>
+		<key>answer3</key>
+		<string>UnicodeScalarView</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This type is a collection of values of type UnicodeScalar.</string>
+		<key>answer1</key>
+		<string>Character.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>UnicodeScalarView</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What is the name of the Unicode scalar property that returns the scalar&apos;s 21 bit value, represented within a UInt32 value.</string>
+		<key>answer1</key>
+		<string>value</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>UnicodeScalarView</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Each UnicodeScalar in a string can also be used to construct a new String Value using:</string>
+		<key>answer1</key>
+		<string>it&apos;s scalar 21 bit value.</string>
+		<key>answer2</key>
+		<string>string interpolation.</string>
+		<key>answer3</key>
+		<string>UnicodeScalarView</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
 </array>
 </plist>
