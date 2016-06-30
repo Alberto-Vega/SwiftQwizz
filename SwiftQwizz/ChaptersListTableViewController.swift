@@ -40,7 +40,7 @@ class ChaptersListTableViewController: UITableViewController, SegueHandlerType {
         switch segueIdentifier {
         case .ShowLevelOneViewController:
             
-            if let LevelOneViewController = segue.destinationViewController as? LevelOneViewController {
+                if let LevelOneViewController = segue.destinationViewController as? LevelOneViewController {
                 if let indexPath = self.tableView.indexPathForSelectedRow {
                     let selectedRow = indexPath.row
                     let selectedChapter = currentQuiz.chapters[selectedRow]

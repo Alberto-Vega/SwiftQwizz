@@ -52,7 +52,9 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         self.navigationController?.navigationBarHidden = false
         if let currentQuizChapter =  currentChapter {
             self.navigationItem.title = currentQuizChapter.name
-            currentQuizChapter.loadQuestionsFromPlistNamed(currentQuizChapter.plistFileName)
+           let questionLoader = QuestionLoader()
+            
+            questionLoader.loadQuestionsFromPlistNamed(currentQuizChapter)
             currentQuizChapter.createQuizFromRandomQuestions()
         }
     }
@@ -76,7 +78,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     
     func updateScore() {
         if let currentChapter =  currentChapter {
-            if currentChapter.Questions[currentQuestionCounter].correctAnswer == true {
+            if currentChapter.questions[currentQuestionCounter].correctAnswer == true {
                 rightAnswersCounter += 1
                 displayAnswerFeedback(correct: true)
                 scoreNumberLabel.text = "\(rightAnswersCounter)"
@@ -113,14 +115,14 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     
     func displayCurrentQuestion() {
         if let currentChapter = currentChapter {
-            if currentQuestionCounter < currentChapter.Questions.count {
+            if currentQuestionCounter < currentChapter.questions.count {
                 
-                QuestionTextLabel.text = currentChapter.Questions[currentQuestionCounter].question
+                QuestionTextLabel.text = currentChapter.questions[currentQuestionCounter].question
                 animateView(QuestionTextLabel, show: true, animation: UIViewAnimationOptions.TransitionFlipFromTop, delayTime: 0,completion: nil)
-                buttonAnswer1.setTitle(currentChapter.Questions[currentQuestionCounter].answer1, forState: .Normal)
-                buttonAnswer2.setTitle(currentChapter.Questions[currentQuestionCounter].answer2,
+                buttonAnswer1.setTitle(currentChapter.questions[currentQuestionCounter].answer1, forState: .Normal)
+                buttonAnswer2.setTitle(currentChapter.questions[currentQuestionCounter].answer2,
                                        forState: .Normal)
-                buttonAnswer3.setTitle(currentChapter.Questions[currentQuestionCounter].answer3, forState: .Normal)
+                buttonAnswer3.setTitle(currentChapter.questions[currentQuestionCounter].answer3, forState: .Normal)
                 
                 animateView(questionNumberLabel, show: true, animation: .TransitionFlipFromTop, delayTime: 0.0, completion: nil)
                 self.questionNumberLabel.text = "\(self.currentQuestionCounter + 1) of 10"
@@ -180,15 +182,15 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         
         switch sender {
         case buttonAnswer1:
-            currentChapter.Questions[currentQuestionCounter].userAnswer = 1
+            currentChapter.questions[currentQuestionCounter].userAnswer = 1
         case buttonAnswer2:
-            currentChapter.Questions[currentQuestionCounter].userAnswer = 2
+            currentChapter.questions[currentQuestionCounter].userAnswer = 2
         case buttonAnswer3:
-            currentChapter.Questions[currentQuestionCounter].userAnswer = 3
+            currentChapter.questions[currentQuestionCounter].userAnswer = 3
         default:
-            currentChapter.Questions[currentQuestionCounter].userAnswer = 0
+            currentChapter.questions[currentQuestionCounter].userAnswer = 0
         }
-        animateRightAnswer(rightAnswer: currentChapter.Questions[currentQuestionCounter].rightAnswer)
+        animateRightAnswer(rightAnswer: currentChapter.questions[currentQuestionCounter].rightAnswer)
         self.updateScore()
         currentQuestionCounter += 1
         Flurry.logEvent("Question \(currentQuestionCounter) answered")

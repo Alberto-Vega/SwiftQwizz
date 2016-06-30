@@ -619,5 +619,145 @@
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>
+	<dict>
+		<key>question</key>
+		<string>To insert a character into a string at a specified index use this method:</string>
+		<key>answer1</key>
+		<string>insert(_:atIndex:)</string>
+		<key>answer2</key>
+		<string>insertContentsOf(_:at:)</string>
+		<key>answer3</key>
+		<string>String.Index</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>To insert the contents of another string at a specified index use this method:</string>
+		<key>answer1</key>
+		<string>insert(_:atIndex:)</string>
+		<key>answer2</key>
+		<string>insertContentsOf(_:at:)</string>
+		<key>answer3</key>
+		<string>String.Index</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>To remove a character from a string at a specified index, use the method:</string>
+		<key>answer1</key>
+		<string>insert(_:atIndex:)</string>
+		<key>answer2</key>
+		<string>insertContentsOf(_:at:)</string>
+		<key>answer3</key>
+		<string>removeAtIndex(_:)</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>To remove a substring at a specified range, use the method:</string>
+		<key>answer1</key>
+		<string>insert(_:atIndex:)</string>
+		<key>answer2</key>
+		<string>insertContentsOf(_:at:)</string>
+		<key>answer3</key>
+		<string>removeRange(_:)</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Swift provides three ways to compare textual values: string and character equality, prefix equality and:</string>
+		<key>answer1</key>
+		<string>index equality.</string>
+		<key>answer2</key>
+		<string>suffix equality.</string>
+		<key>answer3</key>
+		<string>Unicode equality.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>String and character equality is checked with the operators:</string>
+		<key>answer1</key>
+		<string>== and !=</string>
+		<key>answer2</key>
+		<string>=== and !==</string>
+		<key>answer3</key>
+		<string>= and !</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Two String values or two Character values are considered equal if their extented grapheme clusters:</string>
+		<key>answer1</key>
+		<string>are canonically equivallent.</string>
+		<key>answer2</key>
+		<string>have same Unicode scalars.</string>
+		<key>answer3</key>
+		<string>have same character count.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>To check wheter a string has a particular prefix or suffix, call the string&apos;s hasPrefix(_:) and hasSuffix(_:) methods, both of which take a single argument of type:</string>
+		<key>answer1</key>
+		<string>Character</string>
+		<key>answer2</key>
+		<string>Unicode scalar</string>
+		<key>answer3</key>
+		<string>String</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>The hasPrefix(_:) and hasSuffix(_:) methods perform a character by characer canonical equivalence comparison between the:</string>
+		<key>answer1</key>
+		<string>Characters</string>
+		<key>answer2</key>
+		<string>extended grapheme clusters</string>
+		<key>answer3</key>
+		<string>String arrays</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Swift provides three ways to compare textual values: string and character equality, prefix equality and:</string>
+		<key>answer1</key>
+		<string>index equality.</string>
+		<key>answer2</key>
+		<string>suffix equality.</string>
+		<key>answer3</key>
+		<string>Unicode equality.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
 </array>
 </plist>
