@@ -21,11 +21,10 @@ class ChaptersListTableViewController: UITableViewController, SegueHandlerType {
         currentQuiz.createChapters()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.title = "Chapters"
-        self.navigationController?.navigationItem.backBarButtonItem?.action
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,13 +33,13 @@ class ChaptersListTableViewController: UITableViewController, SegueHandlerType {
     
     
     // MARK: - Navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let segueIdentifier = segueIdentifierForSegue(segue)
         
         switch segueIdentifier {
         case .ShowLevelOneViewController:
             
-                if let LevelOneViewController = segue.destinationViewController as? LevelOneViewController {
+                if let LevelOneViewController = segue.destination as? LevelOneViewController {
                 if let indexPath = self.tableView.indexPathForSelectedRow {
                     let selectedRow = indexPath.row
                     let selectedChapter = currentQuiz.chapters[selectedRow]
@@ -56,22 +55,22 @@ class ChaptersListTableViewController: UITableViewController, SegueHandlerType {
 
 extension ChaptersListTableViewController {
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentQuiz.chapters.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ChaptersListItem", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChaptersListItem", for: indexPath)
         
         configureCell(cell, indexPath: indexPath)
         return cell
     }
     
-    func configureCell(cell:UITableViewCell, indexPath: NSIndexPath) {
+    func configureCell(_ cell:UITableViewCell, indexPath: IndexPath) {
         currentQuiz.currentChapter = self.currentQuiz.chapters[indexPath.row]
         let chapterNameTextLabel = cell.viewWithTag(1) as! UILabel
         chapterNameTextLabel.text = currentQuiz.currentChapter?.name

@@ -30,14 +30,20 @@ class ResultsViewController:UIViewController, SegueHandlerType {
         if let chapter = currentChapter {
             //    print("The current chapter in resultsvc: \(chapter)")
             currentChapterLabel.text = "Chapter: \(chapter.name)"
-        Flurry.logEvent("Finished Quizz")
+            Flurry.logEvent("Finished Quizz")
         }
+        self.navigationController?.isNavigationBarHidden = true
     }
     
-    func stylingButtons(button: UIButton) {
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    func stylingButtons(_ button: UIButton) {
         button.layer.shadowRadius = 8
         button.layer.shadowOffset = CGSize.zero
-        button.layer.shadowColor = UIColor.blackColor().CGColor
+        button.layer.shadowColor = UIColor.black.cgColor
         button.layer.shadowOpacity = 0.5
     }
     
@@ -57,12 +63,15 @@ class ResultsViewController:UIViewController, SegueHandlerType {
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let segueIdentifier = segueIdentifierForSegue(segue)
-        switch segueIdentifier {
-        case .ShowChaptersListTableViewController:
-            
-            Flurry.logEvent("Again button tapped")
+    @IBAction func againButtonPressed(_ sender: Any) {
+        if let navigationController = self.navigationController {
+            for chapterListTableViewController in navigationController.viewControllers {
+                if(chapterListTableViewController is ChaptersListTableViewController){
+                    
+                    navigationController.popToViewController(chapterListTableViewController, animated: true)
+                }
+            }
         }
+        Flurry.logEvent("Again button tapped")
     }
 }

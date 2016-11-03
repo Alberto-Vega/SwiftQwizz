@@ -31,48 +31,54 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
             stylingButtons(buttonAnswer3)
         }
     }
-    //    @IBOutlet weak var rightOrWrongTextLabel: UILabel!
     @IBOutlet weak var continueButton: GradientButton!
     @IBOutlet var continueButtonXConstraint: NSLayoutConstraint!
     
     var currentChapter:Chapter?
+    var questionController: QuestionController!
     var rightAnswersCounter = 0
     var currentQuestionCounter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.questionNumberLabel.hidden = true
-        self.QuestionTextLabel.hidden = true
-        self.rightOrWrongLabel.hidden = true
+        self.questionNumberLabel.isHidden = true
+        self.QuestionTextLabel.isHidden = true
+        self.rightOrWrongLabel.isHidden = true
         self.continueButtonXConstraint.constant = 0 - self.view.bounds.width * 2
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = false
         if let currentQuizChapter =  currentChapter {
             self.navigationItem.title = currentQuizChapter.name
-           let questionLoader = QuestionLoader()
-            
-            questionLoader.loadQuestionsFromPlistNamed(currentQuizChapter)
-            currentQuizChapter.createQuizFromRandomQuestions()
+            self.questionController = QuestionController()
+            guard let questionPool = questionController.loadQuestionsFrom(plistFileName: currentQuizChapter.plistFileName) else { print("Failed to load questions from Plist")
+                return
+            }
+            currentQuizChapter.questionPoolFromPlist = questionPool
+            guard let randomQuestions = questionController.fetchQuestionsWithrandomIndexes(count: 10, questionPool: currentQuizChapter.questionPoolFromPlist) else { return }
+            self.currentChapter?.questions = randomQuestions
+            self.currentChapter?.questionPoolFromPlist = questionController.clearQuestionsCache()
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         displayCurrentQuestion()
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    func stylingButtons(button: UIButton) {
+    override func viewDidDisappear(_ animated: Bool) {
+        self.currentChapter?.questions = questionController.clearQuestionsCache()
+    }
+    
+    func stylingButtons(_ button: UIButton) {
         button.layer.cornerRadius = 9
-        button.layer.borderColor = UIColor.orangeColor().CGColor
+        button.layer.borderColor = UIColor.orange.cgColor
         button.layer.borderWidth = 1
     }
     
@@ -82,7 +88,7 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
                 rightAnswersCounter += 1
                 displayAnswerFeedback(correct: true)
                 scoreNumberLabel.text = "\(rightAnswersCounter)"
-                animateView(scoreNumberLabel, show: true, animation: .TransitionFlipFromTop, delayTime: 0.0, completion: nil)
+                animateView(scoreNumberLabel, show: true, animation: .transitionFlipFromTop, delayTime: 0.0, completion: nil)
             } else {
                 displayAnswerFeedback(correct: false)
                 scoreNumberLabel.text = "\(rightAnswersCounter)"
@@ -90,24 +96,23 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         }
     }
     
-    
-    func animateRightAnswer(rightAnswer rightAnswer: Int?) {
+    func animateRightAnswer(rightAnswer: Int?) {
         guard let rightAnswer = rightAnswer else { print("right answer is nil"); return }
         switch rightAnswer {
         case 1:
-            buttonAnswer1.enabled = false
-            animateView(buttonAnswer2, show: false, animation: .TransitionFlipFromBottom, delayTime: 0.0, completion: nil)
-            animateView(buttonAnswer3, show: false, animation: .TransitionFlipFromBottom, delayTime: 0.0, completion: nil)
+            buttonAnswer1.isEnabled = false
+            animateView(buttonAnswer2, show: false, animation: .transitionFlipFromBottom, delayTime: 0.0, completion: nil)
+            animateView(buttonAnswer3, show: false, animation: .transitionFlipFromBottom, delayTime: 0.0, completion: nil)
             
         case 2:
-            buttonAnswer2.enabled = false
-            animateView(buttonAnswer1, show: false, animation: .TransitionFlipFromBottom, delayTime: 0.0, completion: nil)
-            animateView(buttonAnswer3, show: false, animation: .TransitionFlipFromBottom, delayTime: 0.0, completion: nil)
+            buttonAnswer2.isEnabled = false
+            animateView(buttonAnswer1, show: false, animation: .transitionFlipFromBottom, delayTime: 0.0, completion: nil)
+            animateView(buttonAnswer3, show: false, animation: .transitionFlipFromBottom, delayTime: 0.0, completion: nil)
             
         case 3:
-            buttonAnswer3.enabled = false
-            animateView(buttonAnswer1, show: false, animation: .TransitionFlipFromBottom, delayTime: 0.0, completion: nil)
-            animateView(buttonAnswer2, show: false, animation: .TransitionFlipFromBottom, delayTime: 0.0, completion: nil)
+            buttonAnswer3.isEnabled = false
+            animateView(buttonAnswer1, show: false, animation: .transitionFlipFromBottom, delayTime: 0.0, completion: nil)
+            animateView(buttonAnswer2, show: false, animation: .transitionFlipFromBottom, delayTime: 0.0, completion: nil)
         default:
             break
         }
@@ -118,57 +123,56 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
             if currentQuestionCounter < currentChapter.questions.count {
                 
                 QuestionTextLabel.text = currentChapter.questions[currentQuestionCounter].question
-                animateView(QuestionTextLabel, show: true, animation: UIViewAnimationOptions.TransitionFlipFromTop, delayTime: 0,completion: nil)
-                buttonAnswer1.setTitle(currentChapter.questions[currentQuestionCounter].answer1, forState: .Normal)
+                animateView(QuestionTextLabel, show: true, animation: UIViewAnimationOptions.transitionFlipFromTop, delayTime: 0,completion: nil)
+                buttonAnswer1.setTitle(currentChapter.questions[currentQuestionCounter].answer1, for: UIControlState())
                 buttonAnswer2.setTitle(currentChapter.questions[currentQuestionCounter].answer2,
-                                       forState: .Normal)
-                buttonAnswer3.setTitle(currentChapter.questions[currentQuestionCounter].answer3, forState: .Normal)
+                                       for: UIControlState())
+                buttonAnswer3.setTitle(currentChapter.questions[currentQuestionCounter].answer3, for: UIControlState())
                 
-                animateView(questionNumberLabel, show: true, animation: .TransitionFlipFromTop, delayTime: 0.0, completion: nil)
+                animateView(questionNumberLabel, show: true, animation: .transitionFlipFromTop, delayTime: 0.0, completion: nil)
                 self.questionNumberLabel.text = "\(self.currentQuestionCounter + 1) of 10"
                 Flurry.logEvent("Question Number: \(self.currentQuestionCounter + 1) seen")
             }
         }
     }
     
-    func answerContainer(minimize minimize: Bool) {
+    func answerContainer(minimize: Bool) {
         
         if let answerContainerViewConstraints = answerContainerView.superview?.constraints {
             for constraint in answerContainerViewConstraints {
                 if constraint.identifier == "AnswerContainerHeight" {
-                    constraint.active = false
-                    
-                    let newConstraint = NSLayoutConstraint(item: answerContainerView, attribute: .Height, relatedBy: .Equal, toItem: answerContainerView.superview!, attribute: .Height, multiplier: minimize ? 0.085 : 0.25, constant: 0)
+                    constraint.isActive = false
+                    let newConstraint = NSLayoutConstraint(item: answerContainerView, attribute: .height, relatedBy: .equal, toItem: answerContainerView.superview!, attribute: .height, multiplier: minimize ? 0.085 : 0.25, constant: 0)
                     newConstraint.identifier = "AnswerContainerHeight"
-                    newConstraint.active = true
+                    newConstraint.isActive = true
                 }
             }
         }
         
-        UIView.animateWithDuration(0.33, delay: 0, options: .CurveEaseOut, animations: {
+        UIView.animate(withDuration: 0.33, delay: 0, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
-            }, completion: nil)
+        }, completion: nil)
     }
     
-    func displayAnswerFeedback(correct correct: Bool) {
-        animateView(rightOrWrongLabel, show: false, animation: .TransitionCrossDissolve, delayTime: 0, completion: nil)
+    func displayAnswerFeedback(correct: Bool) {
+        animateView(rightOrWrongLabel, show: false, animation: .transitionCrossDissolve, delayTime: 0, completion: nil)
         delay(seconds: 0.4) {
             if correct {
-                self.animateView(self.rightOrWrongLabel, show: true, animation: .TransitionFlipFromTop, delayTime: 0.0, completion: nil)
+                self.animateView(self.rightOrWrongLabel, show: true, animation: .transitionFlipFromTop, delayTime: 0.0, completion: nil)
                 self.rightOrWrongLabel.text = "Nice job!"
             } else {
-                self.animateView(self.rightOrWrongLabel, show: true, animation: .TransitionFlipFromTop, delayTime: 0.0, completion: nil)
+                self.animateView(self.rightOrWrongLabel, show: true, animation: .transitionFlipFromTop, delayTime: 0.0, completion: nil)
                 self.rightOrWrongLabel.text = "I'm afraid the correct answer is: "
             }
         }
         animateConstraint(continueButtonXConstraint, constant: 0)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             switch identifier {
             case "showResults":
-                if let rvc: ResultsViewController =  segue.destinationViewController as? ResultsViewController {
+                if let rvc: ResultsViewController =  segue.destination as? ResultsViewController {
                     rvc.rightAnswersCounter = rightAnswersCounter
                     rvc.currentChapter = currentChapter
                 }
@@ -177,9 +181,8 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
         }
     }
     
-    @IBAction func answer(sender: UIButton) {
+    @IBAction func answer(_ sender: UIButton) {
         guard let currentChapter = currentChapter else { return print("currentChapter is nil")}
-        
         switch sender {
         case buttonAnswer1:
             currentChapter.questions[currentQuestionCounter].userAnswer = 1
@@ -199,46 +202,46 @@ class LevelOneViewController: UIViewController, UIPopoverPresentationControllerD
     
     //MARK: -  Animations.
     
-    func animateConstraint(constraint: NSLayoutConstraint, constant: CGFloat) {
+    func animateConstraint(_ constraint: NSLayoutConstraint, constant: CGFloat) {
         constraint.constant = constant
-        UIView.animateWithDuration(1.0, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 07.0, options: .CurveEaseOut, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 07.0, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
-            }, completion: nil)
+        }, completion: nil)
     }
     
-    func animateView(label: UIView, show: Bool, animation: UIViewAnimationOptions, delayTime: Double, completion: (() ->())?) {
+    func animateView(_ label: UIView, show: Bool, animation: UIViewAnimationOptions, delayTime: Double, completion: (() ->())?) {
         delay(seconds: delayTime) {
             if(!show) {
-                UIView.transitionWithView(label, duration: 0.8, options: animation, animations: {
-                    label.hidden = true
-                    }, completion: nil)
+                UIView.transition(with: label, duration: 0.8, options: animation, animations: {
+                    label.isHidden = true
+                }, completion: nil)
             } else {
-                UIView.transitionWithView(label, duration: 0.8, options: animation, animations: {
-                    label.hidden = false
-                    }, completion: nil)
+                UIView.transition(with: label, duration: 0.8, options: animation, animations: {
+                    label.isHidden = false
+                }, completion: nil)
             }
         }
         completion?()
     }
     
-    @IBAction func continueButtonPressed(sender: AnyObject) {
+    @IBAction func continueButtonPressed(_ sender: AnyObject) {
         animateConstraint(continueButtonXConstraint, constant: 0 - self.view.bounds.width * 0.65)
         
-        animateView(buttonAnswer1, show: true, animation: .TransitionFlipFromTop, delayTime: 0.0, completion: nil)
-        animateView(buttonAnswer2, show: true, animation: .TransitionFlipFromTop, delayTime: 0.0, completion: nil)
-        animateView(buttonAnswer3, show: true, animation: .TransitionFlipFromTop, delayTime: 0.0, completion: nil)
-        buttonAnswer1.enabled = true
-        buttonAnswer2.enabled = true
-        buttonAnswer3.enabled = true
-        animateView(QuestionTextLabel, show: false, animation: .TransitionFlipFromBottom, delayTime: 0.0, completion: nil)
-        animateView(questionNumberLabel, show: false, animation: .TransitionFlipFromBottom, delayTime: 0.0, completion: nil)
-        animateView(rightOrWrongLabel, show: false, animation: .TransitionFlipFromBottom, delayTime: 0.0, completion: nil)
+        animateView(buttonAnswer1, show: true, animation: .transitionFlipFromTop, delayTime: 0.0, completion: nil)
+        animateView(buttonAnswer2, show: true, animation: .transitionFlipFromTop, delayTime: 0.0, completion: nil)
+        animateView(buttonAnswer3, show: true, animation: .transitionFlipFromTop, delayTime: 0.0, completion: nil)
+        buttonAnswer1.isEnabled = true
+        buttonAnswer2.isEnabled = true
+        buttonAnswer3.isEnabled = true
+        animateView(QuestionTextLabel, show: false, animation: .transitionFlipFromBottom, delayTime: 0.0, completion: nil)
+        animateView(questionNumberLabel, show: false, animation: .transitionFlipFromBottom, delayTime: 0.0, completion: nil)
+        animateView(rightOrWrongLabel, show: false, animation: .transitionFlipFromBottom, delayTime: 0.0, completion: nil)
         
         delay(seconds: 0.4) {
             if (self.currentQuestionCounter) < 10 {
                 self.displayCurrentQuestion()
             } else {
-                self.performSegueWithIdentifier("showResults", sender:self)
+                self.performSegue(withIdentifier: "showResults", sender:self)
             }
         }
     }

@@ -12,7 +12,7 @@ class Quiz {
     var chapters = [Chapter]()
     var currentChapter: Chapter?
     var bestScore:Int?
-    var defaults = NSUserDefaults.standardUserDefaults()
+    var defaults = UserDefaults.standard
 }
 
 extension Quiz {

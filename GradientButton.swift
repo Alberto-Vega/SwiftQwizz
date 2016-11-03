@@ -14,15 +14,15 @@ class GradientButton: UIButton {
     
     let gradientLayer: CAGradientLayer = {
         let gradientLayer = CAGradientLayer()
-        gradientLayer.backgroundColor = UIColor.whiteColor().CGColor
+        gradientLayer.backgroundColor = UIColor.white.cgColor
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 1.0)
         gradientLayer.endPoint = CGPoint(x:1.0, y: 1.0)
         
         gradientLayer.locations = [0.25, 0.5, 0.75]
-        gradientLayer.colors = [UIColor.orangeColor(), UIColor.whiteColor(), UIColor.orangeColor()].map { color in color.CGColor }
+        gradientLayer.colors = [UIColor.orange, UIColor.white, UIColor.orange].map { color in color.cgColor }
         return gradientLayer
     }()
-
+    
     override func didMoveToWindow() {
         super.didMoveToWindow()
         gradientLayer.frame = bounds
@@ -35,7 +35,7 @@ class GradientButton: UIButton {
         gradientAnimation.toValue = [0.75, 1.0, 1.0]
         gradientAnimation.duration = 3
         gradientAnimation.repeatCount = Float.infinity
-        gradientLayer.addAnimation(gradientAnimation, forKey: nil)
-        maskView = self.titleLabel
+        gradientLayer.add(gradientAnimation, forKey: nil)
+        mask = self.titleLabel
     }
 }
