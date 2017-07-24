@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nZb-L5-awk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nZb-L5-awk">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Level One View Controller-->
+        <!--Quiz View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="LevelOneViewController" customModule="SwiftQwizz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="QuizViewController" customModule="SwiftQwizz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -261,7 +261,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" text="This is the correct answer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYs-KC-oa5">
                                 <rect key="frame" x="97" y="454.33333333333331" width="220" height="26"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Light" family="PingFang SC" pointSize="18"/>
-                                <color key="textColor" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" name="PingFangSC-Light" family="PingFang SC" pointSize="33"/>
@@ -323,14 +323,14 @@
                             <mask key="constraints">
                                 <exclude reference="kCu-iu-HrC"/>
                                 <exclude reference="jF9-vN-2wB"/>
+                                <exclude reference="QRH-C1-KBN"/>
+                                <exclude reference="WjP-9p-E0M"/>
+                                <exclude reference="vfJ-8n-4nS"/>
                                 <exclude reference="Dph-dE-7Pu"/>
                                 <exclude reference="RGc-Wi-GJN"/>
                                 <exclude reference="djX-9O-CUA"/>
                                 <exclude reference="euL-DP-bRH"/>
                                 <exclude reference="wty-60-kaw"/>
-                                <exclude reference="QRH-C1-KBN"/>
-                                <exclude reference="WjP-9p-E0M"/>
-                                <exclude reference="vfJ-8n-4nS"/>
                                 <exclude reference="Oif-tn-QuD"/>
                                 <exclude reference="T8X-Ab-Jfs"/>
                                 <exclude reference="UCB-Ga-plk"/>
@@ -344,9 +344,9 @@
                                 <include reference="kCu-iu-HrC"/>
                                 <exclude reference="1Ck-wg-WwR"/>
                                 <include reference="jF9-vN-2wB"/>
-                                <exclude reference="RGc-Wi-GJN"/>
                                 <exclude reference="9Zm-5e-EEd"/>
                                 <include reference="vfJ-8n-4nS"/>
+                                <exclude reference="RGc-Wi-GJN"/>
                                 <exclude reference="OjT-EQ-fat"/>
                                 <exclude reference="r5h-ey-iC4"/>
                                 <exclude reference="EWC-fD-dKm"/>
@@ -365,7 +365,7 @@
                         <outlet property="questionNumberLabel" destination="MMT-QN-hOn" id="p0a-6g-yuM"/>
                         <outlet property="rightOrWrongLabel" destination="PYs-KC-oa5" id="Qi1-l7-GDi"/>
                         <outlet property="scoreNumberLabel" destination="h2v-MT-gZC" id="eLn-ag-mH3"/>
-                        <segue destination="CPi-1f-irq" kind="show" identifier="showResults" id="5Zs-p3-Dbm"/>
+                        <segue destination="CPi-1f-irq" kind="show" identifier="ShowResultsViewController" id="5Zs-p3-Dbm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -570,10 +570,10 @@
             </objects>
             <point key="canvasLocation" x="3192" y="301"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="Qfh-NA-m8J">
             <objects>
-                <viewController id="nZb-L5-awk" customClass="HomeViewController" customModule="SwiftQwizz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nZb-L5-awk" customClass="InitialViewController" customModule="SwiftQwizz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fgc-z1-YC0"/>
                         <viewControllerLayoutGuide type="bottom" id="fw7-J4-3P8"/>
@@ -710,7 +710,7 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" identifier="ShowLevelOneViewController" id="PIu-SS-p1P"/>
+                                    <segue destination="vXZ-lx-hvc" kind="show" identifier="ShowQuizViewController" id="PIu-SS-p1P"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -21,15 +21,14 @@ class ResultsViewController:UIViewController, SegueHandlerType {
     @IBOutlet weak var startAgainButton: GradientButton!
     
     var rightAnswersCounter: Int?
-    var currentChapter: Chapter?
+    var currentChapter: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setResultLabels()
-        stylingButtons(startAgainButton)
+        self.setResultLabels()
+        self.stylingButtons(startAgainButton)
         if let chapter = currentChapter {
-            //    print("The current chapter in resultsvc: \(chapter)")
-            currentChapterLabel.text = "Chapter: \(chapter.name)"
+            currentChapterLabel.text = "Chapter: \(chapter)"
             Flurry.logEvent("Finished Quizz")
         }
         self.navigationController?.isNavigationBarHidden = true
@@ -39,17 +38,10 @@ class ResultsViewController:UIViewController, SegueHandlerType {
         super.viewWillDisappear(animated)
         self.navigationController?.isNavigationBarHidden = false
     }
-    
-    func stylingButtons(_ button: UIButton) {
-        button.layer.shadowRadius = 8
-        button.layer.shadowOffset = CGSize.zero
-        button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.shadowOpacity = 0.5
-    }
-    
+
     func setResultLabels() {
         if let rightAnswers = rightAnswersCounter {
-            //      print(" This is the unwrapped opcional value for right answers counter \(rightAnswers)")
+            
             let accuracyPercentage = (Double(rightAnswers)/10)*100
             if accuracyPercentage < 60 {
                 endOfQuizMessage!.text = "Good try!"
@@ -58,10 +50,18 @@ class ResultsViewController:UIViewController, SegueHandlerType {
             } else {
                 endOfQuizMessage!.text = "Impressive!"
             }
-            finalScoreLabel!.text = "\(rightAnswers)"
-            finalAccuracyLabel!.text = "\(accuracyPercentage)" + " %"
+            finalScoreLabel?.text = "\(rightAnswers)"
+            finalAccuracyLabel?.text = "\(accuracyPercentage)" + " %"
         }
     }
+    
+    func stylingButtons(_ button: UIButton) {
+        button.layer.shadowRadius = 8
+        button.layer.shadowOffset = CGSize.zero
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOpacity = 0.5
+    }
+    
     
     @IBAction func againButtonPressed(_ sender: Any) {
         if let navigationController = self.navigationController {

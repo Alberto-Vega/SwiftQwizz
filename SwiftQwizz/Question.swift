@@ -9,23 +9,21 @@
 import Foundation
 
 class Question {
+    
     var question: String
     var answer1: String
     var answer2: String
     var answer3: String
     var rightAnswer: Int?
     var userAnswer: Int? {
-        willSet {
-            //      print("The new value of userAnswer is:\(newValue)")
-        }
+        
         didSet {
             if let userAnswer = userAnswer {
-                correctAnswer = userAnswer == rightAnswer ? true : false
-                //        print("User answer is correct: \(correctAnswer)")
+                isCorrectAnswer = userAnswer == rightAnswer ? true : false
             }
         }
     }
-    var correctAnswer = false
+    var isCorrectAnswer = false
     var rightAnswerMessage: String
     
     init(question: String, answer1: String, answer2: String, answer3: String, rightAnswer: Int, rightAnswerMessage: String) {

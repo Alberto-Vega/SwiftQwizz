@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct QuestionController {
+class QuestionLoader {
+    
     func loadQuestionsFrom(plistFileName: String) -> [Question]? {
-        //    print("Loading Questions from Plist")
         var questionPoolFromPlist: [Question]?
         let questionsPath = Bundle.main.path(forResource: plistFileName, ofType: "plist")
         if let questionObjects = NSArray(contentsOfFile: questionsPath!) as? [[String: AnyObject]] {
@@ -19,35 +19,11 @@ struct QuestionController {
                 if let questionOne = question["question"] as? String, let answer1 = question["answer1"] as? String, let answer2 = question["answer2"] as? String, let answer3 = question["answer3"] as? String, let rightAnswer = question["rightAnswer"] as? Int, let rightAnswerMessage = question["rightAnswerMessage"] as? String {
                     let question = Question(question: questionOne, answer1: answer1, answer2: answer2, answer3: answer3, rightAnswer: rightAnswer, rightAnswerMessage: rightAnswerMessage)
                     questionPoolFromPlist?[index] = question
-                    //          print("Question pool has appended  " + "\(questionPoolFromPlist.count)" + " questions from Plist")
                 }
             }
         }
         return questionPoolFromPlist ?? nil
     }
-    
-    private func pickRandom(numberOfIndexes: Int, fromPoolSize: Int) -> [Int] {
-        var randomIndexes = [Int:Int](minimumCapacity: numberOfIndexes)
-        while randomIndexes.count < 10 {
-            let randomIndex = Int(arc4random_uniform(UInt32(fromPoolSize)))
-            if (randomIndexes[randomIndex] == nil) {
-                randomIndexes[randomIndex] = randomIndex
-            }
-        }
-        return Array(randomIndexes.values)
-    }
-    
-    func fetchQuestionsWithrandomIndexes(count: Int, questionPool: [Question])-> [Question]? {
-        let randomIndexes = pickRandom(numberOfIndexes: count, fromPoolSize: questionPool.count)
-        var questions: [Question] = Array(repeating: Question(question: "", answer1: "", answer2: "", answer3: "", rightAnswer: 0, rightAnswerMessage: ""), count: randomIndexes.count)
-        for (index,number) in randomIndexes.enumerated() {
-            questions[index] = questionPool[number]
-        }
-        return questions
-    }
-    
-    func clearQuestionsCache() -> [Question] {
-        return [Question]()
-    }
-
 }
+
+

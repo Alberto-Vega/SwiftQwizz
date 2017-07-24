@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    Flurry.startSession(APIKeyForApp.SwiftQwizz.rawValue)
+    Flurry.startSession(Constants.Key.Flurry.rawValue)
     Flurry.logEvent("Launched Application", timed: true)
 //    UINavigationBar.appearance().tintColor = UIColor(red: 250, green: 217, blue: 97, alpha: 100)
     UINavigationBar.appearance().tintColor = UIColor.orange
