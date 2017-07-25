@@ -9,11 +9,17 @@
 import Foundation
 
 class Quiz {
-    var chapters = [Chapter]()
-    var currentChapter: Chapter?
-    var bestScore:Int?
-    var defaults = NSUserDefaults.standardUserDefaults()
+    
+    var chapter: String
+    var questions: [Question]
+    
+    init(chapter: String, questions: [Question]) {
+        self.chapter = chapter
+        self.questions = questions
+    }
 }
+
+
 
 
 

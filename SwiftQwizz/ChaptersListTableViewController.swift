@@ -8,49 +8,57 @@
 
 import UIKit
 
-class ChaptersListTableViewController: UITableViewController {
+class ChaptersListTableViewController: UITableViewController, SegueHandlerType {
     
-    var currentQuiz = Quiz()
+    var dataSource:ChaptersTableViewDataSource?
     
+    enum SegueIdentifier: String {
+        case ShowQuizViewController
+    }
+    
+    // MARK: - View Controller Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentQuiz.createChapters()
+        self.setupTableView()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupNavigationBarApperance()
     }
     
-    // MARK: - Table view data source
-    
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currentQuiz.chapters.count
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ChaptersListItem", forIndexPath: indexPath)
-        let index = indexPath.row
-        currentQuiz.currentChapter = self.currentQuiz.chapters[index]
-        let chapterNameTextLabel = cell.viewWithTag(1) as! UILabel
-        chapterNameTextLabel.text = currentQuiz.currentChapter?.name
-        return cell
-    }
     // MARK: - Navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ShowLevelOneViewController" {
-            if let LevelOneViewController = segue.destinationViewController as? LevelOneViewController {
-                if let indexPath = self.tableView.indexPathForSelectedRow {
-                    let selectedRow = indexPath.row
-                    //          print("the table view tapped index is: \(selectedRow)")
-                    let selectedChapter = currentQuiz.chapters[selectedRow]
-                    currentQuiz.currentChapter = selectedChapter
-                    LevelOneViewController.currentChapter = currentQuiz.currentChapter
-                }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let segueIdentifier = segueIdentifierForSegue(segue)
+        
+        switch segueIdentifier {
+            
+        case .ShowQuizViewController:
+            self.passSelectedChapterToQuizViewController(segue: segue)
+        }
+    }
+    
+    // MARK: - Helper Functions
+    func setupTableView() {
+        self.dataSource = ChaptersTableViewDataSource(items: ChapterCatalog.allValues, cellIdentifier: Constants.CellIdentifiers.ChaptersListItem.rawValue)
+        self.tableView.dataSource = self.dataSource
+    }
+    
+    func setupNavigationBarApperance() -> Void {
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationItem.title = "Chapters"
+    }
+    
+    func passSelectedChapterToQuizViewController(segue: UIStoryboardSegue) {
+        if let levelOneViewController = segue.destination as? QuizViewController,
+           let indexPath = self.tableView.indexPathForSelectedRow {
+           let selectedRow = indexPath.row
+            if let selectedChapter = dataSource?.items[selectedRow],
+               let gameManagerForQuizChapter = GameManager(currentChapter: selectedChapter, score: 0) {
+                levelOneViewController.game = gameManagerForQuizChapter
+                Flurry.logEvent("User started chapter \(selectedChapter.rawValue)")
             }
         }
     }
 }
+

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>question</key>
+		<string>Swift is a general-purpose, multi-paradigm, compiled programming language developed by Apple Inc. for iOS, macOS, watchOS, tvOS, and Linux. Swift is designed to work with Apple&apos;s Cocoa and Cocoa Touch frameworks and the large body of extant Objective-C (ObjC) code written for Apple products.</string>
+		<key>answer3</key>
+		<string></string>
+		<key>answer2</key>
+		<string>False</string>
+		<key>answer1</key>
+		<string>True</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Difference between class and struct?
+Select a valid difference between class and struct.</string>
+		<key>answer3</key>
+		<string>Structs can&apos;t inherit.</string>
+		<key>answer2</key>
+		<string>Structs are reference types.</string>
+		<key>answer1</key>
+		<string>ARC manges structs.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Grand Central Dispatch</string>
+		<key>answer3</key>
+		<string>is an Objective-C API and that brings some overhead with it. </string>
+		<key>answer2</key>
+		<string>is a low-level C API that interacts directly with Unix level of the system.</string>
+		<key>answer1</key>
+		<string>It is a higher level API than NSOperation</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>It is used to broadcast messages to possibly several recipients unknown from the sender.</string>
+		<key>answer3</key>
+		<string>Delegate</string>
+		<key>answer2</key>
+		<string>NotificationCenter</string>
+		<key>answer1</key>
+		<string>Protocol</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>allows an object to send a message to another object (the delegate) so that it can customise the handling of an event.</string>
+		<key>answer3</key>
+		<string>Notification</string>
+		<key>answer2</key>
+		<string>Protocol</string>
+		<key>answer1</key>
+		<string>Delegate</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality</string>
+		<key>answer3</key>
+		<string>Notification</string>
+		<key>answer2</key>
+		<string>Delegate</string>
+		<key>answer1</key>
+		<string>Protocol</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>can then be adopted by a class, structure, or enumeration to provide an actual implementation of it&apos;s requirements</string>
+		<key>answer3</key>
+		<string>Protocol</string>
+		<key>answer2</key>
+		<string>Delegate</string>
+		<key>answer1</key>
+		<string>Controller</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string> Layout object that organizes items into a grid with optional header and footer views for each section. </string>
+		<key>answer3</key>
+		<string>UITableView</string>
+		<key>answer2</key>
+		<string>UICollectioView</string>
+		<key>answer1</key>
+		<string>UICollectionViewFlowLayout</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>With UICollectionViewFlowLayout cells can be the same sizes or different sizes.</string>
+		<key>answer3</key>
+		<string></string>
+		<key>answer2</key>
+		<string>False</string>
+		<key>answer1</key>
+		<string>True</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>The bounds of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to its own coordinate system (0,0)</string>
+		<key>answer3</key>
+		<string></string>
+		<key>answer2</key>
+		<string>False</string>
+		<key>answer1</key>
+		<string>True</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>The frame of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to the superview it is contained within.</string>
+		<key>answer3</key>
+		<string></string>
+		<key>answer2</key>
+		<string>False</string>
+		<key>answer1</key>
+		<string>True</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Allows you to add new functionality to an existing class, structure, enumeration, or protocol type. This includes the ability to extend types for which you do not have access to the original source code (known as retroactive modeling). Extensions are similar to categories in Objective-C. (Unlike Objective-C categories, Swift extensions do not have names.)</string>
+		<key>answer3</key>
+		<string>Protocol</string>
+		<key>answer2</key>
+		<string>Extensions</string>
+		<key>answer1</key>
+		<string>Inheritance</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Extensions can add new functionality to a type, but they cannot override existing functionality.</string>
+		<key>answer3</key>
+		<string></string>
+		<key>answer2</key>
+		<string>False</string>
+		<key>answer1</key>
+		<string>True</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>If you define an extension to add new functionality to an existing type, the new functionality will be available on all existing instances of that type, even if they were created before the extension was defined.</string>
+		<key>answer3</key>
+		<string></string>
+		<key>answer2</key>
+		<string>False</string>
+		<key>answer1</key>
+		<string>True</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Extensions can add new computed properties, but they cannot add stored properties, or add property observers to existing properties.</string>
+		<key>answer3</key>
+		<string></string>
+		<key>answer2</key>
+		<string>False</string>
+		<key>answer1</key>
+		<string>True</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>If you provide a new initializer with an extension, you are still responsible for making sure that each instance is fully initialized once the initializer completes.</string>
+		<key>answer3</key>
+		<string></string>
+		<key>answer2</key>
+		<string>False</string>
+		<key>answer1</key>
+		<string>True</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Not running, Inactive, Active, Background, Suspended.</string>
+		<key>answer3</key>
+		<string>Execution App States</string>
+		<key>answer2</key>
+		<string>View Controller Life Cicle</string>
+		<key>answer1</key>
+		<string>App Delegate</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Can you make updates to UI from a background thread?</string>
+		<key>answer3</key>
+		<string></string>
+		<key>answer2</key>
+		<string>No, UI runs on the main thread.</string>
+		<key>answer1</key>
+		<string>Yes, UI runs on a background thread anyway</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Enables you to write flexible, reusable functions and types that can work with any type, subject to requirements that you define. You can write code that avoids duplication and expresses its intent in a clear, abstracted manner.</string>
+		<key>answer3</key>
+		<string>Protocols</string>
+		<key>answer2</key>
+		<string>Generics</string>
+		<key>answer1</key>
+		<string>Classes</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Is the process of preparing an instance of a class, structure, or enumeration for use. This process involves setting an initial value for each stored property on that instance and performing any other setup or initialization that is required before the new instance is ready for use.</string>
+		<key>answer3</key>
+		<string>Initialization</string>
+		<key>answer2</key>
+		<string>Type Casting</string>
+		<key>answer1</key>
+		<string>Closure</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Useful whenever a shortcut to a common initialization pattern will save time or make initialization of the class clearer in intent.</string>
+		<key>answer3</key>
+		<string>Default initializers</string>
+		<key>answer2</key>
+		<string>Convenience initializers</string>
+		<key>answer1</key>
+		<string>Failable initializers</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This design pattern dynamically adds behaviors and responsibilities to an object without modifying its code. It’s an alternative to subclassing where you modify a class’ behavior by wrapping it with another object.</string>
+		<key>answer3</key>
+		<string>Singleton Pattern</string>
+		<key>answer2</key>
+		<string>Decorator Pattern</string>
+		<key>answer1</key>
+		<string>Facade Pattern</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Design pattern that provides a single interface to a complex subsystem. Instead of exposing the user to a set of classes and their APIs, you only expose one simple unified API.</string>
+		<key>answer3</key>
+		<string>Facade</string>
+		<key>answer2</key>
+		<string>Singleton</string>
+		<key>answer1</key>
+		<string>Decorator</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This design pattern ensures that only one instance exists for a given class and that there’s a global access point to that instance. It usually uses lazy loading to create the single instance when it’s needed the first time.</string>
+		<key>answer3</key>
+		<string>Facade</string>
+		<key>answer2</key>
+		<string>Singleton</string>
+		<key>answer1</key>
+		<string>MVC</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>is a software design pattern for implementing user interfaces on computers. It divides a given software application into three interconnected parts, so as to separate internal representations of information from the ways that information is presented to or accepted from the user</string>
+		<key>answer3</key>
+		<string>Singleton</string>
+		<key>answer2</key>
+		<string>MVC</string>
+		<key>answer1</key>
+		<string>Facade</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>In Objective-C there are two very common implementations of this pattern: Category and Delegation.</string>
+		<key>answer3</key>
+		<string>MVVM</string>
+		<key>answer2</key>
+		<string>MVM</string>
+		<key>answer1</key>
+		<string>Decorator</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string> This is a software design pattern (also known as Wrapper, an alternative naming shared with the Decorator pattern) that allows the interface of an existing class to be used as another interface.[1] It is often used to make existing classes work with others without modifying their source code.</string>
+		<key>answer3</key>
+		<string>MVVM</string>
+		<key>answer2</key>
+		<string>Decorator</string>
+		<key>answer1</key>
+		<string>Adapter</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>It is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods. It is mainly used to implement distributed event handling systems.</string>
+		<key>answer3</key>
+		<string>Singleton</string>
+		<key>answer2</key>
+		<string>Facade</string>
+		<key>answer1</key>
+		<string>Observer</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string> It is a mechanism that allows objects to be notified of changes to specified properties of other objects.</string>
+		<key>answer3</key>
+		<string>Singleton</string>
+		<key>answer2</key>
+		<string>Facade</string>
+		<key>answer1</key>
+		<string>KVO</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This pattern is a software design pattern that provides the ability to restore an object to its previous state (undo via rollback).</string>
+		<key>answer3</key>
+		<string>Memento</string>
+		<key>answer2</key>
+		<string>Facade</string>
+		<key>answer1</key>
+		<string>Observer</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>It is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods. It is mainly used to implement distributed event handling systems.</string>
+		<key>answer3</key>
+		<string>Singleton</string>
+		<key>answer2</key>
+		<string>Facade</string>
+		<key>answer1</key>
+		<string>Observer</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>It is a behavioral design pattern in which an object is used to encapsulate all information needed to perform an action or trigger an event at a later time. This information includes the method name, the object that owns the method and values for the method parameters.</string>
+		<key>answer3</key>
+		<string>Memento</string>
+		<key>answer2</key>
+		<string>Observer</string>
+		<key>answer1</key>
+		<string>Command</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+</array>
+</plist>

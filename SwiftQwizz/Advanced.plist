@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>question</key>
+		<string>In the following code, what is the super class name? class Audi: Car {...}</string>
+		<key>answer1</key>
+		<string>Audi</string>
+		<key>answer2</key>
+		<string>Car</string>
+		<key>answer3</key>
+		<string>class</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string>Car is the super class of the Audi class.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What will happen if you assign a value to a property within its own didSet observer?</string>
+		<key>answer1</key>
+		<string>Code will not compile.</string>
+		<key>answer2</key>
+		<string>It creates an infinite loop.</string>
+		<key>answer3</key>
+		<string>The property will take on that value.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string>If you assign a value to a property within its own didSet observer, the new value that you assign will replace the one that was just set.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What is the name of the Objective-C Bridging Header given a product module named Project?</string>
+		<key>answer1</key>
+		<string>Project-Bridging-Swift.h</string>
+		<key>answer2</key>
+		<string>Project-Swift.h</string>
+		<key>answer3</key>
+		<string>Project-Bridging-Header.h</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string>Xcode creates the header file along with the file you were creating, and names it by your product module name followed by adding -Bridging-Header.h</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>With which keyword can you declare a constant in Swift?</string>
+		<key>answer1</key>
+		<string>let</string>
+		<key>answer2</key>
+		<string>final</string>
+		<key>answer3</key>
+		<string>define</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>To declare a constant in Swift you need to use the keyword let.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What is the name of the deinitializer in a Class declaration?</string>
+		<key>answer1</key>
+		<string>deinit</string>
+		<key>answer2</key>
+		<string>release</string>
+		<key>answer3</key>
+		<string>dealloc</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>You write deinitializers with the deinit keyword. Deinitializers are only available on class types.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of these is not a valid property declaration in Swift?</string>
+		<key>answer1</key>
+		<string>final let x = 0</string>
+		<key>answer2</key>
+		<string>final lazy let x = 0</string>
+		<key>answer3</key>
+		<string>final lazy var x = 0</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string>Constant properties must always have a value before initialization completes, and therefore cannot be declared as lazy.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>How can you use a nested type outside of its definition?</string>
+		<key>answer1</key>
+		<string>Prefix its name with the name of the type it is nested within.</string>
+		<key>answer2</key>
+		<string>Nested types can&apos;t be used outside of definition.</string>
+		<key>answer3</key>
+		<string>From anywhere in the same block.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>To use a nested type outside of its definition context, prefix its name with the name of the type it is nested within.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which is correct regarding optional form of the type cast operator (as?).</string>
+		<key>answer1</key>
+		<string>Return value will be nil if the downcast was not possible.</string>
+		<key>answer2</key>
+		<string>This is used when you are sure that the downcast will always succeed.</string>
+		<key>answer3</key>
+		<string>It will trigger a runtime error if the downcast fails.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>Use the conditional form of the type cast operator (as?) when you are not sure if the downcast will succeed. The value will be nil if the downcast was not possible. This enables you to check for a successful downcast.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of these collection types in not included by default in standard Swift?</string>
+		<key>answer1</key>
+		<string>Set</string>
+		<key>answer2</key>
+		<string>Array</string>
+		<key>answer3</key>
+		<string>Both are included.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string>Both Set and array are included by defauld in standard Swift.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which keyword do you use to define a function?</string>
+		<key>answer1</key>
+		<string>func</string>
+		<key>answer2</key>
+		<string>function</string>
+		<key>answer3</key>
+		<string>procedure</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>func is the keyword used to define a function in Swift.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which keyword in the context of a Switch statement is required to force the execution of a subsequent case?</string>
+		<key>answer1</key>
+		<string>falltrough</string>
+		<key>answer2</key>
+		<string>continue</string>
+		<key>answer3</key>
+		<string>break</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>To opt in to fallthrough behavior for a particular switch case, use the fallthrough keyword.
+
+</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What is used to import Objective-C files in to Swift?</string>
+		<key>answer1</key>
+		<string>They are automatically imported.</string>
+		<key>answer2</key>
+		<string>They are imported in the Swift file using the class.</string>
+		<key>answer3</key>
+		<string>Objective-C classes are imported via a Bridging Header.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>To import a set of Objective-C files in the same app target as your Swift code, you rely on an Objective-C bridging header to expose those files to Swift.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Can Structures be type cast in Swift?</string>
+		<key>answer1</key>
+		<string>Yes</string>
+		<key>answer2</key>
+		<string>No</string>
+		<key>answer3</key>
+		<string>Only those deriving from NSObject</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string>Unlike Swift Classes, Structures can not be type cast.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of these statements is a valid way to extend the capabilities of our theoretical class, ExampleClass to conform to protocol MyProtocol?</string>
+		<key>answer1</key>
+		<string>extension ExampleClass(MyProtocol) {...}</string>
+		<key>answer2</key>
+		<string>extension ExampleClass, prot MyProtocol {...}</string>
+		<key>answer3</key>
+		<string>extension ExampleClass: MyProtocol {...}</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string>The correct way to add protocol conformance with an extension is  ExampleClass: MyProtocol {  }</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>How do closures capture references to variables by default?</string>
+		<key>answer1</key>
+		<string>by weak reference.</string>
+		<key>answer2</key>
+		<string>by strong reference.</string>
+		<key>answer3</key>
+		<string>by copy.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string>Closures, like classes, are reference types. When you assign a closure to a property, you are assigning a reference to that closure.
+</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What is the return value of type check operator: (is)?</string>
+		<key>answer1</key>
+		<string>true, false</string>
+		<key>answer2</key>
+		<string>yes, no</string>
+		<key>answer3</key>
+		<string>0, 1</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>Type check operator (is)  checks whether an instance is of a certain subclass type. It returns true if the instance is of that subclass type and false if it is not.
+</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What is the result of the following code? func playerScore(name: String, score: Int) -&gt; String { return &quot;Hello \(name)! Your score is \(score)&quot;.}     playerScore(&quot;Bob&quot;, 100)</string>
+		<key>answer1</key>
+		<string>Hello Bob! Your score is 100.</string>
+		<key>answer2</key>
+		<string>name: Bob, score: 100</string>
+		<key>answer3</key>
+		<string>playerScore = &quot;Hello Bob! Your score is 100.&quot;</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>The function returns Hello Alberto! Your score is 100.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Considering var index = UInt8.max, which of the following operation results to the value of zero for var index?</string>
+		<key>answer1</key>
+		<string>index = index &amp;- 1</string>
+		<key>answer2</key>
+		<string>index = index &amp;+ 1</string>
+		<key>answer3</key>
+		<string>index = index &amp;/ 255</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string>The value that remains within the bounds of the UInt8 after the overflow addition &amp;+ is 00000000, or zero.
+
+</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>All Swift classes must inherit from which root class?</string>
+		<key>answer1</key>
+		<string>NSObject</string>
+		<key>answer2</key>
+		<string>Root</string>
+		<key>answer3</key>
+		<string>Swift classes do not require a root class.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string>Swift classes do not require a root class.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What does a retainCount represent in ARC?</string>
+		<key>answer1</key>
+		<string>Current number of strong references to an object.</string>
+		<key>answer2</key>
+		<string>Current number of instances of an object.</string>
+		<key>answer3</key>
+		<string>Number of objects being retained in memory.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>retainCount represents the current number of strong references to an object.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string> What is the name of the Swift language feature that Objective-C Blocks are translated into?</string>
+		<key>answer1</key>
+		<string>Lambda</string>
+		<key>answer2</key>
+		<string>Callback</string>
+		<key>answer3</key>
+		<string>Closure</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string>Closures in Swift are similar to blocks in C and Objective-C.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which keyword is used on a function in an enumeration to indicate that the function will modify &apos;self&apos;?</string>
+		<key>answer1</key>
+		<string>modifier</string>
+		<key>answer2</key>
+		<string>mutating</string>
+		<key>answer3</key>
+		<string>mutable</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string>If you need to modify the properties of your structure or enumeration within a particular method, you can opt in to mutating behavior for that method.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>How would one indicate that a variable is an enum of type Status outside the context of MyClass?</string>
+		<key>answer1</key>
+		<string>var status: MyClass.Status = .On</string>
+		<key>answer2</key>
+		<string>var status: MyClass(Status) = .On</string>
+		<key>answer3</key>
+		<string>var status: MyClass&lt;Status&gt; = .On</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>The correct syntax for a Swift enum is: var status: MyClass.Status = .On </string>
+	</dict>
+</array>
+</plist>

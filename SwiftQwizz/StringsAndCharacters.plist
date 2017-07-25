@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>question</key>
+		<string>Swift Strings are represented by the type:</string>
+		<key>answer1</key>
+		<string>NSString</string>
+		<key>answer2</key>
+		<string>String</string>
+		<key>answer3</key>
+		<string>Character</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>These Swift types provide a fast, Unicode-compliant way to work with text in your code.</string>
+		<key>answer1</key>
+		<string>NSString and char.</string>
+		<key>answer2</key>
+		<string>String and Character.</string>
+		<key>answer3</key>
+		<string>String literals.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>String mutability is managed by choosing between:</string>
+		<key>answer1</key>
+		<string>Constant and Variable.</string>
+		<key>answer2</key>
+		<string>NSMutableString and NSString.</string>
+		<key>answer3</key>
+		<string>MutableString and String.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>var greeting = &apos;Hello World&apos; is an example of a </string>
+		<key>answer1</key>
+		<string>Constant</string>
+		<key>answer2</key>
+		<string>Explicit string type</string>
+		<key>answer3</key>
+		<string>Inferred type string</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string>var greeting = &apos;Hello World&apos; is an example of an Inferred type string.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>To create an inmutable String you need to use the keyword</string>
+		<key>answer1</key>
+		<string>constant</string>
+		<key>answer2</key>
+		<string>let</string>
+		<key>answer3</key>
+		<string>var</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>To create a mutable String you need to use the keyword</string>
+		<key>answer1</key>
+		<string>NSMutableString</string>
+		<key>answer2</key>
+		<string>var</string>
+		<key>answer3</key>
+		<string>MutableString</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Swift uses this process to include the name of a constant or variable as a placeholder in a longer string, and to prompt Swift to replace it with the current value of that constant or variable.</string>
+		<key>answer1</key>
+		<string>String Interpolation.</string>
+		<key>answer2</key>
+		<string>Concatenation.</string>
+		<key>answer3</key>
+		<string>Appending.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>Swift uses String Interpolation to include the name of a constant or variable as a placeholder in a longer string, and to prompt Swift to replace it with the current value of that constant or variable.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Swift&apos;s String type is bridged with Foundation&apos;s class:</string>
+		<key>answer1</key>
+		<string>NSString</string>
+		<key>answer2</key>
+		<string>NSObject</string>
+		<key>answer3</key>
+		<string>char</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>It&apos;s a fixed sequence of textual characters surrounded by a pair of double quotes(&quot;&quot;).</string>
+		<key>answer1</key>
+		<string>String.</string>
+		<key>answer2</key>
+		<string>Mutable string</string>
+		<key>answer3</key>
+		<string>String literal.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>If you create a new String value in Swift and you pass it to a function or assign it to a constant or variable:</string>
+		<key>answer1</key>
+		<string>It gets passed by reference.</string>
+		<key>answer2</key>
+		<string>It passes it&apos;s address in memory.</string>
+		<key>answer3</key>
+		<string>It is passed by copy.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Swift&apos;s String type is a ______ type.</string>
+		<key>answer1</key>
+		<string>Reference type.</string>
+		<key>answer2</key>
+		<string>Value type.</string>
+		<key>answer3</key>
+		<string>NSString type.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Swift&apos;s copy by default String behavior ensures that when a function passes you a String value, the String passed will:</string>
+		<key>answer1</key>
+		<string>Be modified.</string>
+		<key>answer2</key>
+		<string>Not be modified unless you do.</string>
+		<key>answer3</key>
+		<string>Be inmutable.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You can access the individual Character values for a String by:</string>
+		<key>answer1</key>
+		<string>Iterating its characters property.</string>
+		<key>answer2</key>
+		<string>Converting it into an array.</string>
+		<key>answer3</key>
+		<string>Type casting to NSString.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You can&apos;t append a String or Character to an existing Character variable, because a Character value must:</string>
+		<key>answer1</key>
+		<string>Be mutable.</string>
+		<key>answer2</key>
+		<string>Contain a single character only.</string>
+		<key>answer3</key>
+		<string>Conform to a protocol.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You can append a Characer value to a String variable with the String method:</string>
+		<key>answer1</key>
+		<string>stringFromChar().</string>
+		<key>answer2</key>
+		<string>append().</string>
+		<key>answer3</key>
+		<string>concatenate().</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Strings values can be added together or concatenated to create a new String value using:</string>
+		<key>answer1</key>
+		<string>Addition operator (+).</string>
+		<key>answer2</key>
+		<string>Addition assignement (+=).</string>
+		<key>answer3</key>
+		<string>.append().</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string>It is a collection of data items which can be accessed via an index beginning with 0.</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You can also append a String value to an existing String variable using:</string>
+		<key>answer1</key>
+		<string>Addition operator (+).</string>
+		<key>answer2</key>
+		<string>Addition assignement (+=).</string>
+		<key>answer3</key>
+		<string>Unescaped backslash (\).</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This is a way to construct a new String value from a mix of constants, variables, literals and expressions by including their values inside a string literal.</string>
+		<key>answer1</key>
+		<string>Concatenation.</string>
+		<key>answer2</key>
+		<string>String Interpolation.</string>
+		<key>answer3</key>
+		<string>String literal.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This is an example of string interpolation: The value of  multiplier variable is inserted into a string literal as:</string>
+		<key>answer1</key>
+		<string>\(multiplier)</string>
+		<key>answer2</key>
+		<string>+ multiplier</string>
+		<key>answer3</key>
+		<string>+= multiplier</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>The expressions you write inside paranthesis within an interpolated string cannot contain:</string>
+		<key>answer1</key>
+		<string>Unescaped backslash(\)</string>
+		<key>answer2</key>
+		<string>String literals</string>
+		<key>answer3</key>
+		<string>Backslash (/)</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This is a series of characters, such as &quot;hello&quot;, &quot;world&quot; or &quot;albatross&quot;</string>
+		<key>answer1</key>
+		<string>String</string>
+		<key>answer2</key>
+		<string>Character</string>
+		<key>answer3</key>
+		<string>Character array</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>var emptyString = String() creates a:</string>
+		<key>answer1</key>
+		<string>String literal.</string>
+		<key>answer2</key>
+		<string>Empty string.</string>
+		<key>answer3</key>
+		<string>nil object.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>When you called the .isEmpty property of a string you get:</string>
+		<key>answer1</key>
+		<string>0 or 1.</string>
+		<key>answer2</key>
+		<string>Boolean.</string>
+		<key>answer3</key>
+		<string>String lenght.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Is an international standard for encoding, representing, and processing text in different writing systems. It enables you to represent almost any character from any language in a standarized form.</string>
+		<key>answer1</key>
+		<string>ASCII</string>
+		<key>answer2</key>
+		<string>Unicode</string>
+		<key>answer3</key>
+		<string>String</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Behind the scenes, Swift&apos;s native String type is built from:</string>
+		<key>answer1</key>
+		<string>Objective-c char.</string>
+		<key>answer2</key>
+		<string>Unicode scalar values.</string>
+		<key>answer3</key>
+		<string>NSString.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This is a unique 21-bit number for a character or modifier, such as U+0061 for LATIN SMALL LETTER A(&quot;a&quot;), or U+1F425 for FRONT-FACING BABY CHICK(&quot;🐥&quot;).</string>
+		<key>answer1</key>
+		<string>ASCII value</string>
+		<key>answer2</key>
+		<string>Unicode scalar</string>
+		<key>answer3</key>
+		<string>ANSI value</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>It can include the following special characters: \0 (null character), \\(backslash), \t (horizontal tab), \n (line feed), \r (carriage return), \&quot; (double quote) and \&apos; (single quote) and an arbitrary unicode scalar written as \u{n}.</string>
+		<key>answer1</key>
+		<string>NSString.</string>
+		<key>answer2</key>
+		<string>String literal.</string>
+		<key>answer3</key>
+		<string>String interpolation.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>It is a sequence of one or more Unicode scalars that (when combined) produce a single human-readable character.</string>
+		<key>answer1</key>
+		<string>ASCII character.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>Extended grapheme cluster.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Every instance of Swift&apos;s Character type represents a single:</string>
+		<key>answer1</key>
+		<string>char.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>Extended grapheme cluster.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>These are a flexible way to represent many complex script characters as a single Character value.</string>
+		<key>answer1</key>
+		<string>ASCII character.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>Extended grapheme cluster.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>To retrieve a count of the Character values in a string, the characters property has a property:</string>
+		<key>answer1</key>
+		<string>lenght.</string>
+		<key>answer2</key>
+		<string>count.</string>
+		<key>answer3</key>
+		<string>characters.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>If you initialize a new string with the four character word cafe and then append a COMBINING ACUTE ACCENT (U+0301) to the end of the string, the resulting string will have a character count of:</string>
+		<key>answer1</key>
+		<string>5</string>
+		<key>answer2</key>
+		<string>4</string>
+		<key>answer3</key>
+		<string>6</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You access and modify a string through its methods and properties, or by:</string>
+		<key>answer1</key>
+		<string>ASCII character values.</string>
+		<key>answer2</key>
+		<string>Converting it to an array or characters</string>
+		<key>answer3</key>
+		<string>Subscript syntax</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Each String value has an associated index type, which corresponds to the position of each Character in the string.
+        </string>
+		<key>answer1</key>
+		<string>String.index.</string>
+		<key>answer2</key>
+		<string>startIndex.</string>
+		<key>answer3</key>
+		<string>endIndex.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Use this property to access the position of the first Character of a String.</string>
+		<key>answer1</key>
+		<string>String.index.</string>
+		<key>answer2</key>
+		<string>startIndex.</string>
+		<key>answer3</key>
+		<string>endIndex.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This value can access its immediately preceding index by calling the predecessor() method, and its immediately succeeding index by calling the successor() method.</string>
+		<key>answer1</key>
+		<string>String.index.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>characters.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Any index in a String can be accessed from any other index by using the:</string>
+		<key>answer1</key>
+		<string>Extended grapheme cluster.</string>
+		<key>answer2</key>
+		<string>characters.</string>
+		<key>answer3</key>
+		<string>advancedBy(_:).</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You can use this property of the characters property to create a Range of all the indexes used to access individual characters in a string. A use case would be to iterate trough all the Characters of a String.</string>
+		<key>answer1</key>
+		<string>lenght.</string>
+		<key>answer2</key>
+		<string>indices.</string>
+		<key>answer3</key>
+		<string>advancedBy(_:).</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>let greeting = &quot;Hola&quot;;  greeting[greeting.endIndex.predecessor()] this code is accessing the character:</string>
+		<key>answer1</key>
+		<string>l</string>
+		<key>answer2</key>
+		<string>a</string>
+		<key>answer3</key>
+		<string>H</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>It is not a valid argument to subscript, and is always reachable from startIndex by zero or more applications of successor().</string>
+		<key>answer1</key>
+		<string>String.CharacterView.Index</string>
+		<key>answer2</key>
+		<string>String.Index</string>
+		<key>answer3</key>
+		<string>endIndex</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You can use this property of the characters property to create a Range of all the indexes used to access individual characters in a string. A use case would be to iterate trough all the Characters of a String.</string>
+		<key>answer1</key>
+		<string>lenght.</string>
+		<key>answer2</key>
+		<string>indices.</string>
+		<key>answer3</key>
+		<string>advancedBy(_:).</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>If a String is empty, startIndex and endIndex:</string>
+		<key>answer1</key>
+		<string>are nil.</string>
+		<key>answer2</key>
+		<string>will trigger runtime error.</string>
+		<key>answer3</key>
+		<string>are equal.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Any index in a String can be accessed from any other index by chaining these methods together:</string>
+		<key>answer1</key>
+		<string>endIndex and startIndex.</string>
+		<key>answer2</key>
+		<string>predecessor() and successor()</string>
+		<key>answer3</key>
+		<string>String.Index</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Different characters can require different amounts of memory to store, so in order to determine which Character is  at a particular position:</string>
+		<key>answer1</key>
+		<string>iterate over each Unicode scalar of that String.</string>
+		<key>answer2</key>
+		<string>must access it&apos;s index.</string>
+		<key>answer3</key>
+		<string>convert it to an array.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>To insert a character into a string at a specified index use this method:</string>
+		<key>answer1</key>
+		<string>insert(_:atIndex:)</string>
+		<key>answer2</key>
+		<string>insertContentsOf(_:at:)</string>
+		<key>answer3</key>
+		<string>String.Index</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>To insert the contents of another string at a specified index use this method:</string>
+		<key>answer1</key>
+		<string>insert(_:atIndex:)</string>
+		<key>answer2</key>
+		<string>insertContentsOf(_:at:)</string>
+		<key>answer3</key>
+		<string>String.Index</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>To remove a character from a string at a specified index, use the method:</string>
+		<key>answer1</key>
+		<string>insert(_:atIndex:)</string>
+		<key>answer2</key>
+		<string>insertContentsOf(_:at:)</string>
+		<key>answer3</key>
+		<string>removeAtIndex(_:)</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>To remove a substring at a specified range, use the method:</string>
+		<key>answer1</key>
+		<string>insert(_:atIndex:)</string>
+		<key>answer2</key>
+		<string>insertContentsOf(_:at:)</string>
+		<key>answer3</key>
+		<string>removeRange(_:)</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Swift provides three ways to compare textual values: string and character equality, prefix equality and:</string>
+		<key>answer1</key>
+		<string>index equality.</string>
+		<key>answer2</key>
+		<string>suffix equality.</string>
+		<key>answer3</key>
+		<string>Unicode equality.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>String and character equality is checked with the operators:</string>
+		<key>answer1</key>
+		<string>== and !=</string>
+		<key>answer2</key>
+		<string>=== and !==</string>
+		<key>answer3</key>
+		<string>= and !</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Two String values or two Character values are considered equal if their extented grapheme clusters:</string>
+		<key>answer1</key>
+		<string>are canonically equivallent.</string>
+		<key>answer2</key>
+		<string>have same Unicode scalars.</string>
+		<key>answer3</key>
+		<string>have same character count.</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>To check wheter a string has a particular prefix or suffix, call the string&apos;s hasPrefix(_:) and hasSuffix(_:) methods, both of which take a single argument of type:</string>
+		<key>answer1</key>
+		<string>Character</string>
+		<key>answer2</key>
+		<string>Unicode scalar</string>
+		<key>answer3</key>
+		<string>String</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>The hasPrefix(_:) and hasSuffix(_:) methods perform a character by characer canonical equivalence comparison between the:</string>
+		<key>answer1</key>
+		<string>Characters</string>
+		<key>answer2</key>
+		<string>extended grapheme clusters</string>
+		<key>answer3</key>
+		<string>String arrays</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Swift provides three ways to compare textual values: string and character equality, prefix equality and:</string>
+		<key>answer1</key>
+		<string>index equality.</string>
+		<key>answer2</key>
+		<string>suffix equality.</string>
+		<key>answer3</key>
+		<string>Unicode equality.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>These include UTF-8, UTF-16 and UTF-32 encoding forms.</string>
+		<key>answer1</key>
+		<string>Unicode scalars</string>
+		<key>answer2</key>
+		<string>Unicode-defined encoding forms.</string>
+		<key>answer3</key>
+		<string>Unicode equality.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>When a Unicode string is written to a text file or some other storage, the Unicode scalars in that string are encoded in one of several:</string>
+		<key>answer1</key>
+		<string>Characters.</string>
+		<key>answer2</key>
+		<string>Unicode-defined encoding forms.</string>
+		<key>answer3</key>
+		<string>Unicode equality.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Each Unicode-defined encoding form encodes strings in small chunks know as:</string>
+		<key>answer1</key>
+		<string>Unicode scalars.</string>
+		<key>answer2</key>
+		<string>code units.</string>
+		<key>answer3</key>
+		<string>Characters.</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Encodes a string as 8-bit code units:</string>
+		<key>answer1</key>
+		<string>Character.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>UTF-8</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Encodes a string as 16-bit code units:</string>
+		<key>answer1</key>
+		<string>Character.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>UTF-16</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Encodes a string as 32-bit code units:</string>
+		<key>answer1</key>
+		<string>Character.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>UTF-32</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You can iterate over a string with a for-in statement, to access its individual Character values as:</string>
+		<key>answer1</key>
+		<string>code units.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>Unicode extended grapheme clusters.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>The string utf8 and utf16  properties are  collections of:</string>
+		<key>answer1</key>
+		<string>Character.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>UTF-8 and UTF-16 code units.</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This string property is a collection fo 21-bit Unicode scalar values, equivalent to the string&apos;s UTF-32 encoding form.</string>
+		<key>answer1</key>
+		<string>unicodeScalars.</string>
+		<key>answer2</key>
+		<string>Characters.</string>
+		<key>answer3</key>
+		<string>UTF-32</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>You can access a Unicode scalar representation of a String value by iterating over its property:</string>
+		<key>answer1</key>
+		<string>Characters.</string>
+		<key>answer2</key>
+		<string>unicodeScalars.</string>
+		<key>answer3</key>
+		<string>UTF-32</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>The string unicodeScalars property is of type:</string>
+		<key>answer1</key>
+		<string>Character.</string>
+		<key>answer2</key>
+		<string>UnicodeScalar.</string>
+		<key>answer3</key>
+		<string>UnicodeScalarView</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>This type is a collection of values of type UnicodeScalar.</string>
+		<key>answer1</key>
+		<string>Character.</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>UnicodeScalarView</string>
+		<key>rightAnswer</key>
+		<integer>3</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What is the name of the Unicode scalar property that returns the scalar&apos;s 21 bit value, represented within a UInt32 value.</string>
+		<key>answer1</key>
+		<string>value</string>
+		<key>answer2</key>
+		<string>Unicode scalar.</string>
+		<key>answer3</key>
+		<string>UnicodeScalarView</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Each UnicodeScalar in a string can also be used to construct a new String Value using:</string>
+		<key>answer1</key>
+		<string>it&apos;s scalar 21 bit value.</string>
+		<key>answer2</key>
+		<string>string interpolation.</string>
+		<key>answer3</key>
+		<string>UnicodeScalarView</string>
+		<key>rightAnswer</key>
+		<integer>2</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+</array>
+</plist>
