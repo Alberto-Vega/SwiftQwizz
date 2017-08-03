@@ -25,15 +25,15 @@ Select a valid difference between class and struct.</string>
 		<key>answer2</key>
 		<string>Structs are reference types.</string>
 		<key>answer1</key>
-		<string>ARC manges structs.</string>
+		<string>ARC manages structs.</string>
 		<key>rightAnswer</key>
-		<integer>3</integer>
+		<integer>1</integer>
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>Grand Central Dispatch</string>
+		<string>Grand Central Dispatch.</string>
 		<key>answer3</key>
 		<string>is an Objective-C API and that brings some overhead with it. </string>
 		<key>answer2</key>
@@ -61,41 +61,13 @@ Select a valid difference between class and struct.</string>
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>allows an object to send a message to another object (the delegate) so that it can customise the handling of an event.</string>
+		<string>Allows an object to send a message to another object so that it can customize the handling of an event. Unlike the Observer pattern is a one to one relationship.</string>
 		<key>answer3</key>
 		<string>Notification</string>
 		<key>answer2</key>
 		<string>Protocol</string>
 		<key>answer1</key>
 		<string>Delegate</string>
-		<key>rightAnswer</key>
-		<integer>1</integer>
-		<key>rightAnswerMessage</key>
-		<string></string>
-	</dict>
-	<dict>
-		<key>question</key>
-		<string>defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality</string>
-		<key>answer3</key>
-		<string>Notification</string>
-		<key>answer2</key>
-		<string>Delegate</string>
-		<key>answer1</key>
-		<string>Protocol</string>
-		<key>rightAnswer</key>
-		<integer>1</integer>
-		<key>rightAnswerMessage</key>
-		<string></string>
-	</dict>
-	<dict>
-		<key>question</key>
-		<string>can then be adopted by a class, structure, or enumeration to provide an actual implementation of it&apos;s requirements</string>
-		<key>answer3</key>
-		<string>Protocol</string>
-		<key>answer2</key>
-		<string>Delegate</string>
-		<key>answer1</key>
-		<string>Controller</string>
 		<key>rightAnswer</key>
 		<integer>3</integer>
 		<key>rightAnswerMessage</key>
@@ -103,7 +75,35 @@ Select a valid difference between class and struct.</string>
 	</dict>
 	<dict>
 		<key>question</key>
-		<string> Layout object that organizes items into a grid with optional header and footer views for each section. </string>
+		<string>defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality.</string>
+		<key>answer3</key>
+		<string>Notification</string>
+		<key>answer2</key>
+		<string>Delegate</string>
+		<key>answer1</key>
+		<string>Protocol</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Can then be adopted by a class, structure, or enumeration to provide an actual implementation of it&apos;s requirements.</string>
+		<key>answer3</key>
+		<string>Protocol</string>
+		<key>answer2</key>
+		<string>Delegate</string>
+		<key>answer1</key>
+		<string>Controller</string>
+		<key>rightAnswer</key>
+		<integer>1</integer>
+		<key>rightAnswerMessage</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>It&apos;s a concrete layout object that organizes items into a grid with optional header and footer views for each section. </string>
 		<key>answer3</key>
 		<string>UITableView</string>
 		<key>answer2</key>
@@ -111,7 +111,7 @@ Select a valid difference between class and struct.</string>
 		<key>answer1</key>
 		<string>UICollectionViewFlowLayout</string>
 		<key>rightAnswer</key>
-		<integer>1</integer>
+		<integer>3</integer>
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>
@@ -131,7 +131,7 @@ Select a valid difference between class and struct.</string>
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>The bounds of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to its own coordinate system (0,0)</string>
+		<string>Bounds of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to its own coordinate system (0,0)</string>
 		<key>answer3</key>
 		<string></string>
 		<key>answer2</key>
@@ -159,7 +159,7 @@ Select a valid difference between class and struct.</string>
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>Allows you to add new functionality to an existing class, structure, enumeration, or protocol type. This includes the ability to extend types for which you do not have access to the original source code (known as retroactive modeling). Extensions are similar to categories in Objective-C. (Unlike Objective-C categories, Swift extensions do not have names.)</string>
+		<string>Allows you to add new functionality to an existing class, structure, enumeration, or protocol type. This includes the ability to extend types for which you do not have access to the original source code (known as retroactive modeling). These are similar to categories in Objective-C. (Unlike Objective-C categories,  in Swift they do not have names.)</string>
 		<key>answer3</key>
 		<string>Protocol</string>
 		<key>answer2</key>
@@ -233,11 +233,11 @@ Select a valid difference between class and struct.</string>
 		<key>answer3</key>
 		<string>Execution App States</string>
 		<key>answer2</key>
-		<string>View Controller Life Cicle</string>
+		<string>View Controller life cycle</string>
 		<key>answer1</key>
-		<string>App Delegate</string>
+		<string>UIView life cycle</string>
 		<key>rightAnswer</key>
-		<integer>3</integer>
+		<integer>1</integer>
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>

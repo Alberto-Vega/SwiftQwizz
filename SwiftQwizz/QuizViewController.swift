@@ -140,7 +140,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
             if (self.currentQuestionCounter) < 10 {
                 self.displayCurrentQuestion()
             } else {
-                self.performSegue(withIdentifier: "showResults", sender:self)
+                self.performSegue(withIdentifier: SegueIdentifier.ShowResultsViewController.rawValue, sender:self)
             }
         }
     }

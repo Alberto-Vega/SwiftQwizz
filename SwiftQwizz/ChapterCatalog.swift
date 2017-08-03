@@ -10,7 +10,7 @@ import Foundation
 
 enum ChapterCatalog: String, CustomStringConvertible {
     
-    case TheBasics, StringsAndCharacters, Advanced
+    case TheBasics, StringsAndCharacters, Advanced, IOSInterviewQuestions
     
     var description: String {
         
@@ -21,6 +21,8 @@ enum ChapterCatalog: String, CustomStringConvertible {
             return "Strings and Characters"
         case .Advanced:
             return "Advanced"
+        case .IOSInterviewQuestions:
+            return "iOS Interview Questions"
         }
     }
     
@@ -30,6 +32,8 @@ enum ChapterCatalog: String, CustomStringConvertible {
             return .StringsAndCharacters
         case .StringsAndCharacters:
             return .Advanced
+        case .Advanced:
+            return .IOSInterviewQuestions
         default:
             return nil
         }
