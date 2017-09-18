@@ -19,7 +19,7 @@ class ChaptersListTableViewController: UITableViewController, SegueHandlerType {
     // MARK: - View Controller Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupTableView()
+        self.setupTableViewDataSource()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +39,7 @@ class ChaptersListTableViewController: UITableViewController, SegueHandlerType {
     }
     
     // MARK: - Helper Functions
-    func setupTableView() {
+    func setupTableViewDataSource() {
         self.dataSource = ChaptersTableViewDataSource(items: ChapterCatalog.allValues, cellIdentifier: Constants.CellIdentifiers.ChaptersListItem.rawValue)
         self.tableView.dataSource = self.dataSource
     }
