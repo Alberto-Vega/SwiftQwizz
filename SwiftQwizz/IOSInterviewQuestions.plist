@@ -27,7 +27,7 @@ Select a valid difference between class and struct.</string>
 		<key>answer1</key>
 		<string>ARC manages structs.</string>
 		<key>rightAnswer</key>
-		<integer>1</integer>
+		<integer>3</integer>
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>
@@ -35,9 +35,9 @@ Select a valid difference between class and struct.</string>
 		<key>question</key>
 		<string>Grand Central Dispatch.</string>
 		<key>answer3</key>
-		<string>is an Objective-C API and that brings some overhead with it. </string>
+		<string>is an Objective-C API </string>
 		<key>answer2</key>
-		<string>is a low-level C API that interacts directly with Unix level of the system.</string>
+		<string>is a low-level C API, interacts with Unix level of the system.</string>
 		<key>answer1</key>
 		<string>It is a higher level API than NSOperation</string>
 		<key>rightAnswer</key>
@@ -69,13 +69,13 @@ Select a valid difference between class and struct.</string>
 		<key>answer1</key>
 		<string>Delegate</string>
 		<key>rightAnswer</key>
-		<integer>3</integer>
+		<integer>1</integer>
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality.</string>
+		<string>Defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality.</string>
 		<key>answer3</key>
 		<string>Notification</string>
 		<key>answer2</key>
@@ -89,7 +89,7 @@ Select a valid difference between class and struct.</string>
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>Can then be adopted by a class, structure, or enumeration to provide an actual implementation of it&apos;s requirements.</string>
+		<string>Can be adopted by a class, structure, or enumeration to provide an actual implementation of it&apos;s requirements.</string>
 		<key>answer3</key>
 		<string>Protocol</string>
 		<key>answer2</key>
@@ -97,7 +97,7 @@ Select a valid difference between class and struct.</string>
 		<key>answer1</key>
 		<string>Controller</string>
 		<key>rightAnswer</key>
-		<integer>1</integer>
+		<integer>3</integer>
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>
@@ -111,7 +111,7 @@ Select a valid difference between class and struct.</string>
 		<key>answer1</key>
 		<string>UICollectionViewFlowLayout</string>
 		<key>rightAnswer</key>
-		<integer>3</integer>
+		<integer>1</integer>
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>
@@ -237,7 +237,7 @@ Select a valid difference between class and struct.</string>
 		<key>answer1</key>
 		<string>UIView life cycle</string>
 		<key>rightAnswer</key>
-		<integer>1</integer>
+		<integer>3</integer>
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>
@@ -277,9 +277,9 @@ Select a valid difference between class and struct.</string>
 		<key>answer2</key>
 		<string>Type Casting</string>
 		<key>answer1</key>
-		<string>Closure</string>
+		<string>Setup</string>
 		<key>rightAnswer</key>
-		<integer>1</integer>
+		<integer>3</integer>
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>
@@ -321,7 +321,7 @@ Select a valid difference between class and struct.</string>
 		<key>answer1</key>
 		<string>Decorator</string>
 		<key>rightAnswer</key>
-		<integer>1</integer>
+		<integer>3</integer>
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>
@@ -341,7 +341,7 @@ Select a valid difference between class and struct.</string>
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>is a software design pattern for implementing user interfaces on computers. It divides a given software application into three interconnected parts, so as to separate internal representations of information from the ways that information is presented to or accepted from the user</string>
+		<string>Is a software design pattern for implementing user interfaces on computers. It divides a given software application into three interconnected parts, so as to separate internal representations of information from the ways that information is presented to or accepted from the user</string>
 		<key>answer3</key>
 		<string>Singleton</string>
 		<key>answer2</key>
@@ -355,21 +355,7 @@ Select a valid difference between class and struct.</string>
 	</dict>
 	<dict>
 		<key>question</key>
-		<string>In Objective-C there are two very common implementations of this pattern: Category and Delegation.</string>
-		<key>answer3</key>
-		<string>MVVM</string>
-		<key>answer2</key>
-		<string>MVM</string>
-		<key>answer1</key>
-		<string>Decorator</string>
-		<key>rightAnswer</key>
-		<integer>3</integer>
-		<key>rightAnswerMessage</key>
-		<string></string>
-	</dict>
-	<dict>
-		<key>question</key>
-		<string> This is a software design pattern (also known as Wrapper, an alternative naming shared with the Decorator pattern) that allows the interface of an existing class to be used as another interface.[1] It is often used to make existing classes work with others without modifying their source code.</string>
+		<string> This is a software design pattern (also known as Wrapper, an alternative naming shared with the Decorator pattern) that allows the interface of an existing class to be used as another interface. It is often used to make existing classes work with others without modifying their source code.</string>
 		<key>answer3</key>
 		<string>MVVM</string>
 		<key>answer2</key>
@@ -377,7 +363,7 @@ Select a valid difference between class and struct.</string>
 		<key>answer1</key>
 		<string>Adapter</string>
 		<key>rightAnswer</key>
-		<integer>3</integer>
+		<integer>1</integer>
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>
@@ -391,7 +377,7 @@ Select a valid difference between class and struct.</string>
 		<key>answer1</key>
 		<string>Observer</string>
 		<key>rightAnswer</key>
-		<integer>3</integer>
+		<integer>1</integer>
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>
@@ -405,7 +391,7 @@ Select a valid difference between class and struct.</string>
 		<key>answer1</key>
 		<string>KVO</string>
 		<key>rightAnswer</key>
-		<integer>3</integer>
+		<integer>1</integer>
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>
@@ -414,20 +400,6 @@ Select a valid difference between class and struct.</string>
 		<string>This pattern is a software design pattern that provides the ability to restore an object to its previous state (undo via rollback).</string>
 		<key>answer3</key>
 		<string>Memento</string>
-		<key>answer2</key>
-		<string>Facade</string>
-		<key>answer1</key>
-		<string>Observer</string>
-		<key>rightAnswer</key>
-		<integer>1</integer>
-		<key>rightAnswerMessage</key>
-		<string></string>
-	</dict>
-	<dict>
-		<key>question</key>
-		<string>It is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods. It is mainly used to implement distributed event handling systems.</string>
-		<key>answer3</key>
-		<string>Singleton</string>
 		<key>answer2</key>
 		<string>Facade</string>
 		<key>answer1</key>
@@ -447,7 +419,7 @@ Select a valid difference between class and struct.</string>
 		<key>answer1</key>
 		<string>Command</string>
 		<key>rightAnswer</key>
-		<integer>3</integer>
+		<integer>1</integer>
 		<key>rightAnswerMessage</key>
 		<string></string>
 	</dict>
