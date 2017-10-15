@@ -140,7 +140,7 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
             if (self.currentQuestionCounter) < 10 {
                 self.displayCurrentQuestion()
             } else {
-                self.performSegue(withIdentifier: "showResults", sender:self)
+                self.performSegue(withIdentifier: SegueIdentifier.ShowResultsViewController.rawValue, sender:self)
             }
         }
     }
@@ -167,7 +167,8 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
     
     func displayCurrentQuestion() {
         
-        if let gameManager = self.game, let currentQuiz = gameManager.currentQuiz {
+        if let gameManager = self.game,
+           let currentQuiz = gameManager.currentQuiz {
             if currentQuestionCounter < currentQuiz.questions.count {
                 QuestionTextLabel.text = currentQuiz.questions[currentQuestionCounter].question
                 animateView(QuestionTextLabel, show: true, animation: .transitionFlipFromTop, delayTime: 0.0, completion: nil)
@@ -175,6 +176,11 @@ class QuizViewController: UIViewController, UIPopoverPresentationControllerDeleg
                 buttonAnswer2.setTitle(currentQuiz.questions[currentQuestionCounter].answer2,
                                        for: UIControlState())
                 buttonAnswer3.setTitle(currentQuiz.questions[currentQuestionCounter].answer3, for: UIControlState())
+                if currentQuiz.questions[currentQuestionCounter].answer3 == "" {
+                    buttonAnswer3.isHidden = true
+                } else {
+                    buttonAnswer3.isHidden = false
+                }
                 
                 animateView(questionNumberLabel, show: true, animation: .transitionFlipFromTop, delayTime: 0.0, completion: nil)
                 self.questionNumberLabel.text = "\(self.currentQuestionCounter + 1) of 10"

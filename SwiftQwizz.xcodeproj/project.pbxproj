@@ -36,7 +36,7 @@
 		D35E62021F26A2DD00F007D1 /* ChaptersTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35E62011F26A2DD00F007D1 /* ChaptersTableViewDataSource.swift */; };
 		D399D5761F22A89F00B53FC3 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D399D5751F22A89F00B53FC3 /* GameManager.swift */; };
 		D399D5771F22A89F00B53FC3 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D399D5751F22A89F00B53FC3 /* GameManager.swift */; };
-		D3E83A551DF231BF00CE2BFD /* InterviewQuestions.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3E83A541DF231BF00CE2BFD /* InterviewQuestions.plist */; };
+		D3E83A551DF231BF00CE2BFD /* IOSInterviewQuestions.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3E83A541DF231BF00CE2BFD /* IOSInterviewQuestions.plist */; };
 		D3FCC18D1F22CB4600301214 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FCC18C1F22CB4600301214 /* TableViewDataSource.swift */; };
 		D3FCC18E1F22CB4600301214 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FCC18C1F22CB4600301214 /* TableViewDataSource.swift */; };
 /* End PBXBuildFile section */
@@ -95,7 +95,7 @@
 		D35E61FF1F269D7700F007D1 /* QuestionRandomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionRandomizer.swift; sourceTree = "<group>"; };
 		D35E62011F26A2DD00F007D1 /* ChaptersTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaptersTableViewDataSource.swift; sourceTree = "<group>"; };
 		D399D5751F22A89F00B53FC3 /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
-		D3E83A541DF231BF00CE2BFD /* InterviewQuestions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InterviewQuestions.plist; sourceTree = "<group>"; };
+		D3E83A541DF231BF00CE2BFD /* IOSInterviewQuestions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = IOSInterviewQuestions.plist; sourceTree = "<group>"; };
 		D3FCC18C1F22CB4600301214 /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewDataSource.swift; path = ../TableViewDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -246,7 +246,7 @@
 				BFFDFEB71D1366DE00B06DDD /* Constants.swift */,
 				BF357B9D1BC75BA000D0C072 /* Info.plist */,
 				BF357BCB1BC76F1400D0C072 /* QuestionsDataLevelTwo.plist */,
-				D3E83A541DF231BF00CE2BFD /* InterviewQuestions.plist */,
+				D3E83A541DF231BF00CE2BFD /* IOSInterviewQuestions.plist */,
 				BF357BCD1BC76F2400D0C072 /* TheBasics.plist */,
 				BF713AD71C97E15D003E0345 /* Advanced.plist */,
 				BF19D0341D08ECF300CDFC0E /* StringsAndCharacters.plist */,
@@ -324,7 +324,7 @@
 		BF357B861BC75BA000D0C072 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Alberto Vega Gonzalez";
 				TargetAttributes = {
 					BF357B8D1BC75BA000D0C072 = {
@@ -372,7 +372,7 @@
 				BF357B9C1BC75BA000D0C072 /* LaunchScreen.storyboard in Resources */,
 				BF19D0351D08ECF300CDFC0E /* StringsAndCharacters.plist in Resources */,
 				BF713AD81C97E15E003E0345 /* Advanced.plist in Resources */,
-				D3E83A551DF231BF00CE2BFD /* InterviewQuestions.plist in Resources */,
+				D3E83A551DF231BF00CE2BFD /* IOSInterviewQuestions.plist in Resources */,
 				BF357B991BC75BA000D0C072 /* Assets.xcassets in Resources */,
 				BF357BD61BC8C67000D0C072 /* logo.png in Resources */,
 				BF357BCC1BC76F1400D0C072 /* QuestionsDataLevelTwo.plist in Resources */,
@@ -475,13 +475,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -520,13 +528,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -545,6 +561,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
